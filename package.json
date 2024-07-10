@@ -1,7 +1,10 @@
 {
   "type": "module",
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@googlemaps/markerclusterer": "^2.5.1",
+    "@mui/material": "^5.16.0",
     "@vis.gl/react-google-maps": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
