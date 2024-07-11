@@ -14,5 +14,8 @@
     "start": "vite",
     "start-local": "vite --config ./vite.config.local.js",
     "build": "vite build"
+  },
+  "devDependencies": {
+    "prettier": "3.3.2"
   }
 }
