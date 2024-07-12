@@ -1,8 +1,7 @@
 import { AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
-// @ts-ignore
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import * as React from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
-// @ts-ignore
 import marker from "../../assets/marker.svg";
 import { DataItem } from "../type";
 

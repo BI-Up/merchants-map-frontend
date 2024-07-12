@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import * as React from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "./PoiMarkers";
 import { DataItem } from "../type";
 import { getData } from "../api";
-
-type Poi = { key: string; location: google.maps.LatLngLiteral };
 
 const mockData: DataItem[] = [
   {
@@ -107,6 +106,7 @@ const MerchantsMap = () => {
 
   return (
     <>
+      {/*@ts-ignore*/}
       <Sidebar data={data} />
       <Map
         defaultZoom={10}
