@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import {
   Box,
-  Button,
   Divider,
   List,
   ListItem,
   ListItemText,
   Paper,
-  Stack,
-  Switch,
   Typography,
 } from "@mui/material";
 import InputField from "./InputField";
