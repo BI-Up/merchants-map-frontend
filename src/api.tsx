@@ -1,8 +1,15 @@
 import axios from "axios";
 
-export const getData = async (queryParams) => {
+interface params {
+  town: string;
+  accepted_products: string;
+  region: string;
+  is_hero_corp: boolean;
+  mcc_category: string;
+}
+export const getData = async (queryParams: params) => {
   try {
-    const response = await axios.get("http://10.10.81.124/merchants", {
+    const response = await axios.get("http://localhost/merchants", {
       params: queryParams,
     });
     return response.data;
@@ -12,11 +19,17 @@ export const getData = async (queryParams) => {
   }
 };
 
-export const getTowns = async () => {
+export const getFilters = async (
+  filter_value: string,
+  language?: "en" | "gr",
+) => {
   try {
-    const response = await axios.get(
-      "http://10.10.81.124/filter-values/?filter_label=town",
-    );
+    const response = await axios.get("http://localhost/filters/values", {
+      params: {
+        filter_label: filter_value,
+        language,
+      },
+    });
     return response.data;
   } catch (error) {
     console.error("Error fetching data:", error);

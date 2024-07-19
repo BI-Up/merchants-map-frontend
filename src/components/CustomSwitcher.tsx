@@ -2,7 +2,7 @@ import * as React from "react";
 import { Stack, Switch, Typography } from "@mui/material";
 
 interface CustomSwitcherProps {
-  selectedItems: string[];
+  selectedItems: string[] | boolean;
   onChange: (event: React.ChangeEvent<{ value: unknown }>) => void;
 }
 const CustomSwitcher = ({ selectedItems, onChange }: CustomSwitcherProps) => {
@@ -11,7 +11,7 @@ const CustomSwitcher = ({ selectedItems, onChange }: CustomSwitcherProps) => {
       <Typography>Off</Typography>
       {/*@ts-ignore*/}
       <Switch
-        checked={selectedItems}
+        checked={selectedItems as boolean}
         onChange={onChange}
         sx={{
           "& .MuiSwitch-thumb": {

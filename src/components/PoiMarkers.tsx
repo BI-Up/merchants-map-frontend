@@ -2,14 +2,18 @@ import { AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
+// @ts-ignore
 import marker from "../../assets/marker.svg";
-import { DataItem } from "../type";
+import { merchantsResponse } from "../type";
 
-const PoiMarkers = (props: { pois: DataItem[] }) => {
+interface PoiMarkersProps {
+  data: merchantsResponse[] | [];
+}
+
+const PoiMarkers = ({ data }: PoiMarkersProps) => {
   const map = useMap();
   const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
   const clusterer = useRef<MarkerClusterer | null>(null);
-  const [circleCenter, setCircleCenter] = useState(null);
   const [openLocation, setOpenLocation] = useState(null);
 
   const handleClick = useCallback(
@@ -19,7 +23,6 @@ const PoiMarkers = (props: { pois: DataItem[] }) => {
       console.log("marker clicked: ", ev.latLng.toString());
       map.panTo(ev.latLng);
       setOpenLocation(key);
-      setCircleCenter(ev.latLng);
     },
     [],
   );
@@ -73,34 +76,44 @@ const PoiMarkers = (props: { pois: DataItem[] }) => {
 
   return (
     <>
-      {props.pois.map((poi: DataItem) => (
-        <>
-          <AdvancedMarker
-            key={poi.key}
-            position={{ lat: poi.Latitude, lng: poi.Longitude }}
-            ref={(marker) => setMarkerRef(marker, poi.VATName_EN)}
-            clickable={true}
-            onClick={(ev: google.maps.MapMouseEvent) =>
-              handleClick(ev, poi.VATName_EN)
-            }
-          >
-            {/*<Pin background={'#FBBC04'} glyphColor={'#000'} borderColor={'#000'}  />*/}
-            <img src={marker} alt={poi.VATName_EN} width={"30px"} />
-          </AdvancedMarker>
+      {data &&
+        data.map(
+          (poi: merchantsResponse) =>
+            poi.latitude != null &&
+            poi.longitude != null && (
+              <>
+                <AdvancedMarker
+                  key={poi.vat_name_en}
+                  position={{
+                    lat: Number(poi?.latitude),
+                    lng: Number(poi?.longitude),
+                  }}
+                  ref={(marker) => setMarkerRef(marker, poi?.vat_name_en)}
+                  clickable={true}
+                  onClick={(ev: google.maps.MapMouseEvent) =>
+                    handleClick(ev, poi?.vat_name_en)
+                  }
+                >
+                  <img src={marker} alt={poi?.vat_name_en} width={"30px"} />
+                </AdvancedMarker>
 
-          {openLocation === poi.VATName_EN && (
-            <>
-              <InfoWindow
-                position={{ lat: poi.Latitude, lng: poi.Longitude }}
-                onCloseClick={() => setOpenLocation(null)}
-              >
-                {" "}
-                <p>{poi.VATName_EN}</p>{" "}
-              </InfoWindow>
-            </>
-          )}
-        </>
-      ))}
+                {openLocation === poi.vat_name_en && (
+                  <>
+                    <InfoWindow
+                      position={{
+                        lat: Number(poi.latitude),
+                        lng: Number(poi.longitude),
+                      }}
+                      onCloseClick={() => setOpenLocation(null)}
+                    >
+                      {" "}
+                      <p>{poi.vat_name_en}</p>{" "}
+                    </InfoWindow>
+                  </>
+                )}
+              </>
+            ),
+        )}
     </>
   );
 };

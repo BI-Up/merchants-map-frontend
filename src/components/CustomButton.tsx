@@ -1,5 +1,5 @@
 // @ts-ignore
-import React from "react";
+import React, { ReactNode } from "react";
 import { Button, SxProps } from "@mui/material";
 
 interface CustomButtonProps {
@@ -7,11 +7,13 @@ interface CustomButtonProps {
   variant?: "contained" | "text" | "outlined";
   onClick: () => void;
   sx?: SxProps;
+  icon?: ReactNode;
 }
 const CustomButton = ({
   label,
   variant = "contained",
   onClick,
+  icon,
   sx,
 }: CustomButtonProps) => {
   return (
@@ -26,7 +28,7 @@ const CustomButton = ({
         ...sx,
       }}
     >
-      {label}
+      {icon && icon} {label}
     </Button>
   );
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Box,
   Divider,
@@ -18,17 +18,26 @@ import CustomSwitcher from "./CustomSwitcher";
 import CustomButton from "./CustomButton";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import MenuIcon from "@mui/icons-material/Menu";
+import { getFilters } from "../api";
+import FilterListIcon from "@mui/icons-material/FilterList";
 interface SidebarProps {
-  data: {
-    locations: string[];
-    products: string[];
-    categories: string[];
-  };
+  handleSelectedTown: (_town: string[]) => void;
+  handleSelectedProducts?: (_products: string[]) => void;
+  handleIsHerocorp?: (_is_herocorp: boolean) => void;
+  handleSelectedCategory?: (_category: string[]) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ data }) => {
-  const { locationsData, productsData, categoriesData } = data;
+const Sidebar: React.FC<SidebarProps> = ({
+  handleSelectedTown,
+  handleSelectedProducts,
+  handleIsHerocorp,
+  handleSelectedCategory,
+}) => {
   const [open, setOpen] = useState<boolean>(false);
+  const [filterData, setFilterData] = useState(null);
+  const [locationsData, setLocationsData] = useState<string[]>([]);
+  const [productsData, setProductsData] = useState<string[]>([]);
+  const [categoriesData, setCategoriesData] = useState<string[]>([]);
 
   const [selectedItems, setSelectedItems] = React.useState({
     locations: [] as string[],
@@ -48,10 +57,26 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const hasLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
-  console.log("lg", hasLargeScreen);
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const loc = await getFilters("town");
+        setLocationsData(loc);
+        const prod = await getFilters("accepted_products");
+        setProductsData(prod);
+        const cat = await getFilters("mcc_category");
+        setCategoriesData(cat);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleSelectChange =
     (type: "locations" | "products" | "categories") =>
@@ -73,14 +98,30 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
 
   const handleSubmit = () => {
     setFormData(selectedItems);
+    handleSelectedTown(selectedItems.locations);
+    handleSelectedProducts(selectedItems.products);
+    handleIsHerocorp(selectedItems.has_cashback);
+    handleSelectedCategory(selectedItems.categories);
   };
 
   if (isMobile) {
     return (
-      <>
-        <IconButton onClick={toggleDrawer} color={"inherit"}>
-          <MenuIcon />
-        </IconButton>
+      <Box position={"relative"}>
+        <CustomButton
+          label={"Filters"}
+          onClick={toggleDrawer}
+          sx={{
+            position: "absolute",
+            bottom: 30,
+            zIndex: 10,
+            margin: "0 auto",
+            width: 300,
+          }}
+          icon={<FilterListIcon />}
+        />
+        {/*<IconButton onClick={toggleDrawer} color={"inherit"}>*/}
+        {/*  <MenuIcon />*/}
+        {/*</IconButton>*/}
         <Drawer anchor={"left"} open={open} onClose={toggleDrawer}>
           <Box
             sx={{
@@ -126,7 +167,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
             </Box>
           </Box>
         </Drawer>
-      </>
+      </Box>
     );
   } else {
     return (
@@ -136,6 +177,9 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
             backgroundColor: "white",
             width: hasLargeScreen ? "40%" : "25%",
             color: "black",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
           padding={"1rem"}
         >
@@ -165,8 +209,17 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
               onChange={handleSwitchChange}
             />
           </Box>
-          <Box display="flex" justifyContent="center" padding={"1rem"}>
-            <CustomButton label={"Search"} onClick={handleSubmit} />
+          <Box
+            display="flex"
+            justifyContent="center"
+            padding={"1rem"}
+            width={300}
+          >
+            <CustomButton
+              label={"Search"}
+              onClick={handleSubmit}
+              sx={{ padding: 1.5 }}
+            />
           </Box>
           {/*<Paper sx={{ mt: 2, p: "1rem" }}>*/}
           {/*  <List>*/}
