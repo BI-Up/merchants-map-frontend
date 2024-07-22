@@ -68,13 +68,13 @@ const MerchantsMap = () => {
 
   return (
     <>
-      {/*@ts-ignore*/}
       <Sidebar
         handleSelectedTown={handleSelectedTown}
         handleSelectedProducts={handleSelectedProducts}
         handleIsHerocorp={handleIsHerocorp}
         handleSelectedCategory={handleSelectedCategory}
       />
+
       <Map
         defaultZoom={10}
         defaultCenter={{ lat: 37.97991702599259, lng: 23.730877354617046 }}

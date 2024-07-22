@@ -5,6 +5,7 @@ import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
 // @ts-ignore
 import marker from "../../assets/marker.svg";
 import { merchantsResponse } from "../type";
+import { Box } from "@mui/material";
 
 interface PoiMarkersProps {
   data: merchantsResponse[] | [];
@@ -12,9 +13,11 @@ interface PoiMarkersProps {
 
 const PoiMarkers = ({ data }: PoiMarkersProps) => {
   const map = useMap();
+
   const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
   const clusterer = useRef<MarkerClusterer | null>(null);
   const [openLocation, setOpenLocation] = useState(null);
+  const markersRef = useRef<{ [key: string]: Marker }>({});
 
   const handleClick = useCallback(
     (ev: google.maps.MapMouseEvent, key: string) => {
@@ -51,69 +54,77 @@ const PoiMarkers = ({ data }: PoiMarkersProps) => {
         },
       });
     }
+    return () => {
+      clusterer.current?.clearMarkers();
+    };
   }, [map]);
 
-  // Update markers, if the markers array has changed
+  // Update clusterer with markers
   useEffect(() => {
-    clusterer.current?.clearMarkers();
-    clusterer.current?.addMarkers(Object.values(markers));
-  }, [markers]);
+    if (!clusterer.current) return;
 
-  const setMarkerRef = (marker: Marker | null, key: string) => {
-    if (marker && markers[key]) return;
-    if (!marker && !markers[key]) return;
+    const markersArray = Object.values(markersRef.current);
 
-    setMarkers((prev) => {
-      if (marker) {
-        return { ...prev, [key]: marker };
-      } else {
-        const newMarkers = { ...prev };
-        delete newMarkers[key];
-        return newMarkers;
-      }
-    });
+    if (markersArray.length > 0) {
+      clusterer.current.clearMarkers();
+      clusterer.current.addMarkers(markersArray);
+    } else {
+      console.log("No markers to update in clusterer");
+    }
+  }, [data]);
+
+  const setMarkerRef = (marker: google.maps.Marker | null, key: number) => {
+    if (marker) {
+      markersRef.current[key] = marker;
+    } else {
+      delete markersRef.current[key];
+    }
+    console.log("Markers updated:", markersRef.current);
+
+    // Update clusterer after setting marker reference
+    if (clusterer.current) {
+      const markersArray = Object.values(markersRef.current);
+      console.log("Updating clusterer with markers:", markersArray);
+      clusterer.current.clearMarkers();
+      clusterer.current.addMarkers(markersArray);
+    }
   };
-
   return (
     <>
       {data &&
-        data.map(
-          (poi: merchantsResponse) =>
-            poi.latitude != null &&
-            poi.longitude != null && (
-              <>
-                <AdvancedMarker
-                  key={poi.vat_name_en}
-                  position={{
-                    lat: Number(poi?.latitude),
-                    lng: Number(poi?.longitude),
-                  }}
-                  ref={(marker) => setMarkerRef(marker, poi?.vat_name_en)}
-                  clickable={true}
-                  onClick={(ev: google.maps.MapMouseEvent) =>
-                    handleClick(ev, poi?.vat_name_en)
-                  }
-                >
-                  <img src={marker} alt={poi?.vat_name_en} width={"30px"} />
-                </AdvancedMarker>
+        data.map((poi: merchantsResponse, index) => (
+          <Box key={index}>
+            <AdvancedMarker
+              key={index}
+              position={{
+                lat: Number(poi?.latitude),
+                lng: Number(poi?.longitude),
+              }}
+              ref={(marker) => setMarkerRef(marker, index)}
+              clickable={true}
+              onClick={(ev: google.maps.MapMouseEvent) =>
+                handleClick(ev, index)
+              }
+            >
+              <img src={marker} alt={poi?.vat_name_en} width={"30px"} />
+            </AdvancedMarker>
 
-                {openLocation === poi.vat_name_en && (
-                  <>
-                    <InfoWindow
-                      position={{
-                        lat: Number(poi.latitude),
-                        lng: Number(poi.longitude),
-                      }}
-                      onCloseClick={() => setOpenLocation(null)}
-                    >
-                      {" "}
-                      <p>{poi.vat_name_en}</p>{" "}
-                    </InfoWindow>
-                  </>
-                )}
+            {openLocation === index && (
+              <>
+                <InfoWindow
+                  position={{
+                    lat: Number(poi.latitude),
+                    lng: Number(poi.longitude),
+                  }}
+                  onCloseClick={() => setOpenLocation(null)}
+                >
+                  {" "}
+                  <p>{poi.vat_name_en}</p>{" "}
+                </InfoWindow>
               </>
-            ),
-        )}
+            )}
+          </Box>
+        ))}
     </>
   );
 };

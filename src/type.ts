@@ -12,10 +12,10 @@ export interface merchantsResponse {
   region_en: string;
   town_gr: string;
   town_en: string;
-  is_hero_corp: number;
+  is_hero_corp: boolean;
   accepted_products: string[];
   mcc_category_gr: string;
   mcc_category_en: string;
-  latitude: number | null;
-  longitude: number | null;
+  latitude: string | null;
+  longitude: string | null;
 }

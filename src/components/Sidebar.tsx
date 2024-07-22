@@ -34,19 +34,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedCategory,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
-  const [filterData, setFilterData] = useState(null);
   const [locationsData, setLocationsData] = useState<string[]>([]);
   const [productsData, setProductsData] = useState<string[]>([]);
   const [categoriesData, setCategoriesData] = useState<string[]>([]);
 
   const [selectedItems, setSelectedItems] = React.useState({
-    locations: [] as string[],
-    products: [] as string[],
-    categories: [] as string[],
-    has_cashback: false,
-  });
-
-  const [formData, setFormData] = React.useState({
     locations: [] as string[],
     products: [] as string[],
     categories: [] as string[],
@@ -96,12 +88,14 @@ const Sidebar: React.FC<SidebarProps> = ({
     }));
   };
 
+  console.log("selectedLocations", selectedItems.locations);
+
   const handleSubmit = () => {
-    setFormData(selectedItems);
     handleSelectedTown(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
     handleIsHerocorp(selectedItems.has_cashback);
     handleSelectedCategory(selectedItems.categories);
+    console.log("submit rendered");
   };
 
   if (isMobile) {
@@ -185,19 +179,19 @@ const Sidebar: React.FC<SidebarProps> = ({
         >
           <InputField
             items={locationsData}
-            selectedItems={selectedItems.locations}
+            selectedItems={selectedItems.locations ?? []}
             onChange={handleSelectChange("locations")}
             label={"Locations"}
           />
           <InputField
             items={productsData}
-            selectedItems={selectedItems.products}
+            selectedItems={selectedItems.products ?? []}
             onChange={handleSelectChange("products")}
             label={"Products"}
           />
           <InputField
             items={categoriesData}
-            selectedItems={selectedItems.categories}
+            selectedItems={selectedItems.categories ?? []}
             onChange={handleSelectChange("categories")}
             label={"Categories"}
           />
@@ -205,7 +199,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <Box display={"flex"} alignItems={"center"} gap={2} padding={"1rem"}>
             <Typography>Has Cashback officers?</Typography>
             <CustomSwitcher
-              selectedItems={selectedItems.has_cashback}
+              selectedItems={selectedItems.has_cashback ?? false}
               onChange={handleSwitchChange}
             />
           </Box>

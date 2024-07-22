@@ -25,7 +25,6 @@ const InputField: React.FC<InputFieldProps> = ({
   selectedItems,
   onChange,
   label,
-  handleSubmit,
 }) => {
   const [open, setOpen] = useState(false);
 
