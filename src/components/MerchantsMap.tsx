@@ -5,6 +5,7 @@ import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "./PoiMarkers";
 import { merchantsResponse } from "../type";
 import { getData } from "../api";
+import { Box } from "@mui/material";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);

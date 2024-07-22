@@ -68,8 +68,6 @@ const PoiMarkers = ({ data }: PoiMarkersProps) => {
     if (markersArray.length > 0) {
       clusterer.current.clearMarkers();
       clusterer.current.addMarkers(markersArray);
-    } else {
-      console.log("No markers to update in clusterer");
     }
   }, [data]);
 

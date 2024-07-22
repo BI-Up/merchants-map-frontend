@@ -88,34 +88,33 @@ const Sidebar: React.FC<SidebarProps> = ({
     }));
   };
 
-  console.log("selectedLocations", selectedItems.locations);
-
   const handleSubmit = () => {
     handleSelectedTown(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
     handleIsHerocorp(selectedItems.has_cashback);
     handleSelectedCategory(selectedItems.categories);
-    console.log("submit rendered");
+    setOpen(false);
   };
 
   if (isMobile) {
     return (
-      <Box position={"relative"}>
-        <CustomButton
-          label={"Filters"}
-          onClick={toggleDrawer}
-          sx={{
-            position: "absolute",
-            bottom: 30,
-            zIndex: 10,
-            margin: "0 auto",
-            width: 300,
-          }}
-          icon={<FilterListIcon />}
-        />
-        {/*<IconButton onClick={toggleDrawer} color={"inherit"}>*/}
-        {/*  <MenuIcon />*/}
-        {/*</IconButton>*/}
+      <Box>
+        <Box>
+          <CustomButton
+            label={"Filters"}
+            onClick={toggleDrawer}
+            sx={{
+              position: "absolute",
+              bottom: 30,
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 10,
+              width: 250,
+            }}
+            icon={<FilterListIcon />}
+          />
+        </Box>
+
         <Drawer anchor={"left"} open={open} onClose={toggleDrawer}>
           <Box
             sx={{
