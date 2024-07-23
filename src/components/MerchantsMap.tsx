@@ -1,11 +1,12 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Sidebar from "./Sidebar";
-import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
+import { Map, MapCameraChangedEvent, useMap } from "@vis.gl/react-google-maps";
 import PoiMarkers from "./PoiMarkers";
 import { merchantsResponse } from "../type";
 import { getData } from "../api";
 import { Box } from "@mui/material";
+import { Marker } from "@googlemaps/markerclusterer";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);
@@ -19,6 +20,8 @@ const MerchantsMap = () => {
   });
 
   const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
+
+  const [openLocation, setOpenLocation] = useState(null);
 
   const handleSelectedTown = (town: string[]) => {
     const townString = town.join(",");
@@ -69,15 +72,19 @@ const MerchantsMap = () => {
 
   return (
     <>
-      <Sidebar
-        handleSelectedTown={handleSelectedTown}
-        handleSelectedProducts={handleSelectedProducts}
-        handleIsHerocorp={handleIsHerocorp}
-        handleSelectedCategory={handleSelectedCategory}
-      />
-
+      {!loading && (
+        <Sidebar
+          handleSelectedTown={handleSelectedTown}
+          handleSelectedProducts={handleSelectedProducts}
+          handleIsHerocorp={handleIsHerocorp}
+          handleSelectedCategory={handleSelectedCategory}
+          data={merchantsData}
+          openLocation={openLocation}
+          setOpenLocation={setOpenLocation}
+        />
+      )}
       <Map
-        defaultZoom={10}
+        defaultZoom={8}
         defaultCenter={{ lat: 37.97991702599259, lng: 23.730877354617046 }}
         onCameraChanged={(ev: MapCameraChangedEvent) =>
           console.log(
@@ -88,8 +95,15 @@ const MerchantsMap = () => {
           )
         }
         mapId="da37f3254c6a6d1c"
+        disableDefaultUI={true}
       >
-        {!loading && <PoiMarkers data={merchantsData} />}
+        {!loading && (
+          <PoiMarkers
+            data={merchantsData}
+            openLocation={openLocation}
+            setOpenLocation={setOpenLocation}
+          />
+        )}
       </Map>
     </>
   );

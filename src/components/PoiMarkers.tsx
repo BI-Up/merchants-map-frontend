@@ -9,14 +9,18 @@ import { Box } from "@mui/material";
 
 interface PoiMarkersProps {
   data: merchantsResponse[] | [];
+  openLocation: any;
+  setOpenLocation: any;
 }
 
-const PoiMarkers = ({ data }: PoiMarkersProps) => {
+const PoiMarkers = ({
+  data,
+  openLocation,
+  setOpenLocation,
+}: PoiMarkersProps) => {
   const map = useMap();
-
-  const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
   const clusterer = useRef<MarkerClusterer | null>(null);
-  const [openLocation, setOpenLocation] = useState(null);
+  // const [openLocation, setOpenLocation] = useState(null);
   const markersRef = useRef<{ [key: string]: Marker }>({});
 
   const handleClick = useCallback(
@@ -45,7 +49,6 @@ const PoiMarkers = ({ data }: PoiMarkersProps) => {
                 fontWeight: "bold",
                 fontSize: "16px",
               },
-
               icon: "/assets/cluster.svg",
               opacity: 0.98,
               zIndex: Number(google.maps.Marker.MAX_ZINDEX) + count,
@@ -54,6 +57,7 @@ const PoiMarkers = ({ data }: PoiMarkersProps) => {
         },
       });
     }
+
     return () => {
       clusterer.current?.clearMarkers();
     };
@@ -87,6 +91,7 @@ const PoiMarkers = ({ data }: PoiMarkersProps) => {
       clusterer.current.addMarkers(markersArray);
     }
   };
+
   return (
     <>
       {data &&
@@ -115,9 +120,37 @@ const PoiMarkers = ({ data }: PoiMarkersProps) => {
                     lng: Number(poi.longitude),
                   }}
                   onCloseClick={() => setOpenLocation(null)}
+                  shouldFocus={true}
                 >
-                  {" "}
-                  <p>{poi.vat_name_en}</p>{" "}
+                  <Box
+                    sx={{
+                      width: "250px",
+                      paddingBottom: 2,
+                    }}
+                  >
+                    <Box sx={{ fontSize: "15px", mb: 0.5 }}>
+                      {poi?.mcc_category_en}
+                    </Box>
+                    <Box sx={{ fontWeight: "bold", fontSize: "20px", mb: 0.5 }}>
+                      {poi?.brand_name_en ?? "Brand Name"}
+                    </Box>
+                    <Box
+                      sx={{
+                        fontSize: "14px",
+                        mb: 0.5,
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      {[poi?.address_en, poi?.region_en, poi?.zip_code]
+                        .filter(Boolean)
+                        .join(", ")}
+                    </Box>
+                    <Box display={"flex"} sx={{ mb: 0.5 }}>
+                      {poi?.accepted_products.map((product) => (
+                        <Box>•{product}</Box>
+                      ))}
+                    </Box>
+                  </Box>
                 </InfoWindow>
               </>
             )}

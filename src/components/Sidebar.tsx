@@ -1,13 +1,13 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   Box,
   Divider,
   Drawer,
-  IconButton,
   List,
   ListItem,
   ListItemText,
+  Pagination,
   Paper,
   Typography,
   useMediaQuery,
@@ -16,15 +16,18 @@ import {
 import InputField from "./InputField";
 import CustomSwitcher from "./CustomSwitcher";
 import CustomButton from "./CustomButton";
-import MenuOpenIcon from "@mui/icons-material/MenuOpen";
-import MenuIcon from "@mui/icons-material/Menu";
 import { getFilters } from "../api";
 import FilterListIcon from "@mui/icons-material/FilterList";
+import { merchantsResponse } from "../type";
+import { useMap } from "@vis.gl/react-google-maps";
 interface SidebarProps {
   handleSelectedTown: (_town: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
   handleIsHerocorp?: (_is_herocorp: boolean) => void;
   handleSelectedCategory?: (_category: string[]) => void;
+  data: merchantsResponse[] | [];
+  openLocation: any;
+  setOpenLocation: any;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -32,11 +35,26 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedProducts,
   handleIsHerocorp,
   handleSelectedCategory,
+  openLocation,
+  setOpenLocation,
+  data,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [locationsData, setLocationsData] = useState<string[]>([]);
   const [productsData, setProductsData] = useState<string[]>([]);
   const [categoriesData, setCategoriesData] = useState<string[]>([]);
+  const map = useMap();
+
+  const [page, setPage] = React.useState(1);
+  const itemsPerPage = 4; // Number of items per page
+
+  const pageCount = Math.ceil(data.length / itemsPerPage);
+
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedData = data.slice(startIndex, endIndex);
+
+  console.log("startIndex: " + startIndex, "endIndex", endIndex);
 
   const [selectedItems, setSelectedItems] = React.useState({
     locations: [] as string[],
@@ -44,6 +62,10 @@ const Sidebar: React.FC<SidebarProps> = ({
     categories: [] as string[],
     has_cashback: false,
   });
+
+  const handlePageChange = (event, value) => {
+    setPage(value);
+  };
 
   const theme = useTheme();
 
@@ -88,6 +110,23 @@ const Sidebar: React.FC<SidebarProps> = ({
     }));
   };
 
+  const handleClick = useCallback(
+    (ev: google.maps.MapMouseEvent, index: number) => {
+      if (!map) return;
+      const merchantData = paginatedData[index];
+      if (!merchantData) return;
+      const latLng = new google.maps.LatLng(
+        Number(merchantData.latitude),
+        Number(merchantData.longitude),
+      );
+      console.log("marker clicked: ", latLng.toString());
+      map.panTo(latLng);
+
+      setOpenLocation(index);
+    },
+    [map, paginatedData],
+  );
+
   const handleSubmit = () => {
     handleSelectedTown(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
@@ -95,6 +134,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSelectedCategory(selectedItems.categories);
     setOpen(false);
   };
+
+  console.log("data", data);
 
   if (isMobile) {
     return (
@@ -214,60 +255,51 @@ const Sidebar: React.FC<SidebarProps> = ({
               sx={{ padding: 1.5 }}
             />
           </Box>
-          {/*<Paper sx={{ mt: 2, p: "1rem" }}>*/}
-          {/*  <List>*/}
-          {/*    <ListItem>*/}
-          {/*      <ListItemText*/}
-          {/*        sx={{*/}
-          {/*          display: "flex",*/}
-          {/*          flexDirection: "column",*/}
-          {/*          alignItems: "center",*/}
-          {/*        }}*/}
-          {/*      >*/}
-          {/*        <Typography typography={"body2"}>Supermarket</Typography>*/}
-          {/*        <Typography typography={"h6"}>Brand Name</Typography>*/}
-          {/*        <Typography typography={"body2"}>*/}
-          {/*          Dragatsaniou 6, Athens*/}
-          {/*        </Typography>*/}
-          {/*      </ListItemText>*/}
-          {/*    </ListItem>*/}
-          {/*    <Divider component={"li"} textAlign={"center"} />*/}
-
-          {/*    <ListItem>*/}
-          {/*      <ListItemText*/}
-          {/*        sx={{*/}
-          {/*          display: "flex",*/}
-          {/*          flexDirection: "column",*/}
-          {/*          alignItems: "center",*/}
-          {/*        }}*/}
-          {/*      >*/}
-          {/*        <Typography typography={"body2"}>Supermarket</Typography>*/}
-          {/*        <Typography typography={"h6"}>Brand Name</Typography>*/}
-          {/*        <Typography typography={"body2"}>*/}
-          {/*          Dragatsaniou 6, Athens*/}
-          {/*        </Typography>*/}
-          {/*      </ListItemText>*/}
-          {/*    </ListItem>*/}
-
-          {/*    <Divider component={"li"} textAlign={"center"} />*/}
-
-          {/*    <ListItem>*/}
-          {/*      <ListItemText*/}
-          {/*        sx={{*/}
-          {/*          display: "flex",*/}
-          {/*          flexDirection: "column",*/}
-          {/*          alignItems: "center",*/}
-          {/*        }}*/}
-          {/*      >*/}
-          {/*        <Typography typography={"body2"}>Supermarket</Typography>*/}
-          {/*        <Typography typography={"h6"}>Brand Name</Typography>*/}
-          {/*        <Typography typography={"body2"}>*/}
-          {/*          Dragatsaniou 6, Athens*/}
-          {/*        </Typography>*/}
-          {/*      </ListItemText>*/}
-          {/*    </ListItem>*/}
-          {/*  </List>*/}
-          {/*</Paper>*/}
+          {data && (
+            <Paper sx={{ mt: 2, p: "1rem" }}>
+              <List>
+                {paginatedData.map((item, index) => (
+                  <>
+                    <ListItem
+                      //@ts-ignore
+                      onClick={(ev: google.maps.MapMouseEvent) => {
+                        handleClick(ev, index);
+                      }}
+                      sx={{
+                        "&:hover": {
+                          backgroundColor: "#FEF9F1",
+                          cursor: "pointer",
+                        },
+                        transition: "background-color 0.3s", // Smooth transition effect
+                      }}
+                    >
+                      <ListItemText>
+                        <Typography typography={"body2"}>
+                          {item.mcc_category_en}
+                        </Typography>
+                        <Typography typography={"h6"}>
+                          {item.brand_name_en ?? "Brand Name"}
+                        </Typography>
+                        <Typography typography={"body2"}>
+                          {item.address_en},{item.region_en}, {item.zip_code}
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                    <Divider component={"li"} textAlign={"center"} />
+                  </>
+                ))}
+              </List>
+              <Box display="flex" justifyContent="center" mt={2}>
+                <Pagination
+                  count={pageCount}
+                  page={page}
+                  onChange={handlePageChange}
+                  color="standard"
+                  shape={"circular"}
+                />
+              </Box>
+            </Paper>
+          )}
         </Box>
       </>
     );
