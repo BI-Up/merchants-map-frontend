@@ -18,7 +18,7 @@ import { merchantsResponse } from "../type";
 interface MerchantsListProps {
   data: merchantsResponse[]; // Replace with the actual type of your data
   handleClick: (
-    event: google.maps.MapMouseEvent,
+    event: React.MouseEvent<HTMLLIElement>,
     index: number,
     paginatedData: merchantsResponse[],
   ) => void;
@@ -49,9 +49,57 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
     setOpenBottomDrawer(newOpen);
   };
 
+  console.log("openBottomDrawer", openBottomDrawer);
+
   return (
     <>
-      {isMobile ? (
+      {!isMobile && (
+        <Paper sx={{ mt: 2, p: "1rem" }}>
+          <List>
+            {paginatedData.map((item, index) => (
+              <React.Fragment key={index}>
+                <ListItem
+                  onClick={(ev) => {
+                    handleClick(ev, index, paginatedData);
+                  }}
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "#FEF9F1",
+                      cursor: "pointer",
+                    },
+                    transition: "background-color 0.3s", // Smooth transition effect
+                  }}
+                >
+                  <ListItemText>
+                    <Typography variant="body2">
+                      {item.mcc_category_en}
+                    </Typography>
+                    <Typography variant="h6">
+                      {item.brand_name_en ?? "Brand Name"}
+                    </Typography>
+                    <Typography variant="body2">
+                      {item.address_en},{item.region_en}, {item.zip_code}
+                    </Typography>
+                  </ListItemText>
+                </ListItem>
+                <Divider component={"li"} textAlign={"center"} />
+              </React.Fragment>
+            ))}
+          </List>
+
+          <Box display="flex" justifyContent="center" mt={2}>
+            <Pagination
+              count={pageCount}
+              page={page}
+              onChange={handlePageChange}
+              color="standard"
+              shape="circular"
+            />
+          </Box>
+        </Paper>
+      )}
+
+      {isMobile && openBottomDrawer && (
         <SwipeableDrawer
           anchor={"bottom"}
           open={openBottomDrawer}
@@ -103,50 +151,6 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
             </Box>
           </Paper>
         </SwipeableDrawer>
-      ) : (
-        <Paper sx={{ mt: 2, p: "1rem" }}>
-          <List>
-            {paginatedData.map((item, index) => (
-              <React.Fragment key={index}>
-                <ListItem
-                  onClick={(ev) => {
-                    handleClick(ev, index, paginatedData);
-                  }}
-                  sx={{
-                    "&:hover": {
-                      backgroundColor: "#FEF9F1",
-                      cursor: "pointer",
-                    },
-                    transition: "background-color 0.3s", // Smooth transition effect
-                  }}
-                >
-                  <ListItemText>
-                    <Typography variant="body2">
-                      {item.mcc_category_en}
-                    </Typography>
-                    <Typography variant="h6">
-                      {item.brand_name_en ?? "Brand Name"}
-                    </Typography>
-                    <Typography variant="body2">
-                      {item.address_en},{item.region_en}, {item.zip_code}
-                    </Typography>
-                  </ListItemText>
-                </ListItem>
-                <Divider component={"li"} textAlign={"center"} />
-              </React.Fragment>
-            ))}
-          </List>
-
-          <Box display="flex" justifyContent="center" mt={2}>
-            <Pagination
-              count={pageCount}
-              page={page}
-              onChange={handlePageChange}
-              color="standard"
-              shape="circular"
-            />
-          </Box>
-        </Paper>
       )}
     </>
   );

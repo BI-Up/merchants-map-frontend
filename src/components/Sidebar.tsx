@@ -133,6 +133,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
   }, [submitted, data, map]);
 
+  console.log("submitted", submitted);
+
   if (isMobile) {
     return (
       <Box>
