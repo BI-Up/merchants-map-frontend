@@ -112,6 +112,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     [map],
   );
 
+  console.log("data", data);
+
   const handleSubmit = () => {
     handleSelectedTown(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
@@ -121,7 +123,15 @@ const Sidebar: React.FC<SidebarProps> = ({
     setSubmitted(true);
   };
 
-  console.log("openDrawer", openDrawer);
+  useEffect(() => {
+    if (submitted && data.length > 0) {
+      map.panTo({
+        lat: Number(data[0]?.latitude),
+        lng: Number(data[0]?.longitude),
+      });
+      map.setZoom(18);
+    }
+  }, [submitted, data, map]);
 
   if (isMobile) {
     return (
