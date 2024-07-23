@@ -2,13 +2,7 @@ import * as React from "react";
 import { useCallback, useEffect, useState } from "react";
 import {
   Box,
-  Divider,
   Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Pagination,
-  Paper,
   Typography,
   useMediaQuery,
   useTheme,
@@ -20,13 +14,13 @@ import { getFilters } from "../api";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { merchantsResponse } from "../type";
 import { useMap } from "@vis.gl/react-google-maps";
+import MerchantsList from "./MerchantsList";
 interface SidebarProps {
   handleSelectedTown: (_town: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
   handleIsHerocorp?: (_is_herocorp: boolean) => void;
   handleSelectedCategory?: (_category: string[]) => void;
   data: merchantsResponse[] | [];
-  openLocation: any;
   setOpenLocation: any;
 }
 
@@ -35,26 +29,15 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedProducts,
   handleIsHerocorp,
   handleSelectedCategory,
-  openLocation,
   setOpenLocation,
   data,
 }) => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const [submitted, setSubmitted] = useState<boolean>(false);
   const [locationsData, setLocationsData] = useState<string[]>([]);
   const [productsData, setProductsData] = useState<string[]>([]);
   const [categoriesData, setCategoriesData] = useState<string[]>([]);
   const map = useMap();
-
-  const [page, setPage] = React.useState(1);
-  const itemsPerPage = 4; // Number of items per page
-
-  const pageCount = Math.ceil(data.length / itemsPerPage);
-
-  const startIndex = (page - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedData = data.slice(startIndex, endIndex);
-
-  console.log("startIndex: " + startIndex, "endIndex", endIndex);
 
   const [selectedItems, setSelectedItems] = React.useState({
     locations: [] as string[],
@@ -63,16 +46,13 @@ const Sidebar: React.FC<SidebarProps> = ({
     has_cashback: false,
   });
 
-  const handlePageChange = (event, value) => {
-    setPage(value);
-  };
-
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const hasLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
   const toggleDrawer = () => {
-    setOpen(!open);
+    setOpenDrawer(!openDrawer);
+    setSubmitted(false);
   };
 
   useEffect(() => {
@@ -95,6 +75,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   const handleSelectChange =
     (type: "locations" | "products" | "categories") =>
     (event: React.ChangeEvent<{ value: unknown }>) => {
+      setSubmitted(false);
       const { value } = event.target;
       setSelectedItems((prevSelectedItems) => ({
         ...prevSelectedItems,
@@ -111,7 +92,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   const handleClick = useCallback(
-    (ev: google.maps.MapMouseEvent, index: number) => {
+    (
+      ev: google.maps.MapMouseEvent,
+      index: number,
+      paginatedData: merchantsResponse[],
+    ) => {
       if (!map) return;
       const merchantData = paginatedData[index];
       if (!merchantData) return;
@@ -124,7 +109,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       setOpenLocation(index);
     },
-    [map, paginatedData],
+    [map],
   );
 
   const handleSubmit = () => {
@@ -132,31 +117,48 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSelectedProducts(selectedItems.products);
     handleIsHerocorp(selectedItems.has_cashback);
     handleSelectedCategory(selectedItems.categories);
-    setOpen(false);
+    setOpenDrawer(false);
+    setSubmitted(true);
   };
 
-  console.log("data", data);
+  console.log("openDrawer", openDrawer);
 
   if (isMobile) {
     return (
       <Box>
-        <Box>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: !submitted
+              ? "5%"
+              : submitted && data.length < 2
+                ? "25%"
+                : "35%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 100,
+          }}
+        >
           <CustomButton
             label={"Filters"}
             onClick={toggleDrawer}
             sx={{
-              position: "absolute",
-              bottom: 30,
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: 10,
               width: 250,
             }}
             icon={<FilterListIcon />}
           />
+
+          {submitted && (
+            <MerchantsList
+              data={data}
+              handleClick={handleClick}
+              isMobile={isMobile}
+              open={submitted}
+            />
+          )}
         </Box>
 
-        <Drawer anchor={"left"} open={open} onClose={toggleDrawer}>
+        <Drawer anchor={"left"} open={openDrawer} onClose={toggleDrawer}>
           <Box
             sx={{
               backgroundColor: "white",
@@ -255,50 +257,12 @@ const Sidebar: React.FC<SidebarProps> = ({
               sx={{ padding: 1.5 }}
             />
           </Box>
-          {data && (
-            <Paper sx={{ mt: 2, p: "1rem" }}>
-              <List>
-                {paginatedData.map((item, index) => (
-                  <>
-                    <ListItem
-                      //@ts-ignore
-                      onClick={(ev: google.maps.MapMouseEvent) => {
-                        handleClick(ev, index);
-                      }}
-                      sx={{
-                        "&:hover": {
-                          backgroundColor: "#FEF9F1",
-                          cursor: "pointer",
-                        },
-                        transition: "background-color 0.3s", // Smooth transition effect
-                      }}
-                    >
-                      <ListItemText>
-                        <Typography typography={"body2"}>
-                          {item.mcc_category_en}
-                        </Typography>
-                        <Typography typography={"h6"}>
-                          {item.brand_name_en ?? "Brand Name"}
-                        </Typography>
-                        <Typography typography={"body2"}>
-                          {item.address_en},{item.region_en}, {item.zip_code}
-                        </Typography>
-                      </ListItemText>
-                    </ListItem>
-                    <Divider component={"li"} textAlign={"center"} />
-                  </>
-                ))}
-              </List>
-              <Box display="flex" justifyContent="center" mt={2}>
-                <Pagination
-                  count={pageCount}
-                  page={page}
-                  onChange={handlePageChange}
-                  color="standard"
-                  shape={"circular"}
-                />
-              </Box>
-            </Paper>
+          {submitted && (
+            <MerchantsList
+              data={data}
+              handleClick={handleClick}
+              isMobile={isMobile}
+            />
           )}
         </Box>
       </>

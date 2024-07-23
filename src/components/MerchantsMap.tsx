@@ -6,7 +6,6 @@ import PoiMarkers from "./PoiMarkers";
 import { merchantsResponse } from "../type";
 import { getData } from "../api";
 import { Box } from "@mui/material";
-import { Marker } from "@googlemaps/markerclusterer";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);
@@ -71,7 +70,7 @@ const MerchantsMap = () => {
   }, [queryParams]);
 
   return (
-    <>
+    <Box position={"relative"} width={"100%"} display={"flex"}>
       {!loading && (
         <Sidebar
           handleSelectedTown={handleSelectedTown}
@@ -79,12 +78,11 @@ const MerchantsMap = () => {
           handleIsHerocorp={handleIsHerocorp}
           handleSelectedCategory={handleSelectedCategory}
           data={merchantsData}
-          openLocation={openLocation}
           setOpenLocation={setOpenLocation}
         />
       )}
       <Map
-        defaultZoom={8}
+        defaultZoom={9}
         defaultCenter={{ lat: 37.97991702599259, lng: 23.730877354617046 }}
         onCameraChanged={(ev: MapCameraChangedEvent) =>
           console.log(
@@ -105,7 +103,7 @@ const MerchantsMap = () => {
           />
         )}
       </Map>
-    </>
+    </Box>
   );
 };
 
