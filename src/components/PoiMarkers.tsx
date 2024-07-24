@@ -123,13 +123,33 @@ const PoiMarkers = ({
                   }}
                   onCloseClick={() => setOpenLocation(null)}
                   shouldFocus={true}
+                  maxWidth={250}
                 >
                   <Box
                     sx={{
-                      width: "250px",
-                      paddingBottom: 2,
+                      paddingBottom: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                      alignItems: "flex-start",
                     }}
                   >
+                    {poi.is_hero_corp && (
+                      <Box
+                        sx={{
+                          backgroundColor: "#F59100",
+                          borderRadius: 100,
+                          px: 1,
+                          fontSize: "14px",
+                          fontWeight: 600,
+                          color: "white",
+                          width: 130,
+                          mb: 0.5,
+                        }}
+                      >
+                        Cashback partner
+                      </Box>
+                    )}
                     <Box sx={{ fontSize: "15px", mb: 0.5 }}>
                       {poi[`mcc_category_${language}`]}
                     </Box>
