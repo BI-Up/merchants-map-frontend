@@ -31,7 +31,7 @@ const InputField: React.FC<InputFieldProps> = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <Box p={2}>
+    <Box p={1}>
       <FormControl>
         <InputLabel id={`${label}-label`}>{label}</InputLabel>
         <Select

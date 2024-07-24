@@ -7,6 +7,7 @@ import { merchantsResponse } from "../type";
 import { getData } from "../api";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import Header from "./Header";
+import { c } from "vite/dist/node/types.d-aGj9QkWt";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);
@@ -19,13 +20,26 @@ const MerchantsMap = () => {
     mcc_category: "",
   });
 
+  console.log("queryParams", queryParams);
+
   const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
 
+  console.log("merchantData", merchantsData);
+
   const [openLocation, setOpenLocation] = useState(null);
-  const [selectedLanguage, setSelectedLanguage] = useState<"en">("en");
+  const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
 
   const handleSelectedTown = (town: string[]) => {
-    const townString = town.join(",");
+    const updatedTowns = town.map((town) => {
+      if (selectedLanguage === "gr") {
+        const merchant = merchantsData.find(
+          (merchant) => merchant.town_gr === town,
+        );
+        return merchant ? merchant.town_en : town;
+      }
+      return town;
+    });
+    const townString = updatedTowns.join(",");
     setQueryParams((prevState) => ({
       ...prevState,
       town: townString,
@@ -49,6 +63,16 @@ const MerchantsMap = () => {
   };
 
   const handleSelectedCategory = (category: string[]) => {
+    const updatedCategories = category.map((cat) => {
+      if (selectedLanguage === "gr") {
+        const merchant = merchantsData.find(
+          (merchant) => merchant.mcc_category_gr === cat,
+        );
+        return merchant ? merchant.town_en : cat;
+      }
+      return cat;
+    });
+
     const categorieString = category.join(",");
 
     setQueryParams((prevState) => ({

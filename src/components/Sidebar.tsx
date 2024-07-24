@@ -59,7 +59,9 @@ const Sidebar: React.FC<SidebarProps> = ({
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const hasLargeScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  const hasLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+
+  console.log("hasLargeScreen", hasLargeScreen);
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
     setSubmitted(false);
@@ -141,7 +143,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
   }, [submitted, data, map]);
 
-  console.log("submitted", submitted);
+  console.log("locationsData", locationsData);
+  console.log("selected", selectedItems.locations);
 
   if (isMobile) {
     return (
@@ -247,13 +250,17 @@ const Sidebar: React.FC<SidebarProps> = ({
         <Box
           sx={{
             backgroundColor: "white",
-            width: hasLargeScreen ? "40%" : "25%",
+            width: hasLargeScreen ? "25%" : "40%",
+
             color: "black",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            overflow: "auto",
           }}
+          height={"calc(100vh - 84px)"}
           padding={"1rem"}
+          mt={1}
         >
           <InputField
             items={locationsData}

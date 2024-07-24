@@ -54,7 +54,7 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   return (
     <>
       {!isMobile && (
-        <Paper sx={{ mt: 2, p: "1rem" }}>
+        <Paper elevation={3} sx={{ mt: 2, mb: 5, p: "1rem" }}>
           <List>
             {paginatedData.map((item, index) => (
               <React.Fragment key={index}>
