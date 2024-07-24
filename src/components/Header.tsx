@@ -1,16 +1,40 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import {
   AppBar,
   Box,
   Button,
-  IconButton,
-  Select,
+  Menu,
+  MenuItem,
   Toolbar,
   Typography,
 } from "@mui/material";
+// @ts-ignore
 import logo from "../../assets/logo.svg";
+import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
-const Header = () => {
+interface HeaderProps {
+  language: "en" | "gr";
+  languageHandler: Dispatch<SetStateAction<"en" | "gr">>;
+}
+
+const Header = ({ language, languageHandler }: HeaderProps) => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  // const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleMenuItemClick = (language) => {
+    languageHandler(language);
+    handleClose();
+  };
+
   return (
     <AppBar
       position="static"
@@ -42,8 +66,49 @@ const Header = () => {
             fontWeight: 700,
           }}
         >
-          Contact
+          {language == "en" ? "Contact" : "Επικοινωνια"}
         </Button>
+        <Box ml={2}>
+          <Button
+            variant="contained"
+            onClick={handleClick}
+            endIcon={open ? <ArrowDropUp /> : <ArrowDropDown />}
+            sx={{
+              borderRadius: 2,
+              backgroundColor: "#FF9018",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "#FF8A00",
+              },
+            }}
+          >
+            {language === "en" ? "English" : "Ελληνικα"}
+          </Button>
+          <Menu
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "language-button",
+            }}
+          >
+            <MenuItem
+              key={"en"}
+              selected={"en" === language}
+              onClick={() => handleMenuItemClick("en")}
+            >
+              {language === "en" ? "English" : "Αγγλικά"}
+            </MenuItem>
+
+            <MenuItem
+              key={"gr"}
+              selected={"gr" === language}
+              onClick={() => handleMenuItemClick("gr")}
+            >
+              {language === "en" ? "Greek" : "Ελληνικά"}
+            </MenuItem>
+          </Menu>
+        </Box>
       </Toolbar>
     </AppBar>
   );

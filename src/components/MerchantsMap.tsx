@@ -22,10 +22,7 @@ const MerchantsMap = () => {
   const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
 
   const [openLocation, setOpenLocation] = useState(null);
-
-  const theme = useTheme();
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [selectedLanguage, setSelectedLanguage] = useState<"en">("en");
 
   const handleSelectedTown = (town: string[]) => {
     const townString = town.join(",");
@@ -76,7 +73,10 @@ const MerchantsMap = () => {
 
   return (
     <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
-      <Header />
+      <Header
+        language={selectedLanguage}
+        languageHandler={setSelectedLanguage}
+      />
       <Box
         position={"relative"}
         width={"100%"}
@@ -92,6 +92,8 @@ const MerchantsMap = () => {
             handleSelectedCategory={handleSelectedCategory}
             data={merchantsData}
             setOpenLocation={setOpenLocation}
+            language={selectedLanguage}
+            languageHandler={setSelectedLanguage}
           />
         )}
         <Map
@@ -114,6 +116,7 @@ const MerchantsMap = () => {
               data={merchantsData}
               openLocation={openLocation}
               setOpenLocation={setOpenLocation}
+              language={selectedLanguage}
             />
           )}
         </Map>

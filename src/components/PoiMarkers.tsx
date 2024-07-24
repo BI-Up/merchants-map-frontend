@@ -11,12 +11,14 @@ interface PoiMarkersProps {
   data: merchantsResponse[] | [];
   openLocation: any;
   setOpenLocation: any;
+  language: "en" | "gr";
 }
 
 const PoiMarkers = ({
   data,
   openLocation,
   setOpenLocation,
+  language,
 }: PoiMarkersProps) => {
   const map = useMap();
   const clusterer = useRef<MarkerClusterer | null>(null);
@@ -129,10 +131,10 @@ const PoiMarkers = ({
                     }}
                   >
                     <Box sx={{ fontSize: "15px", mb: 0.5 }}>
-                      {poi?.mcc_category_en}
+                      {poi[`mcc_category_${language}`]}
                     </Box>
                     <Box sx={{ fontWeight: "bold", fontSize: "20px", mb: 0.5 }}>
-                      {poi?.brand_name_en ?? "Brand Name"}
+                      {poi[`brand_name_${language}`] ?? "Brand Name"}
                     </Box>
                     <Box
                       sx={{
@@ -141,9 +143,8 @@ const PoiMarkers = ({
                         textTransform: "capitalize",
                       }}
                     >
-                      {[poi?.address_en, poi?.region_en, poi?.zip_code]
-                        .filter(Boolean)
-                        .join(", ")}
+                      {poi[`address_${language}`]},{poi[`region_${language}`]},
+                      {poi.zip_code}
                     </Box>
                     <Box display={"flex"} sx={{ mb: 0.5 }}>
                       {poi?.accepted_products.map((product) => (

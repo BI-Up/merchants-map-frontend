@@ -24,6 +24,7 @@ interface MerchantsListProps {
   ) => void;
   isMobile: boolean;
   open?: boolean;
+  language: "en" | "gr";
 }
 
 const MerchantsList: React.FC<MerchantsListProps> = ({
@@ -31,6 +32,7 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   handleClick,
   isMobile,
   open,
+  language,
 }) => {
   const [page, setPage] = useState(1);
   // const [openList, setOpenList] = useState(false);
@@ -48,8 +50,6 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpenBottomDrawer(newOpen);
   };
-
-  console.log("openBottomDrawer", openBottomDrawer);
 
   return (
     <>
@@ -72,13 +72,14 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
                 >
                   <ListItemText>
                     <Typography variant="body2">
-                      {item.mcc_category_en}
+                      {item[`mcc_category_${language}`]}
                     </Typography>
                     <Typography variant="h6">
-                      {item.brand_name_en ?? "Brand Name"}
+                      {item[`brand_name_${language}`] ?? "Brand Name"}
                     </Typography>
                     <Typography variant="body2">
-                      {item.address_en},{item.region_en}, {item.zip_code}
+                      {item[`address_${language}`]},{item[`region_${language}`]}
+                      ,{item.zip_code}
                     </Typography>
                   </ListItemText>
                 </ListItem>
@@ -125,13 +126,14 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
                   >
                     <ListItemText>
                       <Typography variant="body2">
-                        {item.mcc_category_en}
+                        {item[`mcc_category_${language}`]}
                       </Typography>
                       <Typography variant="h6">
-                        {item.brand_name_en ?? "Brand Name"}
+                        {item[`brand_name_${language}`] ?? "Brand Name"}
                       </Typography>
                       <Typography variant="body2">
-                        {item.address_en},{item.region_en}, {item.zip_code}
+                        {item[`address_${language}`]},
+                        {item[`region_${language}`]},{item.zip_code}
                       </Typography>
                     </ListItemText>
                   </ListItem>

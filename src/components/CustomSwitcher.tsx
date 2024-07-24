@@ -4,11 +4,16 @@ import { Stack, Switch, Typography } from "@mui/material";
 interface CustomSwitcherProps {
   selectedItems: string[] | boolean;
   onChange: (event: React.ChangeEvent<{ value: unknown }>) => void;
+  language: "en" | "gr";
 }
-const CustomSwitcher = ({ selectedItems, onChange }: CustomSwitcherProps) => {
+const CustomSwitcher = ({
+  selectedItems,
+  onChange,
+  language,
+}: CustomSwitcherProps) => {
   return (
     <Stack direction={"row"} spacing={1} alignItems={"center"}>
-      <Typography>Off</Typography>
+      <Typography>{language === "en" ? "Off" : "Όχι"}</Typography>
       {/*@ts-ignore*/}
       <Switch
         checked={selectedItems as boolean}
@@ -19,7 +24,7 @@ const CustomSwitcher = ({ selectedItems, onChange }: CustomSwitcherProps) => {
           },
         }}
       />
-      <Typography>On</Typography>
+      <Typography>{language === "en" ? "On" : "Ναί"}</Typography>
     </Stack>
   );
 };

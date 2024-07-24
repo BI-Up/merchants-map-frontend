@@ -18,6 +18,7 @@ interface InputFieldProps {
   selectedItems: string[];
   onChange: (event: React.ChangeEvent<{ value: unknown }>) => void;
   label: string;
+  language: "en" | "gr";
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -25,6 +26,7 @@ const InputField: React.FC<InputFieldProps> = ({
   selectedItems,
   onChange,
   label,
+  language,
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -57,7 +59,10 @@ const InputField: React.FC<InputFieldProps> = ({
           ))}
 
           <Box display="flex" justifyContent="center" p={2}>
-            <CustomButton label={"Select"} onClick={() => setOpen(false)} />
+            <CustomButton
+              label={language === "en" ? "Select" : "Επιλογη"}
+              onClick={() => setOpen(false)}
+            />
           </Box>
         </Select>
       </FormControl>

@@ -1,5 +1,11 @@
 import * as React from "react";
-import { useCallback, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import {
   Box,
   Drawer,
@@ -22,6 +28,8 @@ interface SidebarProps {
   handleSelectedCategory?: (_category: string[]) => void;
   data: merchantsResponse[] | [];
   setOpenLocation: any;
+  language: "en" | "gr";
+  languageHandler: Dispatch<SetStateAction<"en" | "gr">>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -30,6 +38,8 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleIsHerocorp,
   handleSelectedCategory,
   setOpenLocation,
+  language,
+  languageHandler,
   data,
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -58,11 +68,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const loc = await getFilters("town");
+        const loc = await getFilters("town", language);
         setLocationsData(loc);
-        const prod = await getFilters("accepted_products");
+        const prod = await getFilters("accepted_products", language);
         setProductsData(prod);
-        const cat = await getFilters("mcc_category");
+        const cat = await getFilters("mcc_category", language);
         setCategoriesData(cat);
       } catch (error) {
         console.error(error);
@@ -70,7 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     };
 
     fetchData();
-  }, []);
+  }, [language]);
 
   const handleSelectChange =
     (type: "locations" | "products" | "categories") =>
@@ -112,8 +122,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     [map],
   );
 
-  console.log("data", data);
-
   const handleSubmit = () => {
     handleSelectedTown(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
@@ -152,7 +160,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           }}
         >
           <CustomButton
-            label={"Filters"}
+            label={language === "en" ? "Filters" : "Φιλτρα"}
             onClick={toggleDrawer}
             sx={{
               width: 250,
@@ -170,6 +178,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               handleClick={handleClick}
               isMobile={isMobile}
               open={submitted}
+              language={language}
             />
           )}
         </Box>
@@ -187,19 +196,22 @@ const Sidebar: React.FC<SidebarProps> = ({
               items={locationsData}
               selectedItems={selectedItems.locations}
               onChange={handleSelectChange("locations")}
-              label={"Locations"}
+              label={language === "en" ? "Locations" : "Τοποθεσίες"}
+              language={language}
             />
             <InputField
               items={productsData}
               selectedItems={selectedItems.products}
               onChange={handleSelectChange("products")}
-              label={"Products"}
+              label={language === "en" ? "Products" : "Προϊόντα"}
+              language={language}
             />
             <InputField
               items={categoriesData}
               selectedItems={selectedItems.categories}
               onChange={handleSelectChange("categories")}
-              label={"Categories"}
+              label={language === "en" ? "Categories" : "Κατηγορίες"}
+              language={language}
             />
 
             <Box
@@ -208,14 +220,22 @@ const Sidebar: React.FC<SidebarProps> = ({
               gap={2}
               padding={"1rem"}
             >
-              <Typography>Has Cashback officers?</Typography>
+              <Typography>
+                {language === "en"
+                  ? "Has Cashback officers?"
+                  : "Παροχή Cashback;"}
+              </Typography>
               <CustomSwitcher
                 selectedItems={selectedItems.has_cashback}
                 onChange={handleSwitchChange}
+                language={language}
               />
             </Box>
             <Box display="flex" justifyContent="center" padding={"1rem"}>
-              <CustomButton label={"Search"} onClick={handleSubmit} />
+              <CustomButton
+                label={language === "en" ? "Search" : "Αναζητηση"}
+                onClick={handleSubmit}
+              />
             </Box>
           </Box>
         </Drawer>
@@ -239,26 +259,34 @@ const Sidebar: React.FC<SidebarProps> = ({
             items={locationsData}
             selectedItems={selectedItems.locations ?? []}
             onChange={handleSelectChange("locations")}
-            label={"Locations"}
+            label={language === "en" ? "Locations" : "Τοποθεσίες"}
+            language={language}
           />
           <InputField
             items={productsData}
             selectedItems={selectedItems.products ?? []}
             onChange={handleSelectChange("products")}
-            label={"Products"}
+            label={language === "en" ? "Products" : "Προϊόντα"}
+            language={language}
           />
           <InputField
             items={categoriesData}
             selectedItems={selectedItems.categories ?? []}
             onChange={handleSelectChange("categories")}
-            label={"Categories"}
+            label={language === "en" ? "Categories" : "Κατηγορίες"}
+            language={language}
           />
 
           <Box display={"flex"} alignItems={"center"} gap={2} padding={"1rem"}>
-            <Typography>Has Cashback officers?</Typography>
+            <Typography>
+              {language === "en"
+                ? "Has Cashback officers?"
+                : "Παροχή Cashback;"}
+            </Typography>
             <CustomSwitcher
               selectedItems={selectedItems.has_cashback ?? false}
               onChange={handleSwitchChange}
+              language={language}
             />
           </Box>
           <Box
@@ -268,7 +296,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             width={300}
           >
             <CustomButton
-              label={"Search"}
+              label={language === "en" ? "Search" : "Αναζητηση"}
               onClick={handleSubmit}
               sx={{ padding: 1.5 }}
             />
@@ -278,6 +306,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               data={data}
               handleClick={handleClick}
               isMobile={isMobile}
+              language={language}
             />
           )}
         </Box>
