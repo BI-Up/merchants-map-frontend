@@ -93,7 +93,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const handleClick = useCallback(
     (
-      ev: google.maps.MapMouseEvent,
+      ev: React.MouseEvent<HTMLLIElement>,
       index: number,
       paginatedData: merchantsResponse[],
     ) => {
@@ -144,8 +144,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             bottom: !submitted
               ? "5%"
               : submitted && data.length < 2
-                ? "25%"
-                : "35%",
+                ? "30%"
+                : "40%",
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 100,
@@ -156,6 +156,10 @@ const Sidebar: React.FC<SidebarProps> = ({
             onClick={toggleDrawer}
             sx={{
               width: 250,
+              backgroundColor: "#4F5D5B",
+              "&:hover": {
+                backgroundColor: "#4F5D5B",
+              },
             }}
             icon={<FilterListIcon />}
           />

@@ -5,7 +5,8 @@ import { Map, MapCameraChangedEvent, useMap } from "@vis.gl/react-google-maps";
 import PoiMarkers from "./PoiMarkers";
 import { merchantsResponse } from "../type";
 import { getData } from "../api";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
+import Header from "./Header";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,10 @@ const MerchantsMap = () => {
   const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
 
   const [openLocation, setOpenLocation] = useState(null);
+
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleSelectedTown = (town: string[]) => {
     const townString = town.join(",");
@@ -70,39 +75,49 @@ const MerchantsMap = () => {
   }, [queryParams]);
 
   return (
-    <Box position={"relative"} width={"100%"} display={"flex"}>
-      {!loading && (
-        <Sidebar
-          handleSelectedTown={handleSelectedTown}
-          handleSelectedProducts={handleSelectedProducts}
-          handleIsHerocorp={handleIsHerocorp}
-          handleSelectedCategory={handleSelectedCategory}
-          data={merchantsData}
-          setOpenLocation={setOpenLocation}
-        />
-      )}
-      <Map
-        defaultZoom={9}
-        defaultCenter={{ lat: 37.97991702599259, lng: 23.730877354617046 }}
-        onCameraChanged={(ev: MapCameraChangedEvent) =>
-          console.log(
-            "camera changed:",
-            ev.detail.center,
-            "zoom:",
-            ev.detail.zoom,
-          )
-        }
-        mapId="da37f3254c6a6d1c"
-        disableDefaultUI={true}
+    <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
+      <Header />
+      <Box
+        position={"relative"}
+        width={"100%"}
+        // height={"100vh"}
+        display={"flex"}
+        height={"calc(100vh - 84px)"}
       >
         {!loading && (
-          <PoiMarkers
+          <Sidebar
+            handleSelectedTown={handleSelectedTown}
+            handleSelectedProducts={handleSelectedProducts}
+            handleIsHerocorp={handleIsHerocorp}
+            handleSelectedCategory={handleSelectedCategory}
             data={merchantsData}
-            openLocation={openLocation}
             setOpenLocation={setOpenLocation}
           />
         )}
-      </Map>
+        <Map
+          defaultZoom={9}
+          defaultCenter={{ lat: 37.97991702599259, lng: 23.730877354617046 }}
+          onCameraChanged={(ev: MapCameraChangedEvent) =>
+            console.log(
+              "camera changed:",
+              ev.detail.center,
+              "zoom:",
+              ev.detail.zoom,
+            )
+          }
+          mapId="da37f3254c6a6d1c"
+          disableDefaultUI={true}
+          clickableIcons={false}
+        >
+          {!loading && (
+            <PoiMarkers
+              data={merchantsData}
+              openLocation={openLocation}
+              setOpenLocation={setOpenLocation}
+            />
+          )}
+        </Map>
+      </Box>
     </Box>
   );
 };
