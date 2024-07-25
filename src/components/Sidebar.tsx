@@ -6,15 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import {
-  Box,
-  Drawer,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import InputField from "./InputField";
-import CustomSwitcher from "./CustomSwitcher";
+import { Box, Drawer, useMediaQuery, useTheme } from "@mui/material";
 import CustomButton from "./CustomButton";
 import { getFilters } from "../api";
 import FilterListIcon from "@mui/icons-material/FilterList";
@@ -40,7 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedCategory,
   setOpenLocation,
   language,
-  languageHandler,
   data,
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -143,23 +134,10 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
   }, [submitted, data, map]);
 
-  console.log("selectedLocations", selectedItems.locations);
   if (isMobile) {
     return (
       <Box>
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: !submitted
-              ? "5%"
-              : submitted && data.length < 2
-                ? "30%"
-                : "40%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 100,
-          }}
-        >
+        <Box>
           <CustomButton
             label={language === "en" ? "Filters" : "Φιλτρα"}
             onClick={toggleDrawer}
@@ -169,6 +147,15 @@ const Sidebar: React.FC<SidebarProps> = ({
               "&:hover": {
                 backgroundColor: "#4F5D5B",
               },
+              position: "absolute",
+              bottom: !submitted
+                ? "5%"
+                : submitted && data.length < 2
+                  ? "30%"
+                  : "40%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 1000,
             }}
             icon={<FilterListIcon />}
           />
@@ -179,6 +166,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               handleClick={handleClick}
               isMobile={isMobile}
               open={submitted}
+              setOpen={setSubmitted}
               language={language}
             />
           )}
