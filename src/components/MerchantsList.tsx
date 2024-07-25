@@ -48,9 +48,6 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
     setPage(value);
   };
 
-  // const toggleDrawer = (newOpen: boolean) => () => {
-  //   setOpenBottomDrawer(newOpen);
-  // };
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };

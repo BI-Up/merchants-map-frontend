@@ -14,6 +14,7 @@ import { merchantsResponse } from "../type";
 import { useMap } from "@vis.gl/react-google-maps";
 import MerchantsList from "./MerchantsList";
 import LeftMenu from "./LeftMenu";
+import { smoothZoom } from "../helper";
 interface SidebarProps {
   handleSelectedTown: (_town: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
@@ -107,12 +108,11 @@ const Sidebar: React.FC<SidebarProps> = ({
         Number(merchantData.latitude),
         Number(merchantData.longitude),
       );
-      console.log("marker clicked: ", latLng.toString());
       map.panTo(latLng);
 
-      setOpenLocation(index);
+      smoothZoom(map, 18, setOpenLocation, index);
     },
-    [map],
+    [map, setOpenLocation],
   );
 
   const handleSubmit = () => {
@@ -130,9 +130,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         lat: Number(data[0]?.latitude),
         lng: Number(data[0]?.longitude),
       });
-      map.setZoom(18);
+
+      smoothZoom(map, 18, setOpenLocation, {
+        lat: Number(data[0]?.latitude),
+        lng: Number(data[0]?.longitude),
+      });
     }
-  }, [submitted, data, map]);
+  }, [submitted, data, setOpenLocation, map]);
 
   if (isMobile) {
     return (

@@ -6,6 +6,7 @@ import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
 import marker from "../../assets/marker.svg";
 import { merchantsResponse } from "../type";
 import { Box } from "@mui/material";
+import { smoothZoom } from "../helper";
 
 interface PoiMarkersProps {
   data: merchantsResponse[] | [];
@@ -22,20 +23,19 @@ const PoiMarkers = ({
 }: PoiMarkersProps) => {
   const map = useMap();
   const clusterer = useRef<MarkerClusterer | null>(null);
-  // const [openLocation, setOpenLocation] = useState(null);
   const markersRef = useRef<{ [key: string]: Marker }>({});
 
   const handleClick = useCallback(
     (ev: google.maps.MapMouseEvent, key: string) => {
       if (!map) return;
       if (!ev.latLng) return;
-      console.log("marker clicked: ", ev.latLng.toString());
-      map.panTo(ev.latLng);
-      setOpenLocation(key);
-    },
-    [],
-  );
 
+      map.panTo(ev.latLng);
+
+      smoothZoom(map, 18, setOpenLocation, key);
+    },
+    [map, setOpenLocation], // Ensure dependencies are included
+  );
   useEffect(() => {
     if (!map) return;
     if (!clusterer.current) {
@@ -57,6 +57,11 @@ const PoiMarkers = ({
             });
           },
         },
+        // onClusterClick: (ev: google.maps.MapMouseEvent) => {
+        //   map.panTo(ev.latLng);
+        //   smoothZoom(map, 14, setOpenLocation, clusterer.current);
+        //   map.setZoom(18);
+        // },
       });
     }
 
