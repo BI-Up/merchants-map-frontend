@@ -21,6 +21,7 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import { merchantsResponse } from "../type";
 import { useMap } from "@vis.gl/react-google-maps";
 import MerchantsList from "./MerchantsList";
+import LeftMenu from "./LeftMenu";
 interface SidebarProps {
   handleSelectedTown: (_town: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
@@ -48,7 +49,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   const [productsData, setProductsData] = useState<string[]>([]);
   const [categoriesData, setCategoriesData] = useState<string[]>([]);
   const map = useMap();
-
   const [selectedItems, setSelectedItems] = React.useState({
     locations: [] as string[],
     products: [] as string[],
@@ -59,8 +59,8 @@ const Sidebar: React.FC<SidebarProps> = ({
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const hasLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
-
+  const hasLargeScreen = useMediaQuery(theme.breakpoints.up("xl"));
+  console.log("isMobile", isMobile);
   console.log("hasLargeScreen", hasLargeScreen);
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -143,9 +143,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
   }, [submitted, data, map]);
 
-  console.log("locationsData", locationsData);
-  console.log("selected", selectedItems.locations);
-
+  console.log("selectedLocations", selectedItems.locations);
   if (isMobile) {
     return (
       <Box>
@@ -187,137 +185,44 @@ const Sidebar: React.FC<SidebarProps> = ({
         </Box>
 
         <Drawer anchor={"left"} open={openDrawer} onClose={toggleDrawer}>
-          <Box
-            sx={{
-              backgroundColor: "white",
-              width: "95%",
-              color: "black",
-              pt: 4,
-            }}
-          >
-            <InputField
-              items={locationsData}
-              selectedItems={selectedItems.locations}
-              onChange={handleSelectChange("locations")}
-              label={language === "en" ? "Locations" : "Τοποθεσίες"}
-              language={language}
-            />
-            <InputField
-              items={productsData}
-              selectedItems={selectedItems.products}
-              onChange={handleSelectChange("products")}
-              label={language === "en" ? "Products" : "Προϊόντα"}
-              language={language}
-            />
-            <InputField
-              items={categoriesData}
-              selectedItems={selectedItems.categories}
-              onChange={handleSelectChange("categories")}
-              label={language === "en" ? "Categories" : "Κατηγορίες"}
-              language={language}
-            />
-
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              gap={2}
-              padding={"1rem"}
-            >
-              <Typography>
-                {language === "en"
-                  ? "Has Cashback officers?"
-                  : "Παροχή Cashback;"}
-              </Typography>
-              <CustomSwitcher
-                selectedItems={selectedItems.has_cashback}
-                onChange={handleSwitchChange}
-                language={language}
-              />
-            </Box>
-            <Box display="flex" justifyContent="center" padding={"1rem"}>
-              <CustomButton
-                label={language === "en" ? "Search" : "Αναζητηση"}
-                onClick={handleSubmit}
-              />
-            </Box>
-          </Box>
+          <LeftMenu
+            isMobile={isMobile}
+            hasLargeScreen={hasLargeScreen}
+            locationsData={locationsData}
+            productsData={productsData}
+            categoriesData={categoriesData}
+            selectedItems={selectedItems}
+            handleSelectChange={handleSelectChange}
+            handleSwitchChange={handleSwitchChange}
+            handleSubmit={handleSubmit}
+            language={language}
+          />
         </Drawer>
       </Box>
     );
   } else {
     return (
-      <>
-        <Box
-          sx={{
-            backgroundColor: "white",
-            width: hasLargeScreen ? "25%" : "40%",
-
-            color: "black",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            overflow: "auto",
-          }}
-          height={"calc(100vh - 84px)"}
-          padding={"1rem"}
-          mt={1}
-        >
-          <InputField
-            items={locationsData}
-            selectedItems={selectedItems.locations ?? []}
-            onChange={handleSelectChange("locations")}
-            label={language === "en" ? "Locations" : "Τοποθεσίες"}
+      <LeftMenu
+        isMobile={isMobile}
+        hasLargeScreen={hasLargeScreen}
+        locationsData={locationsData}
+        productsData={productsData}
+        categoriesData={categoriesData}
+        selectedItems={selectedItems}
+        handleSelectChange={handleSelectChange}
+        handleSwitchChange={handleSwitchChange}
+        handleSubmit={handleSubmit}
+        language={language}
+      >
+        {submitted && (
+          <MerchantsList
+            data={data}
+            handleClick={handleClick}
+            isMobile={isMobile}
             language={language}
           />
-          <InputField
-            items={productsData}
-            selectedItems={selectedItems.products ?? []}
-            onChange={handleSelectChange("products")}
-            label={language === "en" ? "Products" : "Προϊόντα"}
-            language={language}
-          />
-          <InputField
-            items={categoriesData}
-            selectedItems={selectedItems.categories ?? []}
-            onChange={handleSelectChange("categories")}
-            label={language === "en" ? "Categories" : "Κατηγορίες"}
-            language={language}
-          />
-
-          <Box display={"flex"} alignItems={"center"} gap={2} padding={"1rem"}>
-            <Typography>
-              {language === "en"
-                ? "Has Cashback officers?"
-                : "Παροχή Cashback;"}
-            </Typography>
-            <CustomSwitcher
-              selectedItems={selectedItems.has_cashback ?? false}
-              onChange={handleSwitchChange}
-              language={language}
-            />
-          </Box>
-          <Box
-            display="flex"
-            justifyContent="center"
-            padding={"1rem"}
-            width={300}
-          >
-            <CustomButton
-              label={language === "en" ? "Search" : "Αναζητηση"}
-              onClick={handleSubmit}
-              sx={{ padding: 1.5 }}
-            />
-          </Box>
-          {submitted && (
-            <MerchantsList
-              data={data}
-              handleClick={handleClick}
-              isMobile={isMobile}
-              language={language}
-            />
-          )}
-        </Box>
-      </>
+        )}
+      </LeftMenu>
     );
   }
 };

@@ -19,7 +19,6 @@ interface HeaderProps {
 
 const Header = ({ language, languageHandler }: HeaderProps) => {
   const [anchorEl, setAnchorEl] = useState(null);
-  // const [selectedLanguage, setSelectedLanguage] = useState("en");
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -58,12 +57,17 @@ const Header = ({ language, languageHandler }: HeaderProps) => {
         <Button
           variant={"contained"}
           disableElevation={false}
+          component="a"
+          href="https://www.uphellas.gr/contact"
           sx={{
             borderRadius: 100,
             backgroundColor: "white",
             color: "#4F5D5B",
-            fontSize: 16,
+            fontSize: { xs: "14px", sm: "16px" },
             fontWeight: 700,
+            "&:hover": {
+              backgroundColor: "white",
+            },
           }}
         >
           {language == "en" ? "Contact" : "Επικοινωνια"}
@@ -72,13 +76,17 @@ const Header = ({ language, languageHandler }: HeaderProps) => {
           <Button
             variant="contained"
             onClick={handleClick}
+            disableElevation={false}
             endIcon={open ? <ArrowDropUp /> : <ArrowDropDown />}
             sx={{
-              borderRadius: 2,
-              backgroundColor: "#FF9018",
-              color: "white",
+              borderRadius: 100,
+              backgroundColor: "white",
+              color: "#4F5D5B",
+
+              fontSize: { xs: "14px", sm: "16px" },
+              fontWeight: 700,
               "&:hover": {
-                backgroundColor: "#FF8A00",
+                backgroundColor: "white",
               },
             }}
           >

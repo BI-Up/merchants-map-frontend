@@ -30,8 +30,10 @@ const MerchantsMap = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
 
   const handleSelectedTown = (town: string[]) => {
+    console.log("towns", town);
     const updatedTowns = town.map((town) => {
       if (selectedLanguage === "gr") {
+        console.log("debug");
         const merchant = merchantsData.find(
           (merchant) => merchant.town_gr === town,
         );
@@ -39,6 +41,7 @@ const MerchantsMap = () => {
       }
       return town;
     });
+    console.log("updatedTowns", updatedTowns);
     const townString = updatedTowns.join(",");
     setQueryParams((prevState) => ({
       ...prevState,
@@ -73,7 +76,7 @@ const MerchantsMap = () => {
       return cat;
     });
 
-    const categorieString = category.join(",");
+    const categorieString = updatedCategories.join(",");
 
     setQueryParams((prevState) => ({
       ...prevState,
@@ -95,6 +98,8 @@ const MerchantsMap = () => {
     fetchData();
   }, [queryParams]);
 
+  console.log("queryParams", queryParams);
+
   return (
     <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
       <Header
@@ -104,7 +109,6 @@ const MerchantsMap = () => {
       <Box
         position={"relative"}
         width={"100%"}
-        // height={"100vh"}
         display={"flex"}
         height={"calc(100vh - 84px)"}
       >
