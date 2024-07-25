@@ -7,7 +7,7 @@ interface params {
   is_hero_corp: boolean;
   mcc_category: string;
 }
-export const getData = async (queryParams: params) => {
+export const getData = async (queryParams?: params) => {
   try {
     const response = await axios.get("http://localhost/merchants", {
       params: queryParams,

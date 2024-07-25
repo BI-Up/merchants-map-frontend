@@ -20,9 +20,10 @@ const MerchantsMap = () => {
     mcc_category: "",
   });
 
-  console.log("queryParams", queryParams);
-
   const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
+  const [merchantsAllData, setMerchantsAllData] = useState<merchantsResponse[]>(
+    [],
+  );
 
   console.log("merchantData", merchantsData);
 
@@ -34,7 +35,7 @@ const MerchantsMap = () => {
     const updatedTowns = town.map((town) => {
       if (selectedLanguage === "gr") {
         console.log("debug");
-        const merchant = merchantsData.find(
+        const merchant = merchantsAllData.find(
           (merchant) => merchant.town_gr === town,
         );
         return merchant ? merchant.town_en : town;
@@ -48,6 +49,8 @@ const MerchantsMap = () => {
       town: townString,
     }));
   };
+
+  console.log("queryParams", queryParams);
 
   const handleSelectedProducts = (products: string[]) => {
     const productString = products.join(",");
@@ -68,7 +71,7 @@ const MerchantsMap = () => {
   const handleSelectedCategory = (category: string[]) => {
     const updatedCategories = category.map((cat) => {
       if (selectedLanguage === "gr") {
-        const merchant = merchantsData.find(
+        const merchant = merchantsAllData.find(
           (merchant) => merchant.mcc_category_gr === cat,
         );
         return merchant ? merchant.town_en : cat;
@@ -97,6 +100,20 @@ const MerchantsMap = () => {
     };
     fetchData();
   }, [queryParams]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getData();
+        setMerchantsAllData(res);
+        setLoading(false);
+      } catch (err) {
+        setError("An error occurred while fetching the data.");
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   console.log("queryParams", queryParams);
 
