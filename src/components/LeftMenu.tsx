@@ -68,6 +68,7 @@ const LeftMenu = ({
           onChange={handleSelectChange("locations")}
           label={language === "en" ? "Locations" : "Τοποθεσίες"}
           language={language}
+          hasSearch={true}
         />
         <InputField
           items={productsData}
