@@ -75,8 +75,6 @@ const PoiMarkers = ({
     };
   }, [map]);
 
-  console.log("openLocation", openLocation);
-
   // Update clusterer with markers
   useEffect(() => {
     if (!clusterer.current) return;
@@ -95,12 +93,10 @@ const PoiMarkers = ({
     } else {
       delete markersRef.current[key];
     }
-    console.log("Markers updated:", markersRef.current);
 
     // Update clusterer after setting marker reference
     if (clusterer.current) {
       const markersArray = Object.values(markersRef.current);
-      console.log("Updating clusterer with markers:", markersArray);
       clusterer.current.clearMarkers();
       clusterer.current.addMarkers(markersArray);
     }

@@ -25,16 +25,12 @@ const MerchantsMap = () => {
     [],
   );
 
-  console.log("merchantData", merchantsData);
-
   const [openLocation, setOpenLocation] = useState(null);
   const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
 
   const handleSelectedTown = (town: string[]) => {
-    console.log("towns", town);
     const updatedTowns = town.map((town) => {
       if (selectedLanguage === "gr") {
-        console.log("debug");
         const merchant = merchantsAllData.find(
           (merchant) => merchant.town_gr === town,
         );
@@ -42,15 +38,12 @@ const MerchantsMap = () => {
       }
       return town;
     });
-    console.log("updatedTowns", updatedTowns);
     const townString = updatedTowns.join(",");
     setQueryParams((prevState) => ({
       ...prevState,
       town: townString,
     }));
   };
-
-  console.log("queryParams", queryParams);
 
   const handleSelectedProducts = (products: string[]) => {
     const productString = products.join(",");
@@ -114,8 +107,6 @@ const MerchantsMap = () => {
     };
     fetchData();
   }, []);
-
-  console.log("queryParams", queryParams);
 
   return (
     <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>

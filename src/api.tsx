@@ -14,7 +14,7 @@ export const getData = async (queryParams?: params) => {
     });
     return response.data;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error(error);
     throw error;
   }
 };
@@ -32,7 +32,7 @@ export const getFilters = async (
     });
     return response.data;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error(error);
     throw error;
   }
 };

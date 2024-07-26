@@ -52,8 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const hasLargeScreen = useMediaQuery(theme.breakpoints.up("xl"));
-  console.log("isMobile", isMobile);
-  console.log("hasLargeScreen", hasLargeScreen);
+
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
     setSubmitted(false);
