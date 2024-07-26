@@ -2,6 +2,8 @@
 export const smoothZoom = (map, targetZoom, setOpenLocation, key) => {
   const currentZoom = map.getZoom();
 
+  console.log("key length: " + key);
+
   const zoomIn = () => {
     if (map.getZoom() < targetZoom) {
       map.setZoom(map.getZoom() + 1);

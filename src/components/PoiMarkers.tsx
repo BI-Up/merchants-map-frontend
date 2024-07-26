@@ -1,7 +1,11 @@
 import { AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
+import {
+  Marker,
+  MarkerClusterer,
+  SuperClusterAlgorithm,
+} from "@googlemaps/markerclusterer";
 // @ts-ignore
 import marker from "../../assets/marker.svg";
 import { merchantsResponse } from "../type";
@@ -57,11 +61,12 @@ const PoiMarkers = ({
             });
           },
         },
-        // onClusterClick: (ev: google.maps.MapMouseEvent) => {
-        //   map.panTo(ev.latLng);
-        //   smoothZoom(map, 14, setOpenLocation, clusterer.current);
-        //   map.setZoom(18);
-        // },
+        onClusterClick: (event, cluster) => {
+          map.panTo(event.latLng);
+          if (cluster.markers.length > 2)
+            smoothZoom(map, 12, setOpenLocation, clusterer.current);
+          else smoothZoom(map, 18, setOpenLocation, clusterer.current);
+        },
       });
     }
 
@@ -69,6 +74,8 @@ const PoiMarkers = ({
       clusterer.current?.clearMarkers();
     };
   }, [map]);
+
+  console.log("openLocation", openLocation);
 
   // Update clusterer with markers
   useEffect(() => {
