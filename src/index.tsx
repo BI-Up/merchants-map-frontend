@@ -1,12 +1,12 @@
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import Sidebar from "./Sidebar";
+import Sidebar from "./components/Sidebar";
 import { Map, MapCameraChangedEvent, useMap } from "@vis.gl/react-google-maps";
-import PoiMarkers from "./PoiMarkers";
-import { merchantsResponse } from "../type";
-import { getData } from "../api";
+import PoiMarkers from "./components/PoiMarkers";
+import { merchantsResponse } from "./type";
+import { getData } from "./api/api";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import Header from "./Header";
+import Header from "./components/Header";
 import { c } from "vite/dist/node/types.d-aGj9QkWt";
 
 const MerchantsMap = () => {
@@ -19,7 +19,6 @@ const MerchantsMap = () => {
     is_hero_corp: false,
     mcc_category: "",
   });
-
   const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
   const [merchantsAllData, setMerchantsAllData] = useState<merchantsResponse[]>(
     [],
@@ -87,7 +86,7 @@ const MerchantsMap = () => {
         setMerchantsData(res);
         setLoading(false);
       } catch (err) {
-        setError("An error occurred while fetching the data.");
+        console.error(err);
         setLoading(false);
       }
     };
@@ -101,7 +100,7 @@ const MerchantsMap = () => {
         setMerchantsAllData(res);
         setLoading(false);
       } catch (err) {
-        setError("An error occurred while fetching the data.");
+        console.error(err);
         setLoading(false);
       }
     };

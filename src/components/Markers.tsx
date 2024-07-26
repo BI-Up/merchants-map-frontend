@@ -1,6 +1,13 @@
 import { AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import * as React from "react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   Marker,
   MarkerClusterer,
@@ -14,8 +21,8 @@ import { smoothZoom } from "../helper";
 
 interface PoiMarkersProps {
   data: merchantsResponse[] | [];
-  openLocation: any;
-  setOpenLocation: any;
+  openLocation: Object | number | null;
+  setOpenLocation: Dispatch<SetStateAction<Object | number | null>>;
   language: "en" | "gr";
 }
 
@@ -38,7 +45,7 @@ const PoiMarkers = ({
 
       smoothZoom(map, 18, setOpenLocation, key);
     },
-    [map, setOpenLocation], // Ensure dependencies are included
+    [map, setOpenLocation],
   );
   useEffect(() => {
     if (!map) return;
