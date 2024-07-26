@@ -8,7 +8,14 @@ const AppWrapper = ({ children }) => {
       apiKey={process.env.GOOGLE_MAPS_API_KEY}
       onLoad={() => console.log("Maps API has loaded.")}
     >
-      <Box sx={{ height: "100vh", width: "100vw", display: "flex" }}>
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          display: "flex",
+          fontFamily: "Roboto",
+        }}
+      >
         {children}
       </Box>
     </APIProvider>

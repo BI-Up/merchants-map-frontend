@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import AppWrapper from "./AppWrapper";
-import MerchantsMap from "./components/MerchantsMap";
+import AppWrapper from "./wrapper/AppWrapper";
+import MerchantsMap from "./index";
 
 const App = () => (
   <AppWrapper>

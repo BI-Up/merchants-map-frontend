@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   Box,
   Checkbox,
+  Divider,
   FormControl,
   IconButton,
   InputAdornment,
@@ -58,7 +59,6 @@ const InputField: React.FC<InputFieldProps> = ({
     <Box p={1}>
       <FormControl>
         <InputLabel id={`${label}-label`}>{label}</InputLabel>
-
         <Select
           labelId={`${label}-label`}
           id={`simple-select-${label}`}

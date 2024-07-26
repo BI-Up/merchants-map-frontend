@@ -8,30 +8,26 @@ import {
   useRef,
   useState,
 } from "react";
-import {
-  Marker,
-  MarkerClusterer,
-  SuperClusterAlgorithm,
-} from "@googlemaps/markerclusterer";
+import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
 // @ts-ignore
 import marker from "../../assets/marker.svg";
 import { merchantsResponse } from "../type";
 import { Box } from "@mui/material";
 import { smoothZoom } from "../helper";
 
-interface PoiMarkersProps {
+interface MarkersProps {
   data: merchantsResponse[] | [];
   openLocation: Object | number | null;
   setOpenLocation: Dispatch<SetStateAction<Object | number | null>>;
   language: "en" | "gr";
 }
 
-const PoiMarkers = ({
+const Markers = ({
   data,
   openLocation,
   setOpenLocation,
   language,
-}: PoiMarkersProps) => {
+}: MarkersProps) => {
   const map = useMap();
   const clusterer = useRef<MarkerClusterer | null>(null);
   const markersRef = useRef<{ [key: string]: Marker }>({});
@@ -112,13 +108,13 @@ const PoiMarkers = ({
   return (
     <>
       {data &&
-        data.map((poi: merchantsResponse, index) => (
+        data.map((mark: merchantsResponse, index) => (
           <Box key={index}>
             <AdvancedMarker
               key={index}
               position={{
-                lat: Number(poi?.latitude),
-                lng: Number(poi?.longitude),
+                lat: Number(mark?.latitude),
+                lng: Number(mark?.longitude),
               }}
               ref={(marker) => setMarkerRef(marker, index)}
               clickable={true}
@@ -126,15 +122,15 @@ const PoiMarkers = ({
                 handleClick(ev, index)
               }
             >
-              <img src={marker} alt={poi?.vat_name_en} width={"30px"} />
+              <img src={marker} alt={mark?.vat_name_en} width={"30px"} />
             </AdvancedMarker>
 
             {openLocation === index && (
               <>
                 <InfoWindow
                   position={{
-                    lat: Number(poi.latitude),
-                    lng: Number(poi.longitude),
+                    lat: Number(mark.latitude),
+                    lng: Number(mark.longitude),
                   }}
                   onCloseClick={() => setOpenLocation(null)}
                   shouldFocus={true}
@@ -149,7 +145,7 @@ const PoiMarkers = ({
                       alignItems: "flex-start",
                     }}
                   >
-                    {poi.is_hero_corp && (
+                    {mark.is_hero_corp && (
                       <Box
                         sx={{
                           backgroundColor: "#F59100",
@@ -166,24 +162,25 @@ const PoiMarkers = ({
                       </Box>
                     )}
                     <Box sx={{ fontSize: "15px", mb: 0.5 }}>
-                      {poi[`mcc_category_${language}`]}
+                      {mark[`mcc_category_${language}`]}
                     </Box>
                     <Box sx={{ fontWeight: "bold", fontSize: "20px", mb: 0.5 }}>
-                      {poi[`brand_name_${language}`] ?? "Brand Name"}
+                      {mark[`brand_name_${language}`] ?? "Brand Name"}
                     </Box>
                     <Box
                       sx={{
                         fontSize: "14px",
                         mb: 0.5,
                         textTransform: "capitalize",
+                        fontWeight: "normal",
                       }}
                     >
-                      {poi[`address_${language}`]},{poi[`region_${language}`]},
-                      {poi.zip_code}
+                      {mark[`address_${language}`]},{mark[`region_${language}`]}
+                      ,{mark.zip_code}
                     </Box>
                     <Box display={"flex"} sx={{ mb: 0.5 }}>
-                      {poi?.accepted_products.map((product) => (
-                        <Box>•{product}</Box>
+                      {mark?.accepted_products.map((product) => (
+                        <Box mr={0.5}>•{product} </Box>
                       ))}
                     </Box>
                   </Box>
@@ -196,4 +193,4 @@ const PoiMarkers = ({
   );
 };
 
-export default PoiMarkers;
+export default Markers;

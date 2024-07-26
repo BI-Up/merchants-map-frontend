@@ -47,13 +47,15 @@ const Header = ({ language, languageHandler }: HeaderProps) => {
       }}
     >
       <Toolbar>
-        <Box
-          component={"img"}
-          src={logo}
-          alt={"uphellas-map-logo"}
-          width={50}
-          height={50}
-        />
+        <Box component={"a"} href={"https://www.uphellas.gr"} target={"_blank"}>
+          <Box
+            component={"img"}
+            src={logo}
+            alt={"uphellas-map-logo"}
+            width={50}
+            height={50}
+          />
+        </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Button
           variant={"contained"}

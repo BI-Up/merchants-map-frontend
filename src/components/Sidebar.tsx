@@ -6,9 +6,15 @@ import {
   useEffect,
   useState,
 } from "react";
-import { Box, Drawer, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Drawer,
+  SwipeableDrawer,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import CustomButton from "./CustomButton";
-import { getFilters } from "../api";
+import { getFilters } from "../api/api";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { merchantsResponse } from "../type";
 import { useMap } from "@vis.gl/react-google-maps";
@@ -16,21 +22,21 @@ import MerchantsList from "./MerchantsList";
 import LeftMenu from "./LeftMenu";
 import { smoothZoom } from "../helper";
 interface SidebarProps {
-  handleSelectedTown: (_town: string[]) => void;
+  handleSelectedTowns: (_towns: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
   handleIsHerocorp?: (_is_herocorp: boolean) => void;
-  handleSelectedCategory?: (_category: string[]) => void;
+  handleSelectedCategories?: (_categories: string[]) => void;
   data: merchantsResponse[] | [];
-  setOpenLocation: any;
+  setOpenLocation: Dispatch<SetStateAction<Object | number | null>>;
   language: "en" | "gr";
   languageHandler: Dispatch<SetStateAction<"en" | "gr">>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-  handleSelectedTown,
+  handleSelectedTowns,
   handleSelectedProducts,
   handleIsHerocorp,
-  handleSelectedCategory,
+  handleSelectedCategories,
   setOpenLocation,
   language,
   data,
@@ -77,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const handleSelectChange =
     (type: "locations" | "products" | "categories") =>
-    (event: React.ChangeEvent<{ value: unknown }>) => {
+    (event: React.ChangeEvent<{ value: string[] }>) => {
       setSubmitted(false);
       const { value } = event.target;
       setSelectedItems((prevSelectedItems) => ({
@@ -115,10 +121,10 @@ const Sidebar: React.FC<SidebarProps> = ({
   );
 
   const handleSubmit = () => {
-    handleSelectedTown(selectedItems.locations);
+    handleSelectedTowns(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
     handleIsHerocorp(selectedItems.has_cashback);
-    handleSelectedCategory(selectedItems.categories);
+    handleSelectedCategories(selectedItems.categories);
     setOpenDrawer(false);
     setSubmitted(true);
   };
@@ -164,14 +170,25 @@ const Sidebar: React.FC<SidebarProps> = ({
           />
 
           {submitted && (
-            <MerchantsList
-              data={data}
-              handleClick={handleClick}
-              isMobile={isMobile}
+            <SwipeableDrawer
+              anchor={"bottom"}
               open={submitted}
-              setOpen={setSubmitted}
-              language={language}
-            />
+              onClose={() => setSubmitted(false)}
+              onOpen={() => setSubmitted(true)}
+              slotProps={{
+                backdrop: {
+                  invisible: true,
+                },
+              }}
+            >
+              <MerchantsList
+                data={data}
+                handleClick={handleClick}
+                isMobile={isMobile}
+                language={language}
+                sx={{ py: "0.5rem" }}
+              />
+            </SwipeableDrawer>
           )}
         </Box>
 
@@ -211,6 +228,11 @@ const Sidebar: React.FC<SidebarProps> = ({
             handleClick={handleClick}
             isMobile={isMobile}
             language={language}
+            sx={{
+              mt: 2,
+              mb: 5,
+              p: "1rem",
+            }}
           />
         )}
       </LeftMenu>

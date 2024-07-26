@@ -2,7 +2,7 @@ import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import { Map, MapCameraChangedEvent, useMap } from "@vis.gl/react-google-maps";
-import PoiMarkers from "./components/PoiMarkers";
+import Markers from "./components/Markers";
 import { merchantsResponse } from "./type";
 import { getData } from "./api/api";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
@@ -11,7 +11,15 @@ import { c } from "vite/dist/node/types.d-aGj9QkWt";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
+  const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
+  const [merchantsAllData, setMerchantsAllData] = useState<merchantsResponse[]>(
+    [],
+  );
+  const [openLocation, setOpenLocation] = useState<Object | number | null>(
+    null,
+  );
+  const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
   const [queryParams, setQueryParams] = useState({
     town: "",
     accepted_products: "",
@@ -19,16 +27,9 @@ const MerchantsMap = () => {
     is_hero_corp: false,
     mcc_category: "",
   });
-  const [merchantsData, setMerchantsData] = useState<merchantsResponse[]>([]);
-  const [merchantsAllData, setMerchantsAllData] = useState<merchantsResponse[]>(
-    [],
-  );
 
-  const [openLocation, setOpenLocation] = useState(null);
-  const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
-
-  const handleSelectedTown = (town: string[]) => {
-    const updatedTowns = town.map((town) => {
+  const handleSelectedTowns = (towns: string[]) => {
+    const enFormattedTowns = towns.map((town) => {
       if (selectedLanguage === "gr") {
         const merchant = merchantsAllData.find(
           (merchant) => merchant.town_gr === town,
@@ -37,19 +38,19 @@ const MerchantsMap = () => {
       }
       return town;
     });
-    const townString = updatedTowns.join(",");
+    const joinedTowns = enFormattedTowns.join(",");
     setQueryParams((prevState) => ({
       ...prevState,
-      town: townString,
+      town: joinedTowns,
     }));
   };
 
   const handleSelectedProducts = (products: string[]) => {
-    const productString = products.join(",");
+    const joinedProducts = products.join(",");
 
     setQueryParams((prevState) => ({
       ...prevState,
-      accepted_products: productString,
+      accepted_products: joinedProducts,
     }));
   };
 
@@ -60,22 +61,22 @@ const MerchantsMap = () => {
     }));
   };
 
-  const handleSelectedCategory = (category: string[]) => {
-    const updatedCategories = category.map((cat) => {
+  const handleSelectedCategories = (categories: string[]) => {
+    const enFormattedCategories = categories.map((category) => {
       if (selectedLanguage === "gr") {
         const merchant = merchantsAllData.find(
-          (merchant) => merchant.mcc_category_gr === cat,
+          (merchant) => merchant.mcc_category_gr === category,
         );
-        return merchant ? merchant.town_en : cat;
+        return merchant ? merchant.mcc_category_en : category;
       }
-      return cat;
+      return category;
     });
 
-    const categorieString = updatedCategories.join(",");
+    const joinedCategories = enFormattedCategories.join(",");
 
     setQueryParams((prevState) => ({
       ...prevState,
-      mcc_category: categorieString,
+      mcc_category: joinedCategories,
     }));
   };
 
@@ -121,10 +122,10 @@ const MerchantsMap = () => {
       >
         {!loading && (
           <Sidebar
-            handleSelectedTown={handleSelectedTown}
+            handleSelectedTowns={handleSelectedTowns}
             handleSelectedProducts={handleSelectedProducts}
             handleIsHerocorp={handleIsHerocorp}
-            handleSelectedCategory={handleSelectedCategory}
+            handleSelectedCategories={handleSelectedCategories}
             data={merchantsData}
             setOpenLocation={setOpenLocation}
             language={selectedLanguage}
@@ -147,7 +148,7 @@ const MerchantsMap = () => {
           clickableIcons={false}
         >
           {!loading && (
-            <PoiMarkers
+            <Markers
               data={merchantsData}
               openLocation={openLocation}
               setOpenLocation={setOpenLocation}
