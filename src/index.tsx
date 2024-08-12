@@ -133,17 +133,26 @@ const MerchantsMap = () => {
           />
         )}
         <Map
-          defaultZoom={9}
-          defaultCenter={{ lat: 37.97991702599259, lng: 23.730877354617046 }}
-          onCameraChanged={(ev: MapCameraChangedEvent) =>
+          defaultBounds={{
+            south: 35.84368582373623,
+            west: 19.067974674560833,
+            north: 41.852448096741405,
+            east: 28.080433566145448,
+          }}
+          onCameraChanged={(ev: MapCameraChangedEvent) => {
+            console.log("bounds", ev.map.getBounds());
             console.log(
               "camera changed:",
               ev.detail.center,
               "zoom:",
               ev.detail.zoom,
-            )
-          }
-          mapId="da37f3254c6a6d1c"
+              ev,
+            );
+          }}
+          minZoom={7}
+          maxZoom={15}
+          // mapId="da37f3254c6a6d1c"
+          mapId="116fd91f1d18588b"
           disableDefaultUI={true}
           clickableIcons={false}
         >

@@ -10,7 +10,8 @@ import {
 } from "react";
 import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
 // @ts-ignore
-import marker from "../../assets/marker.svg";
+// import marker from "../../assets/marker.svg";
+import marker from "../../assets/marker.png";
 import { merchantsResponse } from "../type";
 import { Box } from "@mui/material";
 import { smoothZoom } from "../helper";
@@ -50,17 +51,21 @@ const Markers = ({
         map,
         renderer: {
           render: ({ markers, position: position, count }) => {
+            console.log("position:", position);
             return new google.maps.Marker({
               position,
+              map,
               label: {
                 text: String(count),
                 color: "white",
                 fontWeight: "bold",
                 fontSize: "16px",
               },
-              icon: "/assets/cluster.svg",
+              // icon: "/assets/cluster.svg",
+              icon: "/assets/cluster.png",
               opacity: 0.98,
               zIndex: Number(google.maps.Marker.MAX_ZINDEX) + count,
+              optimized: true,
             });
           },
         },
@@ -100,6 +105,7 @@ const Markers = ({
     // Update clusterer after setting marker reference
     if (clusterer.current) {
       const markersArray = Object.values(markersRef.current);
+      console.log("markersArray", markersArray);
       clusterer.current.clearMarkers();
       clusterer.current.addMarkers(markersArray);
     }
@@ -122,7 +128,7 @@ const Markers = ({
                 handleClick(ev, index)
               }
             >
-              <img src={marker} alt={mark?.vat_name_en} width={"30px"} />
+              <img src={marker} alt={mark?.vat_name_en} width={"40px"} />
             </AdvancedMarker>
 
             {openLocation === index && (

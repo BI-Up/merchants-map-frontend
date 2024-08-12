@@ -65,6 +65,7 @@ const InputField: React.FC<InputFieldProps> = ({
           value={selectedItems}
           label={label}
           multiple
+          //@ts-ignore
           onChange={onChange}
           open={open}
           onOpen={() => setOpen(true)}
