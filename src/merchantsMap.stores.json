@@ -1,0 +1,5471 @@
+[{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f835a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΜΠΕΛΑΚΙΑ - Τ.Θ. 1076",
+  "Address_EN": "AMPELAKIA - T.TH. 1076",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.117155",
+  "Longitude": "24.094777"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f835b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "1Ο ΧΛΜ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ-ΠΑΛΑΓΙΑΣ",
+  "Address_EN": "1O CHLM ALEXANDROUPOLIS-PALAGIAS",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.845719",
+  "Longitude": "25.873962"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f835c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΘΝΙΚΉΣ ΑΝΤΊΣΤΑΣΗΣ 20",
+  "Address_EN": "ETHNIKΉS ANTΊSTASIS 20",
+  "ZIPCode": "65110",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.935173",
+  "Longitude": "24.406591"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f835d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "11Ο ΔΗΜΟΤΙΚΟ ΣΧΟΛΕΙΟ ΞΑΝΘΗΣ - ΝΕΑΠΟΛΗ",
+  "Address_EN": "11O DIMOTIKO SCHOLEIO XANTHIS - NEAPOLI",
+  "ZIPCode": "67133",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.123323",
+  "Longitude": "24.876545"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f835e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΜΠΟΤΣΑΡΗ ΜΑΡΚΟΥ 1",
+  "Address_EN": "MPOTSARI MARKOU 1",
+  "ZIPCode": "69132",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.117506",
+  "Longitude": "25.395841"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f835f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ",
+  "Address_EN": "KATO NEUROKOPI",
+  "ZIPCode": "66033",
+  "District_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ",
+  "District_EN": "KATO NEUROKOPIOU",
+  "Region_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ ΔΡΑΜΑΣ",
+  "Region_EN": "KATO NEUROKOPI DRAMAS",
+  "Town_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ ΔΡΑΜΑΣ",
+  "Town_EN": "KATO NEUROKOPI DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.340871",
+  "Longitude": "23.867196"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8360"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΓΙΟΣ ΑΘΑΝΑΣΙΟΣ",
+  "Address_EN": "AGIOS ATHANASIOS",
+  "ZIPCode": "66300",
+  "District_GR": "ΔΟΞΑΤΟΥ",
+  "District_EN": "DOXATOU",
+  "Region_GR": "ΑΓΙΟΣ ΑΘΑΝΑΣΙΟΣ ΔΡΑΜΑΣ",
+  "Region_EN": "AGIOS ATHANASIOS DRAMAS",
+  "Town_GR": "ΑΓΙΟΣ ΑΘΑΝΑΣΙΟΣ ΔΡΑΜΑΣ",
+  "Town_EN": "AGIOS ATHANASIOS DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.073576",
+  "Longitude": "24.23833"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8361"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΜΑΚΕΔΟΝΟΜΑΧΩΝ",
+  "Address_EN": "MAKEDONOMACHON",
+  "ZIPCode": "66200",
+  "District_GR": "ΠΡΟΣΟΤΣΑΝΗΣ",
+  "District_EN": "PROSOTSANIS",
+  "Region_GR": "ΠΡΟΣΟΤΣΑΝΗ",
+  "Region_EN": "PROSOTSANI",
+  "Town_GR": "ΠΡΟΣΟΤΣΑΝΗ",
+  "Town_EN": "PROSOTSANI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.182699",
+  "Longitude": "23.977375"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8362"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΝΙΚΟΠΟΛΕΩΣ  ΔΡΑΜΑ",
+  "Address_EN": "TERMA NIKOPOLEOS  DRAMA",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.136595",
+  "Longitude": "24.147462"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8363"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΟΞΑΤΟ ΔΡΑΜΑΣ",
+  "Address_EN": "DOXATO DRAMAS",
+  "ZIPCode": "66300",
+  "District_GR": "ΔΟΞΑΤΟΥ",
+  "District_EN": "DOXATOU",
+  "Region_GR": "ΔΟΞΑΤΟΥ",
+  "Region_EN": "DOXATOU",
+  "Town_GR": "ΔΟΞΑΤΟΥ",
+  "Town_EN": "DOXATOU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.09886",
+  "Longitude": "24.226933"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8364"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Κ. ΔΑΪΛΑΚΗ 6",
+  "Address_EN": "K. DAΪLAKI 6",
+  "ZIPCode": "66200",
+  "District_GR": "ΠΡΟΣΟΤΣΑΝΗΣ",
+  "District_EN": "PROSOTSANIS",
+  "Region_GR": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
+  "Region_EN": "PROSOTSANI DRAMAS",
+  "Town_GR": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
+  "Town_EN": "PROSOTSANI DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.18167",
+  "Longitude": "23.976454"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8365"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΑΡΑΝΕΣΤΙ ΔΡΑΜΑΣ",
+  "Address_EN": "PARANESTI DRAMAS",
+  "ZIPCode": "66035",
+  "District_GR": "ΠΑΡΑΝΕΣΤΙΟΥ",
+  "District_EN": "PARANESTIOU",
+  "Region_GR": "ΠΑΡΑΝΕΣΤΙ",
+  "Region_EN": "PARANESTI",
+  "Town_GR": "ΠΑΡΑΝΕΣΤΙ",
+  "Town_EN": "PARANESTI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.267008",
+  "Longitude": "24.499322"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8366"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ",
+  "Address_EN": "KATO NEUROKOPI",
+  "ZIPCode": "66033",
+  "District_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ",
+  "District_EN": "KATO NEUROKOPIOU",
+  "Region_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ",
+  "Region_EN": "KATO NEUROKOPI",
+  "Town_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ",
+  "Town_EN": "KATO NEUROKOPI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.340835",
+  "Longitude": "23.866531"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8367"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΑΚΟΥΖΗΝΟΥ 12",
+  "Address_EN": "KATAKOUZINOU 12",
+  "ZIPCode": "66131",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.156566",
+  "Longitude": "24.139368"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8368"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΟΥΝΑΡΗ 11",
+  "Address_EN": "GOUNARI 11",
+  "ZIPCode": "66131",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.153012",
+  "Longitude": "24.13386"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8369"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Κ.ΔΑΪΛΑΚΗ 6",
+  "Address_EN": "K.DAΪLAKI 6",
+  "ZIPCode": "66200",
+  "District_GR": "ΠΡΟΣΟΤΣΑΝΗΣ",
+  "District_EN": "PROSOTSANIS",
+  "Region_GR": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
+  "Region_EN": "PROSOTSANI DRAMAS",
+  "Town_GR": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
+  "Town_EN": "PROSOTSANI DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.181835",
+  "Longitude": "23.976302"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f836a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Β. ΒΟΥΛΓΑΡΟΚΤΌΝΟΥ 7Β",
+  "Address_EN": "V. VOULGAROKTΌNOU 7V",
+  "ZIPCode": "66031",
+  "District_GR": "ΚΑΛΑΜΠΑΚΙΟΥ",
+  "District_EN": "KALAMPAKIOU",
+  "Region_GR": "ΚΑΛΑΜΠΆΚΙ",
+  "Region_EN": "KALAMPΆKI",
+  "Town_GR": "ΚΑΛΑΜΠΆΚΙ",
+  "Town_EN": "KALAMPΆKI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.04625",
+  "Longitude": "24.184785"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f836b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΔΡΙΑΝΟΥΠΟΛΕΩΣ 44",
+  "Address_EN": "ADRIANOUPOLEOS 44",
+  "ZIPCode": "66132",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.148454",
+  "Longitude": "24.155187"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f836c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ",
+  "Address_EN": "KATO NEUROKOPI",
+  "ZIPCode": "66033",
+  "District_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ",
+  "District_EN": "KATO NEUROKOPIOU",
+  "Region_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ  ΔΡΑΜΑΣ",
+  "Region_EN": "KATO NEUROKOPI  DRAMAS",
+  "Town_GR": "ΚΑΤΩ ΝΕΥΡΟΚΟΠΙ  ΔΡΑΜΑΣ",
+  "Town_EN": "KATO NEUROKOPI  DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.342253",
+  "Longitude": "23.868259"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f836d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΗΣ",
+  "Address_EN": "TERMA ETHNIKIS ANTISTASIS",
+  "ZIPCode": "66300",
+  "District_GR": "ΔΟΞΑΤΟΥ",
+  "District_EN": "DOXATOU",
+  "Region_GR": "ΔΟΞΑΤΟ ΔΡΑΜΑΣ",
+  "Region_EN": "DOXATO DRAMAS",
+  "Town_GR": "ΔΟΞΑΤΟ ΔΡΑΜΑΣ",
+  "Town_EN": "DOXATO DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.098998",
+  "Longitude": "24.227576"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f836e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΘΗΝΑΣ 30",
+  "Address_EN": "ATHINAS 30",
+  "ZIPCode": "66133",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.146323",
+  "Longitude": "24.155305"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f836f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΘΗΝΑΣ 30",
+  "Address_EN": "ATHINAS 30",
+  "ZIPCode": "66133",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.146056",
+  "Longitude": "24.155155"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8370"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΔΡΙΑΝΟΥΠΟΛΕΩΣ 70",
+  "Address_EN": "ADRIANOUPOLEOS 70",
+  "ZIPCode": "66132",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.147701",
+  "Longitude": "24.154835"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8371"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΔΡΙΑΝΟΥΠΟΛΕΩΣ 44",
+  "Address_EN": "ADRIANOUPOLEOS 44",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑΣ",
+  "Region_EN": "DRAMAS",
+  "Town_GR": "ΔΡΑΜΑΣ",
+  "Town_EN": "DRAMAS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.147856",
+  "Longitude": "24.154265"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8372"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΕΡΙΟΧΗ ΚΑΠΝΟΛΟΓΙΚΟΥ ΙΝΣΤΙΤΟΥΤΟΥ",
+  "Address_EN": "PERIOCHI KAPNOLOGIKOU INSTITOUTOU",
+  "ZIPCode": "66132",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.150539",
+  "Longitude": "24.164958"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8373"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΥΡΓΙΑ ΔΡΑΜΑΣ",
+  "Address_EN": "KURGIA DRAMAS",
+  "ZIPCode": "66032",
+  "District_GR": "ΔΟΞΑΤΟΥ",
+  "District_EN": "DOXATOU",
+  "Region_GR": "ΚΥΡΓΙΑ ΔΡΑΜΑΣ",
+  "Region_EN": "KURGIA DRAMAS",
+  "Town_GR": "ΚΥΡΓΙΑ ΔΡΑΜΑΣ",
+  "Town_EN": "KURGIA DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.09829",
+  "Longitude": "24.28377"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8374"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΝΙΚΟΠΟΛΕΩΣ",
+  "Address_EN": "TERMA NIKOPOLEOS",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.136595",
+  "Longitude": "24.147462"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8375"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΓΊΑ ΠΑΡΑΣΚΕΥΉ",
+  "Address_EN": "AGΊA PARASKEUΉ",
+  "ZIPCode": "66031",
+  "District_GR": "ΚΑΛΑΜΠΑΚΙΟΥ",
+  "District_EN": "KALAMPAKIOU",
+  "Region_GR": "- ΚΑΛΑΜΠΆΚΙ, ΔΡΆΜΑΣ",
+  "Region_EN": "- KALAMPΆKI, DRΆMAS",
+  "Town_GR": "- ΚΑΛΑΜΠΆΚΙ, ΔΡΆΜΑΣ",
+  "Town_EN": "- KALAMPΆKI, DRΆMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.019338",
+  "Longitude": "24.157123"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8376"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΑΡΥΦΕΣ ΚΟΡΥΛΟΒΟΥ",
+  "Address_EN": "PARUFES KORULOVOU",
+  "ZIPCode": "66132",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.159738",
+  "Longitude": "24.153077"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8377"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΙΚΗΦΟΡΟΣ",
+  "Address_EN": "NIKIFOROS",
+  "ZIPCode": "66037",
+  "District_GR": "ΝΙΚΗΦΟΡΟΥ",
+  "District_EN": "NIKIFOROU",
+  "Region_GR": "ΝΙΚΗΦΟΡΟΣ",
+  "Region_EN": "NIKIFOROS",
+  "Town_GR": "ΝΙΚΗΦΟΡΟΣ",
+  "Town_EN": "NIKIFOROS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.160997",
+  "Longitude": "24.300105"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8378"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝΤ. ΚΑΣΤΡΙΝΟΥ 2",
+  "Address_EN": "ANT. KASTRINOU 2",
+  "ZIPCode": "66131",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.152483",
+  "Longitude": "24.134902"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8379"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Δ.Δ. ΦΩΤΟΛΊΒΟΥΣ ΔΉΜΟΥ ΠΡΟΣΟΤΣΆΝΗΣ",
+  "Address_EN": "D.D. FOTOLΊVOUS DΉMOU PROSOTSΆNIS",
+  "ZIPCode": "66034",
+  "District_GR": "ΣΙΤΑΓΡΩΝ",
+  "District_EN": "SITAGRON",
+  "Region_GR": "ΦΩΤΟΛΙΒΟΣ ΔΡΑΜΑΣ",
+  "Region_EN": "FOTOLIVOS DRAMAS",
+  "Town_GR": "ΦΩΤΟΛΙΒΟΣ ΔΡΑΜΑΣ",
+  "Town_EN": "FOTOLIVOS DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.058525",
+  "Longitude": "24.051482"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f837a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΑΚΟΥΖΗΝΟΥ 12",
+  "Address_EN": "KATAKOUZINOU 12",
+  "ZIPCode": "66131",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑΣ",
+  "Region_EN": "DRAMAS",
+  "Town_GR": "ΔΡΑΜΑΣ",
+  "Town_EN": "DRAMAS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.156623",
+  "Longitude": "24.139426"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f837b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑ ΑΜΙΣΟΣ",
+  "Address_EN": "NEA AMISOS",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133954",
+  "Longitude": "24.120228"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f837c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΗΣ ΤΕΡΜΑ",
+  "Address_EN": "ETHNIKIS ANTISTASIS TERMA",
+  "ZIPCode": "66300",
+  "District_GR": "ΔΟΞΑΤΟΥ",
+  "District_EN": "DOXATOU",
+  "Region_GR": "ΔΟΞΑΤΟ ΔΡΑΜΑΣ",
+  "Region_EN": "DOXATO DRAMAS",
+  "Town_GR": "ΔΟΞΑΤΟ ΔΡΑΜΑΣ",
+  "Town_EN": "DOXATO DRAMAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.096022",
+  "Longitude": "24.231353"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f837d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝ. ΚΑΣΤΡΙΝΟΥ 2",
+  "Address_EN": "AN. KASTRINOU 2",
+  "ZIPCode": "66132",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.151818",
+  "Longitude": "24.134729"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f837e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΔΡΙΑΝΟΥΠΟΛΕΩΣ 44",
+  "Address_EN": "ADRIANOUPOLEOS 44",
+  "ZIPCode": "66132",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.148305",
+  "Longitude": "24.154766"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f837f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "1O ΧΛΜ. Ε.O ΔΡΑΜΑΣ-ΚΑΒΑΛΑΣ",
+  "Address_EN": "1O CHLM. E.O DRAMAS-KAVALAS",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.139554",
+  "Longitude": "24.18008"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8380"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝΤΩΝΙΟΥ ΚΑΣΤΡΙΝΟΥ 2",
+  "Address_EN": "ANTONIOU KASTRINOU 2",
+  "ZIPCode": "66131",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.151946",
+  "Longitude": "24.134693"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8381"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝ. ΚΑΣΤΡΙΝΟΥ 2",
+  "Address_EN": "AN. KASTRINOU 2",
+  "ZIPCode": "66100",
+  "District_GR": "ΔΡΑΜΑΣ",
+  "District_EN": "DRAMAS",
+  "Region_GR": "ΔΡΑΜΑ",
+  "Region_EN": "DRAMA",
+  "Town_GR": "ΔΡΑΜΑ",
+  "Town_EN": "DRAMA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.152015",
+  "Longitude": "24.134763"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8382"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΒΡΟΥ 65",
+  "Address_EN": "PERIFEREIAKI EVROU 65",
+  "ZIPCode": "68500",
+  "District_GR": "ΦΕΡΩΝ",
+  "District_EN": "FERON",
+  "Region_GR": "ΦΕΡΕΣ ΕΒΡΟΥ",
+  "Region_EN": "FERES EVROU",
+  "Town_GR": "ΦΕΡΕΣ ΕΒΡΟΥ",
+  "Town_EN": "FERES EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.893241",
+  "Longitude": "26.180942"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8383"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "14ΗΣ ΜΑΪ́ΟΥ 110",
+  "Address_EN": "14IS MAḮOU 110",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852275",
+  "Longitude": "25.871753"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8384"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΡΜΟΥ 1",
+  "Address_EN": "ERMOU 1",
+  "ZIPCode": "68400",
+  "District_GR": "ΣΟΥΦΛΙΟΥ",
+  "District_EN": "SOUFLIOU",
+  "Region_GR": "ΣΟΥΦΛΙ ΕΒΡΟΥ",
+  "Region_EN": "SOUFLI EVROU",
+  "Town_GR": "ΣΟΥΦΛΙ ΕΒΡΟΥ",
+  "Town_EN": "SOUFLI EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.193266",
+  "Longitude": "26.307765"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8385"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "1Ο ΧΙΛ. ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ - ΠΑΛΑΓΙΑΣ",
+  "Address_EN": "1O CHIL. ALEXANDROUPOLIS - PALAGIAS",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "Region_EN": "ALEXANDROUPOLIS",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "Town_EN": "ALEXANDROUPOLIS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.867429",
+  "Longitude": "25.869819"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8386"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΑΚΟΥΖΗΝΟΥ 16",
+  "Address_EN": "KATAKOUZINOU 16",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.847768",
+  "Longitude": "25.863249"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8387"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΑΡΟΔΟΣ ΜΟΥΡΟΥΖΗ 2",
+  "Address_EN": "PARODOS MOUROUZI 2",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.501402",
+  "Longitude": "26.53108"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8388"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "14ΗΣ ΜΑΙΟΥ 110",
+  "Address_EN": "14IS MAIOU 110",
+  "ZIPCode": "68132",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852266",
+  "Longitude": "25.871685"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8389"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "1Ο ΧΙΛ. ΑΛΕΞ/ΠΟΛΗΣ - ΠΑΛΑΓΊΑΣ",
+  "Address_EN": "1O CHIL. ALEX/POLIS - PALAGΊAS",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.867722",
+  "Longitude": "25.869767"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f838a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 57",
+  "Address_EN": "KONSTANTINOUPOLEOS 57",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.490714",
+  "Longitude": "26.53403"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f838b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΙΠΠΟΚΡΑΤΟΥΣ 90",
+  "Address_EN": "IPPOKRATOUS 90",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ ΕΒΡΟΥ",
+  "Region_EN": "ORESTIADA EVROU",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ ΕΒΡΟΥ",
+  "Town_EN": "ORESTIADA EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.497697",
+  "Longitude": "26.513837"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f838c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΑΚΟΥΖΗΝΟΥ 16",
+  "Address_EN": "KATAKOUZINOU 16",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.847944",
+  "Longitude": "25.86282"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f838d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Λ. ΝΙΚΟΛΑΪΔΗ 11",
+  "Address_EN": "L. NIKOLAΪDI 11",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.857318",
+  "Longitude": "25.86551"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f838e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΛΕΩΝΙΔΟΥ 52-54",
+  "Address_EN": "LEONIDOU 52-54",
+  "ZIPCode": "68300",
+  "District_GR": "ΔΙΔΥΜΟΤΕΙΧΟΥ",
+  "District_EN": "DIDUMOTEICHOU",
+  "Region_GR": "ΔΙΔΥΜΟΤΕΙΧΟ",
+  "Region_EN": "DIDUMOTEICHO",
+  "Town_GR": "ΔΙΔΥΜΟΤΕΙΧΟ",
+  "Town_EN": "DIDUMOTEICHO",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.353142",
+  "Longitude": "26.494176"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f838f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΗΤΡΑΣ 1",
+  "Address_EN": "DIMITRAS 1",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852708",
+  "Longitude": "25.868392"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8390"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 6Α",
+  "Address_EN": "DIMOKRITOU 6A",
+  "ZIPCode": "68133",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "Region_EN": "ALEXANDROUPOLIS",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "Town_EN": "ALEXANDROUPOLIS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.851465",
+  "Longitude": "25.895767"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8391"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΙΚΗΤΑΡΑ 35 Α",
+  "Address_EN": "NIKITARA 35 A",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.851706",
+  "Longitude": "25.859251"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8392"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΖΑΡΙΦΗ 7",
+  "Address_EN": "ZARIFI 7",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ ΕΒΡΟΥ",
+  "Region_EN": "ORESTIADA EVROU",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ ΕΒΡΟΥ",
+  "Town_EN": "ORESTIADA EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.49341",
+  "Longitude": "26.524976"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8393"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝΘΕΜΙΟΥ 3",
+  "Address_EN": "ANTHEMIOU 3",
+  "ZIPCode": "68132",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852432",
+  "Longitude": "25.873223"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8394"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΙΚΑΙΑ, 1",
+  "Address_EN": "DIKAIA, 1",
+  "ZIPCode": "68008",
+  "District_GR": "ΤΡΙΓΩΝΟΥ",
+  "District_EN": "TRIGONOU",
+  "Region_GR": "ΔΙΚΑΙΑ - ΟΡΕΣΤΙΑΔΑΣ",
+  "Region_EN": "DIKAIA - ORESTIADAS",
+  "Town_GR": "ΔΙΚΑΙΑ - ΟΡΕΣΤΙΑΔΑΣ",
+  "Town_EN": "DIKAIA - ORESTIADAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.702869",
+  "Longitude": "26.297713"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8395"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΟΛΥΤΕΧΝΕΙΟΥ 3",
+  "Address_EN": "POLUTECHNEIOU 3",
+  "ZIPCode": "68300",
+  "District_GR": "ΔΙΔΥΜΟΤΕΙΧΟΥ",
+  "District_EN": "DIDUMOTEICHOU",
+  "Region_GR": "ΔΙΔΥΜΟΤΕΙΧΟΥ ΕΒΡΟΥ",
+  "Region_EN": "DIDUMOTEICHOU EVROU",
+  "Town_GR": "ΔΙΔΥΜΟΤΕΙΧΟΥ ΕΒΡΟΥ",
+  "Town_EN": "DIDUMOTEICHOU EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.348735",
+  "Longitude": "26.497282"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8396"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΜΑΡΙΩΤΙΣΣΑ ΣΑΜΟΘΡΑΚΗΣ",
+  "Address_EN": "KAMARIOTISSA SAMOTHRAKIS",
+  "ZIPCode": "68002",
+  "District_GR": "ΣΑΜΟΘΡΑΚΗΣ",
+  "District_EN": "SAMOTHRAKIS",
+  "Region_GR": "ΞΗΡΙΑ",
+  "Region_EN": "XIRIA",
+  "Town_GR": "ΞΗΡΙΑ",
+  "Town_EN": "XIRIA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.473522",
+  "Longitude": "25.495665"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8397"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΤΑΚΟΥΖΗΝΟΥ 16",
+  "Address_EN": "KATAKOUZINOU 16",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "Region_EN": "ALEXANDROUPOLIS",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "Town_EN": "ALEXANDROUPOLIS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.847821",
+  "Longitude": "25.862959"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8398"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΒΑΣ. ΚΩΝΣΤΑΝΤΙΝΟΥ 173",
+  "Address_EN": "VAS. KONSTANTINOU 173",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.50453",
+  "Longitude": "26.523789"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8399"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΟΛΥΤΕΧΝΕΙΟΥ 1",
+  "Address_EN": "POLUTECHNEIOU 1",
+  "ZIPCode": "68300",
+  "District_GR": "ΔΙΔΥΜΟΤΕΙΧΟΥ",
+  "District_EN": "DIDUMOTEICHOU",
+  "Region_GR": "ΔΙΔΥΜΟΤΕΙΧΟ ΕΒΡΟΥ",
+  "Region_EN": "DIDUMOTEICHO EVROU",
+  "Town_GR": "ΔΙΔΥΜΟΤΕΙΧΟ ΕΒΡΟΥ",
+  "Town_EN": "DIDUMOTEICHO EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.34876",
+  "Longitude": "26.496662"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f839a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΟΠΟΘΕΣΙΑ ΞΗΡΙΑ",
+  "Address_EN": "TOPOTHESIA XIRIA",
+  "ZIPCode": "68002",
+  "District_GR": "ΣΑΜΟΘΡΑΚΗΣ",
+  "District_EN": "SAMOTHRAKIS",
+  "Region_GR": "ΣΑΜΟΘΡΑΚΗΣ ΕΒΡΟΥ",
+  "Region_EN": "SAMOTHRAKIS EVROU",
+  "Town_GR": "ΣΑΜΟΘΡΑΚΗΣ ΕΒΡΟΥ",
+  "Town_EN": "SAMOTHRAKIS EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.473742",
+  "Longitude": "25.495841"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f839b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 6Β",
+  "Address_EN": "DIMOKRITOU 6V",
+  "ZIPCode": "68133",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.85288",
+  "Longitude": "25.872604"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f839c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΛΕΞΑΝΔΡΟΥ ΠΑΠΑΓΟΥ",
+  "Address_EN": "ALEXANDROU PAPAGOU",
+  "ZIPCode": "68014",
+  "District_GR": "ΒΥΣΣΑΣ",
+  "District_EN": "VUSSAS",
+  "Region_GR": "ΡΙΖΙΑ",
+  "Region_EN": "RIZIA",
+  "Town_GR": "ΡΙΖΙΑ",
+  "Town_EN": "RIZIA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.620626",
+  "Longitude": "26.426257"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f839d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΜΑΡΓΑΡΙΤΗ ΚΟΥΤΑΒΟΥ",
+  "Address_EN": "MARGARITI KOUTAVOU",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.84904",
+  "Longitude": "25.858964"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f839e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΑΡΑΝΤΑ ΕΚΚΛΗΣΙΩΝ  ΤΕΡΜΑ",
+  "Address_EN": "SARANTA EKKLISION  TERMA",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.499826",
+  "Longitude": "26.521523"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f839f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΡΜΟΥ 1",
+  "Address_EN": "ERMOU 1",
+  "ZIPCode": "68400",
+  "District_GR": "ΣΟΥΦΛΙΟΥ",
+  "District_EN": "SOUFLIOU",
+  "Region_GR": "ΣΟΥΦΛΙ",
+  "Region_EN": "SOUFLI",
+  "Town_GR": "ΣΟΥΦΛΙ",
+  "Town_EN": "SOUFLI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.193652",
+  "Longitude": "26.307417"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a0"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΜΕΤΑΞΑΔΕΣ",
+  "Address_EN": "METAXADES",
+  "ZIPCode": "68010",
+  "District_GR": "ΜΕΤΑΞΑΔΩΝ",
+  "District_EN": "METAXADON",
+  "Region_GR": "ΜΕΤΑΞΑΔΕΣ",
+  "Region_EN": "METAXADES",
+  "Town_GR": "ΜΕΤΑΞΑΔΕΣ",
+  "Town_EN": "METAXADES",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.417116",
+  "Longitude": "26.222331"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a1"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΆΡΟΔΟΣ ΜΟΥΡΟΎΖΗ 2 -",
+  "Address_EN": "PΆRODOS MOUROΎZI 2 -",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΆΔΑ",
+  "Region_EN": "ORESTIΆDA",
+  "Town_GR": "ΟΡΕΣΤΙΆΔΑ",
+  "Town_EN": "ORESTIΆDA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.49631",
+  "Longitude": "26.534779"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a2"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Γ. ΚΑΡΤΑΛΗ 10",
+  "Address_EN": "G. KARTALI 10",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.856266",
+  "Longitude": "25.879867"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a3"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 61",
+  "Address_EN": "KONSTANTINOUPOLEOS 61",
+  "ZIPCode": "68004",
+  "District_GR": "ΟΡΦΕΑ",
+  "District_EN": "ORFEA",
+  "Region_GR": "ΛΑΒΑΡΑ",
+  "Region_EN": "LAVARA",
+  "Town_GR": "ΛΑΒΑΡΑ",
+  "Town_EN": "LAVARA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.26987",
+  "Longitude": "26.383096"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a4"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝΘΕΙΑ",
+  "Address_EN": "ANTHEIA",
+  "ZIPCode": "68100",
+  "District_GR": "ΤΡΑΪΑΝΟΥΠΟΛΗΣ",
+  "District_EN": "TRAΪANOUPOLIS",
+  "Region_GR": "ΑΝΘΕΙΑ",
+  "Region_EN": "ANTHEIA",
+  "Town_GR": "ΑΝΘΕΙΑ",
+  "Town_EN": "ANTHEIA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.869626",
+  "Longitude": "25.988208"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a5"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑ ΒΥΣΣΑ",
+  "Address_EN": "NEA VUSSA",
+  "ZIPCode": "68001",
+  "District_GR": "ΒΥΣΣΑΣ",
+  "District_EN": "VUSSAS",
+  "Region_GR": "ΝΕΑΣ ΒΥΣΣΑΣ ΕΒΡΟΥ",
+  "Region_EN": "NEAS VUSSAS EVROU",
+  "Town_GR": "ΝΕΑΣ ΒΥΣΣΑΣ ΕΒΡΟΥ",
+  "Town_EN": "NEAS VUSSAS EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.576193",
+  "Longitude": "26.53013"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a6"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΙΚΑΙΑ",
+  "Address_EN": "DIKAIA",
+  "ZIPCode": "68007",
+  "District_GR": "ΤΡΙΓΩΝΟΥ",
+  "District_EN": "TRIGONOU",
+  "Region_GR": "ΔΙΚΑΙΑ",
+  "Region_EN": "DIKAIA",
+  "Town_GR": "ΔΙΚΑΙΑ",
+  "Town_EN": "DIKAIA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.702817",
+  "Longitude": "26.297412"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a7"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΖΗΒΟΠΟΥΛΟΥ 2",
+  "Address_EN": "ZIVOPOULOU 2",
+  "ZIPCode": "68500",
+  "District_GR": "ΦΕΡΩΝ",
+  "District_EN": "FERON",
+  "Region_GR": "ΦΕΡΕΣ ΕΒΡΟΥ",
+  "Region_EN": "FERES EVROU",
+  "Town_GR": "ΦΕΡΕΣ ΕΒΡΟΥ",
+  "Town_EN": "FERES EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.892897",
+  "Longitude": "26.168643"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a8"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΥΠΡΙΝΟΣ",
+  "Address_EN": "KUPRINOS",
+  "ZIPCode": "68006",
+  "District_GR": "ΚΥΠΡΙΝΟΥ",
+  "District_EN": "KUPRINOU",
+  "Region_GR": "ΚΥΠΡΙΝΟΣ",
+  "Region_EN": "KUPRINOS",
+  "Town_GR": "ΚΥΠΡΙΝΟΣ",
+  "Town_EN": "KUPRINOS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.573309",
+  "Longitude": "26.22038"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83a9"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "14ΗΣ ΜΑΪΟΥ 110",
+  "Address_EN": "14IS MAΪOU 110",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852184",
+  "Longitude": "25.871767"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83aa"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΒΑΣ. ΚΩΝΣΤΑΝΤΙΝΟΥ 173",
+  "Address_EN": "VAS. KONSTANTINOU 173",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.504168",
+  "Longitude": "26.523561"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ab"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝΘΕΜΙΟΥ 1",
+  "Address_EN": "ANTHEMIOU 1",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852322",
+  "Longitude": "25.872506"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ac"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑ ΒΥΣΣΑ",
+  "Address_EN": "NEA VUSSA",
+  "ZIPCode": "68001",
+  "District_GR": "ΒΥΣΣΑΣ",
+  "District_EN": "VUSSAS",
+  "Region_GR": "ΝΕΑ ΒΥΣΣΑ ΕΒΡΟΥ",
+  "Region_EN": "NEA VUSSA EVROU",
+  "Town_GR": "ΝΕΑ ΒΥΣΣΑ ΕΒΡΟΥ",
+  "Town_EN": "NEA VUSSA EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.575854",
+  "Longitude": "26.529963"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ad"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΥΧΕΡΟ",
+  "Address_EN": "TUCHERO",
+  "ZIPCode": "68003",
+  "District_GR": "ΤΥΧΕΡΟΥ",
+  "District_EN": "TUCHEROU",
+  "Region_GR": "ΤΥΧΕΡΟ",
+  "Region_EN": "TUCHERO",
+  "Town_GR": "ΤΥΧΕΡΟ",
+  "Town_EN": "TUCHERO",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.027293",
+  "Longitude": "26.288319"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ae"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΟΛΥΤΕΧΝΕΙΟΥ 5",
+  "Address_EN": "POLUTECHNEIOU 5",
+  "ZIPCode": "68300",
+  "District_GR": "ΔΙΔΥΜΟΤΕΙΧΟΥ",
+  "District_EN": "DIDUMOTEICHOU",
+  "Region_GR": "ΔΙΔΥΜΟΤΕΙΧΟ ΕΒΡΟΥ",
+  "Region_EN": "DIDUMOTEICHO EVROU",
+  "Town_GR": "ΔΙΔΥΜΟΤΕΙΧΟ ΕΒΡΟΥ",
+  "Town_EN": "DIDUMOTEICHO EVROU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.348462",
+  "Longitude": "26.497786"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83af"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΥΧΕΡΟ",
+  "Address_EN": "TUCHERO",
+  "ZIPCode": "68003",
+  "District_GR": "ΤΥΧΕΡΟΥ",
+  "District_EN": "TUCHEROU",
+  "Region_GR": "ΤΥΧΕΡΟ",
+  "Region_EN": "TUCHERO",
+  "Town_GR": "ΤΥΧΕΡΟ",
+  "Town_EN": "TUCHERO",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.027512",
+  "Longitude": "26.288287"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b0"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΑΡΟΔΟΣ ΜΟΥΡΟΥΖΗ 2",
+  "Address_EN": "PARODOS MOUROUZI 2",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.496371",
+  "Longitude": "26.535125"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b1"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΙΠΠΟΚΡΑΤΟΥΣ 90",
+  "Address_EN": "IPPOKRATOUS 90",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.498083",
+  "Longitude": "26.513505"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b2"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΗΡΟΔΌΤΟΥ & ΔΉΜΗΤΡΑΣ",
+  "Address_EN": "IRODΌTOU & DΉMITRAS",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.852861",
+  "Longitude": "25.869782"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b3"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΥΡΙΠΊΔΟΥ - ΖΊΓΚΜΠΟΥΡΓΚ ΚΑΙ ΜΆΡΚΟΥ ΜΠΌΤΣΑΡΗ",
+  "Address_EN": "EURIPΊDOU - ZΊGKMPOURGK KAI MΆRKOU MPΌTSARI",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.498155",
+  "Longitude": "26.534966"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b4"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΙΠΠΟΚΡΑΤΟΥΣ 90",
+  "Address_EN": "IPPOKRATOUS 90",
+  "ZIPCode": "68200",
+  "District_GR": "ΟΡΕΣΤΙΑΔΟΣ",
+  "District_EN": "ORESTIADOS",
+  "Region_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Region_EN": "ORESTIADA",
+  "Town_GR": "ΟΡΕΣΤΙΑΔΑ",
+  "Town_EN": "ORESTIADA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.500065",
+  "Longitude": "26.517457"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b5"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΗΤΡΑΣ 1",
+  "Address_EN": "DIMITRAS 1",
+  "ZIPCode": "68131",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Region_EN": "ALEXANDROUPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗ",
+  "Town_EN": "ALEXANDROUPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.85167",
+  "Longitude": "25.867903"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b6"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΜΜΟΧΏΣΤΟΥ 4",
+  "Address_EN": "AMMOCHΏSTOU 4",
+  "ZIPCode": "68100",
+  "District_GR": "ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ",
+  "District_EN": "ALEXANDROUPOLIS",
+  "Region_GR": "ΑΛΕΞΑΝΔΡΟΎΠΟΛΗ",
+  "Region_EN": "ALEXANDROΎPOLI",
+  "Town_GR": "ΑΛΕΞΑΝΔΡΟΎΠΟΛΗ",
+  "Town_EN": "ALEXANDROΎPOLI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.851649",
+  "Longitude": "25.867749"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b7"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΙΚΗΣΙΑΝΗ,",
+  "Address_EN": "NIKISIANI,",
+  "ZIPCode": "64001",
+  "District_GR": "ΠΑΓΓΑΙΟΥ",
+  "District_EN": "PAGGAIOU",
+  "Region_GR": "ΔΗΜΟΥ ΠΑΓΓΑΙΟΥ",
+  "Region_EN": "DIMOU PAGGAIOU",
+  "Town_GR": "ΔΗΜΟΥ ΠΑΓΓΑΙΟΥ",
+  "Town_EN": "DIMOU PAGGAIOU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.952854",
+  "Longitude": "24.143552"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b8"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΟΔΟΧΩΡΙ",
+  "Address_EN": "PODOCHORI",
+  "ZIPCode": "64008",
+  "District_GR": "ΟΡΦΑΝΟΥ",
+  "District_EN": "ORFANOU",
+  "Region_GR": "ΠΟΔΟΧΩΡΙΟΥ ΚΑΒΑΛΑΣ",
+  "Region_EN": "PODOCHORIOU KAVALAS",
+  "Town_GR": "ΠΟΔΟΧΩΡΙΟΥ ΚΑΒΑΛΑΣ",
+  "Town_EN": "PODOCHORIOU KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.83038",
+  "Longitude": "24.024641"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83b9"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΛΙΜΕΝΑΣ ΘΑΣΟΥ",
+  "Address_EN": "LIMENAS THASOU",
+  "ZIPCode": "64004",
+  "District_GR": "ΘΑΣΟΥ",
+  "District_EN": "THASOU",
+  "Region_GR": "ΛΙΜΕΝΑΣ",
+  "Region_EN": "LIMENAS",
+  "Town_GR": "ΛΙΜΕΝΑΣ",
+  "Town_EN": "LIMENAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.777037",
+  "Longitude": "24.702118"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ba"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΛΙΜΕΝΑΣ ΘΑΣΟΥ",
+  "Address_EN": "LIMENAS THASOU",
+  "ZIPCode": "64004",
+  "District_GR": "ΘΑΣΟΥ",
+  "District_EN": "THASOU",
+  "Region_GR": "ΛΙΜΕΝΑ ΘΑΣΟΥ ΚΑΒΑΛΑΣ",
+  "Region_EN": "LIMENA THASOU KAVALAS",
+  "Town_GR": "ΛΙΜΕΝΑ ΘΑΣΟΥ ΚΑΒΑΛΑΣ",
+  "Town_EN": "LIMENA THASOU KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.777112",
+  "Longitude": "24.702018"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83bb"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Ν. ΚΑΡΒΑΛΗ",
+  "Address_EN": "N. KARVALI",
+  "ZIPCode": "64006",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.962995",
+  "Longitude": "24.511851"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83bc"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΑΜΟΥ  2",
+  "Address_EN": "SAMOU  2",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.944642",
+  "Longitude": "24.425418"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83bd"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΛΙΜΕΝΑΡΙΑ",
+  "Address_EN": "LIMENARIA",
+  "ZIPCode": "64002",
+  "District_GR": "ΘΑΣΟΥ",
+  "District_EN": "THASOU",
+  "Region_GR": "ΘΑΣΟΣ",
+  "Region_EN": "THASOS",
+  "Town_GR": "ΘΑΣΟΣ",
+  "Town_EN": "THASOS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.631052",
+  "Longitude": "24.573155"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83be"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΑΙΔ. ΚΑΤΑΣΚΗΝΩΣΕΙΣ ΑΓ. ΣΙΛΑ",
+  "Address_EN": "PAID. KATASKINOSEIS AG. SILA",
+  "ZIPCode": "65110",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.940414",
+  "Longitude": "24.372049"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83bf"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΓΙΑΣ ΕΙΡΗΝΗΣ",
+  "Address_EN": "AGIAS EIRINIS",
+  "ZIPCode": "64007",
+  "District_GR": "ΕΛΕΥΘΕΡΩΝ",
+  "District_EN": "ELEUTHERON",
+  "Region_GR": "ΝΕΑ ΠΕΡΑΜΟΣ ΔΗΜΟΣ ΠΑΓΓΑΙΟΥ",
+  "Region_EN": "NEA PERAMOS DIMOS PAGGAIOU",
+  "Town_GR": "ΝΕΑ ΠΕΡΑΜΟΣ ΔΗΜΟΣ ΠΑΓΓΑΙΟΥ",
+  "Town_EN": "NEA PERAMOS DIMOS PAGGAIOU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.83926",
+  "Longitude": "24.298213"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c0"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΟΔΟΧΩΡΙ ΚΑΒΑΛΑΣ",
+  "Address_EN": "PODOCHORI KAVALAS",
+  "ZIPCode": "64008",
+  "District_GR": "ΟΡΦΑΝΟΥ",
+  "District_EN": "ORFANOU",
+  "Region_GR": "ΠΟΔΟΧΩΡΙΟΥ",
+  "Region_EN": "PODOCHORIOU",
+  "Town_GR": "ΠΟΔΟΧΩΡΙΟΥ",
+  "Town_EN": "PODOCHORIOU",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.830965",
+  "Longitude": "24.025231"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c1"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΜΑΥΡΟΜΙΧΑΛΗ",
+  "Address_EN": "TERMA MAUROMICHALI",
+  "ZIPCode": "64100",
+  "District_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗΣ",
+  "District_EN": "ELEUTHEROUPOLIS",
+  "Region_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗΣ",
+  "Region_EN": "ELEUTHEROUPOLIS",
+  "Town_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗΣ",
+  "Town_EN": "ELEUTHEROUPOLIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 2",
+  "MCCCategory_EN": "Category 2",
+  "Latitude": "40.920164",
+  "Longitude": "24.259478"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c2"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΘΡΑΚΗΣ 10",
+  "Address_EN": "THRAKIS 10",
+  "ZIPCode": "64200",
+  "District_GR": "ΧΡΥΣΟΥΠΟΛΗΣ",
+  "District_EN": "CHRUSOUPOLIS",
+  "Region_GR": "ΧΡΥΣΟΥΠΟΛΗΣ",
+  "Region_EN": "CHRUSOUPOLIS",
+  "Town_GR": "ΧΡΥΣΟΥΠΟΛΗΣ",
+  "Town_EN": "CHRUSOUPOLIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.987845",
+  "Longitude": "24.704264"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c3"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΓΙΟΣ ΧΡΙΣΤΟΦΟΡΟΣ",
+  "Address_EN": "AGIOS CHRISTOFOROS",
+  "ZIPCode": "64001",
+  "District_GR": "ΠΑΓΓΑΙΟΥ",
+  "District_EN": "PAGGAIOU",
+  "Region_GR": "ΝΙΚΗΣΙΑΝΗ",
+  "Region_EN": "NIKISIANI",
+  "Town_GR": "ΝΙΚΗΣΙΑΝΗ",
+  "Town_EN": "NIKISIANI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.972654",
+  "Longitude": "24.144135"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c4"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΣΘΕΝΟΥΣ 17",
+  "Address_EN": "DIMOSTHENOUS 17",
+  "ZIPCode": "65404",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.938381",
+  "Longitude": "24.388349"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c5"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Γ. ΚΙΤΣΟΥ 57",
+  "Address_EN": "G. KITSOU 57",
+  "ZIPCode": "65302",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑΣ",
+  "Region_EN": "KAVALAS",
+  "Town_GR": "ΚΑΒΑΛΑΣ",
+  "Town_EN": "KAVALAS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.943565",
+  "Longitude": "24.417784"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c6"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΛΙΜΕΝΑΡΙΑ",
+  "Address_EN": "LIMENARIA",
+  "ZIPCode": "64002",
+  "District_GR": "ΘΑΣΟΥ",
+  "District_EN": "THASOU",
+  "Region_GR": "ΘΑΣΟΣ",
+  "Region_EN": "THASOS",
+  "Town_GR": "ΘΑΣΟΣ",
+  "Town_EN": "THASOS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.631155",
+  "Longitude": "24.573223"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c7"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΡΑΪΣΚΑΚΗ 4",
+  "Address_EN": "KARAΪSKAKI 4",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.939646",
+  "Longitude": "24.417075"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c8"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΚΡΑ 11",
+  "Address_EN": "SKRA 11",
+  "ZIPCode": "65403",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.938476",
+  "Longitude": "24.402939"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83c9"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΩΝΣΤΑΝΤΙΝΙΔΟΥ ΠΟΙΗΤΟΥ 16",
+  "Address_EN": "KONSTANTINIDOU POIITOU 16",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.938258",
+  "Longitude": "24.416238"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ca"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΡΚΑΔΙΟΥ 2",
+  "Address_EN": "ARKADIOU 2",
+  "ZIPCode": "65404",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.936748",
+  "Longitude": "24.394795"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83cb"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Π. ΚΟΥΝΤΟΥΡΙΩΤΟΥ ΤΕΡΜΑ",
+  "Address_EN": "P. KOUNTOURIOTOU TERMA",
+  "ZIPCode": "64100",
+  "District_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗΣ",
+  "District_EN": "ELEUTHEROUPOLIS",
+  "Region_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗ ΚΑΒΑΛΑΣ",
+  "Region_EN": "ELEUTHEROUPOLI KAVALAS",
+  "Town_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗ ΚΑΒΑΛΑΣ",
+  "Town_EN": "ELEUTHEROUPOLI KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 2",
+  "MCCCategory_EN": "Category 2",
+  "Latitude": "40.920525",
+  "Longitude": "24.257928"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83cc"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΑΜΟΥ 2",
+  "Address_EN": "SAMOU 2",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑΣ",
+  "Region_EN": "KAVALAS",
+  "Town_GR": "ΚΑΒΑΛΑΣ",
+  "Town_EN": "KAVALAS",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.944536",
+  "Longitude": "24.425879"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83cd"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΘΡΑΚΗΣ 10",
+  "Address_EN": "THRAKIS 10",
+  "ZIPCode": "64200",
+  "District_GR": "ΧΡΥΣΟΥΠΟΛΗΣ",
+  "District_EN": "CHRUSOUPOLIS",
+  "Region_GR": "ΧΡΥΣΟΥΠΟΛΗ ΚΑΒΑΛΑΣ",
+  "Region_EN": "CHRUSOUPOLI KAVALAS",
+  "Town_GR": "ΧΡΥΣΟΥΠΟΛΗ ΚΑΒΑΛΑΣ",
+  "Town_EN": "CHRUSOUPOLI KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.987682",
+  "Longitude": "24.704868"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ce"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΕΡΑΜΩΤΗ",
+  "Address_EN": "KERAMOTI",
+  "ZIPCode": "64200",
+  "District_GR": "ΚΕΡΑΜΩΤΗΣ",
+  "District_EN": "KERAMOTIS",
+  "Region_GR": "ΚΕΡΑΜΩΤΗ ΚΑΒΑΛΑΣ",
+  "Region_EN": "KERAMOTI KAVALAS",
+  "Town_GR": "ΚΕΡΑΜΩΤΗ ΚΑΒΑΛΑΣ",
+  "Town_EN": "KERAMOTI KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.857667",
+  "Longitude": "24.708881"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83cf"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΜΥΓΔΑΛΕΩΝΑΣ ΚΑΒΑΛΑΣ",
+  "Address_EN": "AMUGDALEONAS KAVALAS",
+  "ZIPCode": "64012",
+  "District_GR": "ΦΙΛΙΠΠΩΝ",
+  "District_EN": "FILIPPON",
+  "Region_GR": "ΑΜΥΓΔΑΛΕΩΝΑΣ ΚΑΒΑΛΑΣ",
+  "Region_EN": "AMUGDALEONAS KAVALAS",
+  "Town_GR": "ΑΜΥΓΔΑΛΕΩΝΑΣ ΚΑΒΑΛΑΣ",
+  "Town_EN": "AMUGDALEONAS KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.962551",
+  "Longitude": "24.358795"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d0"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΣΘΕΝΟΥΣ 17",
+  "Address_EN": "DIMOSTHENOUS 17",
+  "ZIPCode": "65404",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.938496",
+  "Longitude": "24.38856"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d1"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΓΙΑΣ ΕΙΡΗΝΗΣ",
+  "Address_EN": "AGIAS EIRINIS",
+  "ZIPCode": "64007",
+  "District_GR": "ΕΛΕΥΘΕΡΩΝ",
+  "District_EN": "ELEUTHERON",
+  "Region_GR": "ΝΕΑ ΠΕΡΑΜΟΣ",
+  "Region_EN": "NEA PERAMOS",
+  "Town_GR": "ΝΕΑ ΠΕΡΑΜΟΣ",
+  "Town_EN": "NEA PERAMOS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.839012",
+  "Longitude": "24.297714"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d2"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΤΑΥΡΟΥ ΑΝΤΩΝΙΑΔΗ",
+  "Address_EN": "STAUROU ANTONIADI",
+  "ZIPCode": "64006",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΝΕΑ ΚΑΡΒΑΛΗ",
+  "Region_EN": "NEA KARVALI",
+  "Town_GR": "ΝΕΑ ΚΑΡΒΑΛΗ",
+  "Town_EN": "NEA KARVALI",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.964448",
+  "Longitude": "24.513004"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d3"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΓΝΑΤΙΑΣ 14",
+  "Address_EN": "EGNATIAS 14",
+  "ZIPCode": "64003",
+  "District_GR": "ΦΙΛΙΠΠΩΝ",
+  "District_EN": "FILIPPON",
+  "Region_GR": "ΚΡΗΝΙΔΕΣ ΚΑΒΑΛΑΣ",
+  "Region_EN": "KRINIDES KAVALAS",
+  "Town_GR": "ΚΡΗΝΙΔΕΣ ΚΑΒΑΛΑΣ",
+  "Town_EN": "KRINIDES KAVALAS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.012657",
+  "Longitude": "24.295309"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d4"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΕΡΟΝΤΑ 5",
+  "Address_EN": "GERONTA 5",
+  "ZIPCode": "64200",
+  "District_GR": "ΧΡΥΣΟΥΠΟΛΗΣ",
+  "District_EN": "CHRUSOUPOLIS",
+  "Region_GR": "ΧΡΥΣΟΥΠΟΛΗ",
+  "Region_EN": "CHRUSOUPOLI",
+  "Town_GR": "ΧΡΥΣΟΥΠΟΛΗ",
+  "Town_EN": "CHRUSOUPOLI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.983314",
+  "Longitude": "24.702469"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d5"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Θ.ΠΟΥΛΙΔΟΥ 14-16",
+  "Address_EN": "TH.POULIDOU 14-16",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.934913",
+  "Longitude": "24.413307"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d6"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΡΙΝΟΣ  ΘΑΣΟΥ",
+  "Address_EN": "PRINOS  THASOU",
+  "ZIPCode": "64010",
+  "District_GR": "ΘΑΣΟΥ",
+  "District_EN": "THASOU",
+  "Region_GR": "ΠΡΙΝΟΣ",
+  "Region_EN": "PRINOS",
+  "Town_GR": "ΠΡΙΝΟΣ",
+  "Town_EN": "PRINOS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.740813",
+  "Longitude": "24.577435"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d7"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΓΝΑΤΊΑΣ 14",
+  "Address_EN": "EGNATΊAS 14",
+  "ZIPCode": "64003",
+  "District_GR": "ΦΙΛΙΠΠΩΝ",
+  "District_EN": "FILIPPON",
+  "Region_GR": "ΚΡΗΝΙΔΕΣ",
+  "Region_EN": "KRINIDES",
+  "Town_GR": "ΚΡΗΝΙΔΕΣ",
+  "Town_EN": "KRINIDES",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.012795",
+  "Longitude": "24.295395"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d8"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΡΓΥΡΟΚΑΣΤΡΟΥ ΤΕΡΜΑ",
+  "Address_EN": "ARGUROKASTROU TERMA",
+  "ZIPCode": "65404",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.937607",
+  "Longitude": "24.412866"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83d9"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΑΜΟΥ 2",
+  "Address_EN": "SAMOU 2",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.944543",
+  "Longitude": "24.424971"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83da"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΧΡΥΣΟΣΤΌΜΟΥ ΣΜΎΡΝΗΣ 10",
+  "Address_EN": "CHRUSOSTΌMOU SMΎRNIS 10",
+  "ZIPCode": "65403",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΆΛΑ",
+  "Region_EN": "KAVΆLA",
+  "Town_GR": "ΚΑΒΆΛΑ",
+  "Town_EN": "KAVΆLA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.93521",
+  "Longitude": "24.39804"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83db"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΑΜΟΥ 2 ΠΕΡΙΓΙΑΛΙ",
+  "Address_EN": "SAMOU 2 PERIGIALI",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.944205",
+  "Longitude": "24.424345"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83dc"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΦΡΙΞΟΥ ΠΑΠΑΧΡΗΣΤΙΔΗ 182",
+  "Address_EN": "FRIXOU PAPACHRISTIDI 182",
+  "ZIPCode": "64100",
+  "District_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗΣ",
+  "District_EN": "ELEUTHEROUPOLIS",
+  "Region_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗ",
+  "Region_EN": "ELEUTHEROUPOLI",
+  "Town_GR": "ΕΛΕΥΘΕΡΟΥΠΟΛΗ",
+  "Town_EN": "ELEUTHEROUPOLI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 2",
+  "MCCCategory_EN": "Category 2",
+  "Latitude": "40.913983",
+  "Longitude": "24.251281"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83dd"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΜΙΣΟΥ 31",
+  "Address_EN": "AMISOU 31",
+  "ZIPCode": "65403",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.944039",
+  "Longitude": "24.402611"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83de"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΧΡΥΣΟΣΤΟΜΟΥ ΣΜΥΡΝΗΣ 10",
+  "Address_EN": "CHRUSOSTOMOU SMURNIS 10",
+  "ZIPCode": "65403",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.935162",
+  "Longitude": "24.397648"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83df"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΜΙΣΟΥ 31",
+  "Address_EN": "AMISOU 31",
+  "ZIPCode": "65403",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.944808",
+  "Longitude": "24.402209"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e0"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΡΉΓΑ ΦΕΡΑΊΟΥ",
+  "Address_EN": "RΉGA FERAΊOU",
+  "ZIPCode": "64200",
+  "District_GR": "ΧΡΥΣΟΥΠΟΛΗΣ",
+  "District_EN": "CHRUSOUPOLIS",
+  "Region_GR": "ΧΡΥΣΟΎΠΟΛΗ",
+  "Region_EN": "CHRUSOΎPOLI",
+  "Town_GR": "ΧΡΥΣΟΎΠΟΛΗ",
+  "Town_EN": "CHRUSOΎPOLI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.978927",
+  "Longitude": "24.701251"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e1"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΑΡΑΙΣΚΑΚΗ 4",
+  "Address_EN": "KARAISKAKI 4",
+  "ZIPCode": "65201",
+  "District_GR": "ΚΑΒΑΛΑΣ",
+  "District_EN": "KAVALAS",
+  "Region_GR": "ΚΑΒΑΛΑ",
+  "Region_EN": "KAVALA",
+  "Town_GR": "ΚΑΒΑΛΑ",
+  "Town_EN": "KAVALA",
+  "IsHerocorp": true,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 1",
+  "MCCCategory_EN": "Category 1",
+  "Latitude": "40.939705",
+  "Longitude": "24.417627"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e2"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΤΑΥΡΟΥΠΟΛΗ ΞΑΝΘΗΣ",
+  "Address_EN": "STAUROUPOLI XANTHIS",
+  "ZIPCode": "67062",
+  "District_GR": "ΣΤΑΥΡΟΥΠΟΛΗΣ",
+  "District_EN": "STAUROUPOLIS",
+  "Region_GR": "ΣΤΑΥΡΟΥΠΟΛΗ ΞΑΝΘΗΣ",
+  "Region_EN": "STAUROUPOLI XANTHIS",
+  "Town_GR": "ΣΤΑΥΡΟΥΠΟΛΗ ΞΑΝΘΗΣ",
+  "Town_EN": "STAUROUPOLI XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.194819",
+  "Longitude": "24.705611"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e3"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΙΕΡΑ ΜΟΝΗ ΤΑΞΙΑΡΧΩΝ",
+  "Address_EN": "IERA MONI TAXIARCHON",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.148648",
+  "Longitude": "24.88287"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e4"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 27",
+  "Address_EN": "DIMOKRITOU 27",
+  "ZIPCode": "67131",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133456",
+  "Longitude": "24.893405"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e5"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΙΟΜΗΔΕΙΑ ΞΑΝΘΗΣ",
+  "Address_EN": "DIOMIDEIA XANTHIS",
+  "ZIPCode": "67100",
+  "District_GR": "ΒΙΣΤΩΝΙΔΟΣ",
+  "District_EN": "VISTONIDOS",
+  "Region_GR": "ΔΙΟΜΗΔΕΙΑ ΞΑΝΘΗΣ",
+  "Region_EN": "DIOMIDEIA XANTHIS",
+  "Town_GR": "ΔΙΟΜΗΔΕΙΑ ΞΑΝΘΗΣ",
+  "Town_EN": "DIOMIDEIA XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.088301",
+  "Longitude": "24.901741"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e6"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑΠΟΛΗ",
+  "Address_EN": "NEAPOLI",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.124801",
+  "Longitude": "24.879354"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e7"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΕΝΙΣΕΑ ΞΑΝΘΗΣ",
+  "Address_EN": "GENISEA XANTHIS",
+  "ZIPCode": "67140",
+  "District_GR": "ΒΙΣΤΩΝΙΔΟΣ",
+  "District_EN": "VISTONIDOS",
+  "Region_GR": "ΓΕΝΙΣΕΑ ΞΑΝΘΗΣ",
+  "Region_EN": "GENISEA XANTHIS",
+  "Town_GR": "ΓΕΝΙΣΕΑ ΞΑΝΘΗΣ",
+  "Town_EN": "GENISEA XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.057278",
+  "Longitude": "24.960166"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e8"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΧΑΤΖΗΣΤΑΥΡΟΥ 10",
+  "Address_EN": "CHATZISTAUROU 10",
+  "ZIPCode": "67133",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.135139",
+  "Longitude": "24.886826"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83e9"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΒΔΗΡΑ",
+  "Address_EN": "AVDIRA",
+  "ZIPCode": "67064",
+  "District_GR": "ΑΒΔΗΡΩΝ",
+  "District_EN": "AVDIRON",
+  "Region_GR": "ΑΒΔΗΡΑ ΞΑΝΘΗΣ",
+  "Region_EN": "AVDIRA XANTHIS",
+  "Town_GR": "ΑΒΔΗΡΑ ΞΑΝΘΗΣ",
+  "Town_EN": "AVDIRA XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.978804",
+  "Longitude": "24.95191"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ea"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Ν. ΚΑΖΑΝΤΖΑΚΗ 1",
+  "Address_EN": "N. KAZANTZAKI 1",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.132238",
+  "Longitude": "24.871976"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83eb"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑΠΟΛΗ",
+  "Address_EN": "NEAPOLI",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.124985",
+  "Longitude": "24.879453"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ec"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΛΑΥΚΗ",
+  "Address_EN": "GLAUKI",
+  "ZIPCode": "67300",
+  "District_GR": "ΜΥΚΗΣ",
+  "District_EN": "MUKIS",
+  "Region_GR": "ΓΛΑΥΚΗ",
+  "Region_EN": "GLAUKI",
+  "Town_GR": "ΓΛΑΥΚΗ",
+  "Town_EN": "GLAUKI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.258946",
+  "Longitude": "24.929317"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ed"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 27",
+  "Address_EN": "DIMOKRITOU 27",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133451",
+  "Longitude": "24.893706"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ee"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΛΑΥΚΗ",
+  "Address_EN": "GLAUKI",
+  "ZIPCode": "67300",
+  "District_GR": "ΜΥΚΗΣ",
+  "District_EN": "MUKIS",
+  "Region_GR": "ΓΛΑΥΚΗ ΞΑΝΘΗΣ",
+  "Region_EN": "GLAUKI XANTHIS",
+  "Town_GR": "ΓΛΑΥΚΗ ΞΑΝΘΗΣ",
+  "Town_EN": "GLAUKI XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.258808",
+  "Longitude": "24.929328"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ef"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑΠΟΛΗ",
+  "Address_EN": "NEAPOLI",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.124266",
+  "Longitude": "24.87656"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f0"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΖΑΒΕΛΑ 10",
+  "Address_EN": "TZAVELA 10",
+  "ZIPCode": "67131",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.127629",
+  "Longitude": "24.888337"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f1"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 27",
+  "Address_EN": "DIMOKRITOU 27",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133298",
+  "Longitude": "24.893803"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f2"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΕΝΙΣΕΑ ΞΑΝΘΗΣ",
+  "Address_EN": "GENISEA XANTHIS",
+  "ZIPCode": "67064",
+  "District_GR": "ΒΙΣΤΩΝΙΔΟΣ",
+  "District_EN": "VISTONIDOS",
+  "Region_GR": "ΓΕΝΙΣΕΑ ΞΑΝΘΗΣ",
+  "Region_EN": "GENISEA XANTHIS",
+  "Town_GR": "ΓΕΝΙΣΕΑ ΞΑΝΘΗΣ",
+  "Town_EN": "GENISEA XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.05874",
+  "Longitude": "24.958191"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f3"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΝΔΡΕΟΥ ΔΗΜΗΤΡΙΟΥ 44",
+  "Address_EN": "ANDREOU DIMITRIOU 44",
+  "ZIPCode": "67133",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133171",
+  "Longitude": "24.884946"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f4"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΟΞΟΤΕΣ",
+  "Address_EN": "TOXOTES",
+  "ZIPCode": "67100",
+  "District_GR": "ΤΟΠΕΙΡΟΥ",
+  "District_EN": "TOPEIROU",
+  "Region_GR": "ΤΟΞΟΤΕΣ ΞΑΝΘΗΣ",
+  "Region_EN": "TOXOTES XANTHIS",
+  "Town_GR": "ΤΟΞΟΤΕΣ ΞΑΝΘΗΣ",
+  "Town_EN": "TOXOTES XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.084925",
+  "Longitude": "24.78228"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f5"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΒΕΛΙΣΑΡΙΟΥ 10",
+  "Address_EN": "VELISARIOU 10",
+  "ZIPCode": "67131",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.137051",
+  "Longitude": "24.891326"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f6"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΥΝΤΑΓΜΑΤΑΡΧΗ ΔΗΜΗΤΡΙΑΔΗ 3",
+  "Address_EN": "SUNTAGMATARCHI DIMITRIADI 3",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.137888",
+  "Longitude": "24.877659"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f7"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΡΑΣΜΙΟ ΞΑΝΘΗΣ",
+  "Address_EN": "ERASMIO XANTHIS",
+  "ZIPCode": "67200",
+  "District_GR": "ΤΟΠΕΙΡΟΥ",
+  "District_EN": "TOPEIROU",
+  "Region_GR": "ΕΡΑΣΜΙΟ ΞΑΝΘΗΣ",
+  "Region_EN": "ERASMIO XANTHIS",
+  "Town_GR": "ΕΡΑΣΜΙΟ ΞΑΝΘΗΣ",
+  "Town_EN": "ERASMIO XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.932662",
+  "Longitude": "24.825396"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f8"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 27",
+  "Address_EN": "DIMOKRITOU 27",
+  "ZIPCode": "67131",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133524",
+  "Longitude": "24.893406"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83f9"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Ν. ΟΛΒΙΟ ΞΑΝΘΗΣ",
+  "Address_EN": "N. OLVIO XANTHIS",
+  "ZIPCode": "67200",
+  "District_GR": "ΤΟΠΕΙΡΟΥ",
+  "District_EN": "TOPEIROU",
+  "Region_GR": "Ν.ΟΛΒΙΟ - ΕΥΛΑΛΟ",
+  "Region_EN": "N.OLVIO - EULALO",
+  "Town_GR": "Ν.ΟΛΒΙΟ - ΕΥΛΑΛΟ",
+  "Town_EN": "N.OLVIO - EULALO",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.027076",
+  "Longitude": "24.801166"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83fa"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΙΚΟΥ ΜΑΤΣΟΥΚΑ 1",
+  "Address_EN": "NIKOU MATSOUKA 1",
+  "ZIPCode": "67132",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.1429",
+  "Longitude": "24.879582"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83fb"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΛΑΥΚΗ ΞΑΝΘΗΣ",
+  "Address_EN": "GLAUKI XANTHIS",
+  "ZIPCode": "67300",
+  "District_GR": "ΜΥΚΗΣ",
+  "District_EN": "MUKIS",
+  "Region_GR": "ΓΛΑΥΚΗ ΞΑΝΘΗΣ",
+  "Region_EN": "GLAUKI XANTHIS",
+  "Town_GR": "ΓΛΑΥΚΗ ΞΑΝΘΗΣ",
+  "Town_EN": "GLAUKI XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.259095",
+  "Longitude": "24.929355"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83fc"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΠΟΛΥΣΙΤΟΣ ΞΑΝΘΗΣ",
+  "Address_EN": "POLUSITOS XANTHIS",
+  "ZIPCode": "67064",
+  "District_GR": "ΒΙΣΤΩΝΙΔΟΣ",
+  "District_EN": "VISTONIDOS",
+  "Region_GR": "ΠΟΛΥΣΙΤΟΣ ΞΑΝΘΗΣ",
+  "Region_EN": "POLUSITOS XANTHIS",
+  "Town_GR": "ΠΟΛΥΣΙΤΟΣ ΞΑΝΘΗΣ",
+  "Town_EN": "POLUSITOS XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.109198",
+  "Longitude": "25.027072"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83fd"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΧΙΝΟΣ",
+  "Address_EN": "ECHINOS",
+  "ZIPCode": "67300",
+  "District_GR": "ΜΥΚΗΣ",
+  "District_EN": "MUKIS",
+  "Region_GR": "ΕΧΙΝΟΣ ΞΑΝΘΗΣ",
+  "Region_EN": "ECHINOS XANTHIS",
+  "Town_GR": "ΕΧΙΝΟΣ ΞΑΝΘΗΣ",
+  "Town_EN": "ECHINOS XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.277961",
+  "Longitude": "24.969906"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83fe"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΒΔΗΡΑ ΞΑΝΘΗΣ",
+  "Address_EN": "AVDIRA XANTHIS",
+  "ZIPCode": "67064",
+  "District_GR": "ΑΒΔΗΡΩΝ",
+  "District_EN": "AVDIRON",
+  "Region_GR": "ΑΒΔΗΡΑ",
+  "Region_EN": "AVDIRA",
+  "Town_GR": "ΑΒΔΗΡΑ",
+  "Town_EN": "AVDIRA",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.979193",
+  "Longitude": "24.951975"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f83ff"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΥΝΤΑΓΜΑΤΑΡΧΗ ΔΗΜΗΤΡΙΑΔΗ 3",
+  "Address_EN": "SUNTAGMATARCHI DIMITRIADI 3",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.137903",
+  "Longitude": "24.877659"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8400"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΒΕΛΙΣΣΑΡΙΟΥ 10",
+  "Address_EN": "VELISSARIOU 10",
+  "ZIPCode": "67131",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.137027",
+  "Longitude": "24.891723"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8401"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑΠΟΛΗ ΞΑΝΘΗΣ",
+  "Address_EN": "NEAPOLI XANTHIS",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.124144",
+  "Longitude": "24.876706"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8402"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΜΙΝΘΗ",
+  "Address_EN": "SMINTHI",
+  "ZIPCode": "67150",
+  "District_GR": "ΜΥΚΗΣ",
+  "District_EN": "MUKIS",
+  "Region_GR": "ΣΜΙΝΘΗ ΞΑΝΘΗΣ",
+  "Region_EN": "SMINTHI XANTHIS",
+  "Town_GR": "ΣΜΙΝΘΗ ΞΑΝΘΗΣ",
+  "Town_EN": "SMINTHI XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.229047",
+  "Longitude": "24.881675"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8403"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΜΙΧΑΗΛ ΚΑΡΑΟΛΗ 79-81",
+  "Address_EN": "MICHAIL KARAOLI 79-81",
+  "ZIPCode": "67133",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.135783",
+  "Longitude": "24.891197"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8404"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΑΛΙΚΑΡΝΑΣΣΟΥ 4",
+  "Address_EN": "ALIKARNASSOU 4",
+  "ZIPCode": "67131",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.130739",
+  "Longitude": "24.893071"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8405"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΛΑΧΑΝΟΚΗΠΩΝ  2",
+  "Address_EN": "LACHANOKIPON  2",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.134238",
+  "Longitude": "24.903286"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8406"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΔΗΜΟΚΡΙΤΟΥ 27",
+  "Address_EN": "DIMOKRITOU 27",
+  "ZIPCode": "67132",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.133492",
+  "Longitude": "24.893621"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8407"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΟΞΟΤΕΣ",
+  "Address_EN": "TOXOTES",
+  "ZIPCode": "67100",
+  "District_GR": "ΤΟΠΕΙΡΟΥ",
+  "District_EN": "TOPEIROU",
+  "Region_GR": "ΤΟΞΟΤΕΣ",
+  "Region_EN": "TOXOTES",
+  "Town_GR": "ΤΟΞΟΤΕΣ",
+  "Town_EN": "TOXOTES",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.089218",
+  "Longitude": "24.784381"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8408"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΟ ΞΑΝΘΗΣ-ΑΒΔΗΡΩΝ 9 ΧΛΜ",
+  "Address_EN": "EO XANTHIS-AVDIRON 9 CHLM",
+  "ZIPCode": "67064",
+  "District_GR": "ΒΙΣΤΩΝΙΔΟΣ",
+  "District_EN": "VISTONIDOS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.056586",
+  "Longitude": "24.948835"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8409"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΕΠ.ΟΔ. ΞΑΝΘΗΣ-ΑΒΔΗΡΩΝ 9ΧΛΜ",
+  "Address_EN": "EP.OD. XANTHIS-AVDIRON 9CHLM",
+  "ZIPCode": "67064",
+  "District_GR": "ΒΙΣΤΩΝΙΔΟΣ",
+  "District_EN": "VISTONIDOS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.068147",
+  "Longitude": "25.01101"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f840a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΘΑΛΑΣΣΙΆ-ΕΎΛΑΛΟ",
+  "Address_EN": "THALASSIΆ-EΎLALO",
+  "ZIPCode": "67200",
+  "District_GR": "ΤΟΠΕΙΡΟΥ",
+  "District_EN": "TOPEIROU",
+  "Region_GR": "ΘΑΛΑΣΣΙΑ ΞΑΝΘΗΣ",
+  "Region_EN": "THALASSIA XANTHIS",
+  "Town_GR": "ΘΑΛΑΣΣΙΑ ΞΑΝΘΗΣ",
+  "Town_EN": "THALASSIA XANTHIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.953374",
+  "Longitude": "24.840813"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f840b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΝΕΑΠΟΛΗ",
+  "Address_EN": "NEAPOLI",
+  "ZIPCode": "67100",
+  "District_GR": "ΞΑΝΘΗΣ",
+  "District_EN": "XANTHIS",
+  "Region_GR": "ΞΑΝΘΗ",
+  "Region_EN": "XANTHI",
+  "Town_GR": "ΞΑΝΘΗ",
+  "Town_EN": "XANTHI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.125112",
+  "Longitude": "24.879651"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f840c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΦΙΛΙΠΠΟΥ 33",
+  "Address_EN": "FILIPPOU 33",
+  "ZIPCode": "69132",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΉ",
+  "Region_EN": "KOMOTINΉ",
+  "Town_GR": "ΚΟΜΟΤΗΝΉ",
+  "Town_EN": "KOMOTINΉ",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.122342",
+  "Longitude": "25.397375"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f840d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Μ. ΑΝΔΡΟΝΙΚΟΥ-Γ. ΠΑΠΑΝΔΡΕΟΥ",
+  "Address_EN": "M. ANDRONIKOU-G. PAPANDREOU",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "KOMOTINIS RODOPIS",
+  "Town_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "KOMOTINIS RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.121629",
+  "Longitude": "25.389462"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f840e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΣΙΣΜΑΝΟΓΛΟΥ",
+  "Address_EN": "TERMA SISMANOGLOU",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.1056",
+  "Longitude": "25.42055"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f840f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΡΑΤΙΑΝΟΥΠΟΛΕΩΣ 1",
+  "Address_EN": "GRATIANOUPOLEOS 1",
+  "ZIPCode": "69131",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "KOMOTINIS RODOPIS",
+  "Town_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "KOMOTINIS RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.150896",
+  "Longitude": "25.425968"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8410"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΣΙΣΜΑΝΟΓΛΟΥ",
+  "Address_EN": "TERMA SISMANOGLOU",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "Region_EN": "KOMOTINIS",
+  "Town_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "Town_EN": "KOMOTINIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.104984",
+  "Longitude": "25.420267"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8411"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Γ. ΠΑΠΑΝΔΡΕΟΥ & Μ.ΑΝΔΡΟΝΙΚΟΥ Ν.ΜΟΣΥΝΟΥΠΟΛΗ",
+  "Address_EN": "G. PAPANDREOU & M.ANDRONIKOU N.MOSUNOUPOLI",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.122316",
+  "Longitude": "25.389474"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8412"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΟΥΤΟΥΜΑΝΗ 1",
+  "Address_EN": "KOUTOUMANI 1",
+  "ZIPCode": "69300",
+  "District_GR": "ΣΑΠΩΝ",
+  "District_EN": "SAPON",
+  "Region_GR": "ΣΑΠΩΝ ΡΟΔΟΠΗΣ",
+  "Region_EN": "SAPON RODOPIS",
+  "Town_GR": "ΣΑΠΩΝ ΡΟΔΟΠΗΣ",
+  "Town_EN": "SAPON RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.021616",
+  "Longitude": "25.703503"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8413"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 2",
+  "Address_EN": "KONSTANTINOUPOLEOS 2",
+  "ZIPCode": "69200",
+  "District_GR": "ΙΑΣΜΟΥ",
+  "District_EN": "IASMOU",
+  "Region_GR": "ΙΑΣΜΟΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "IASMOS RODOPIS",
+  "Town_GR": "ΙΑΣΜΟΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "IASMOS RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.124615",
+  "Longitude": "25.178226"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8414"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΤΙΛΠΩΝΟΣ ΚΥΡΙΑΚΙΔΗ 93",
+  "Address_EN": "STILPONOS KURIAKIDI 93",
+  "ZIPCode": "69132",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.114865",
+  "Longitude": "25.398995"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8415"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΞΥΛΑΓΑΝΗ",
+  "Address_EN": "XULAGANI",
+  "ZIPCode": "69400",
+  "District_GR": "ΜΑΡΩΝΕΙΑΣ",
+  "District_EN": "MARONEIAS",
+  "Region_GR": "ΞΥΛΑΓΑΝΗ",
+  "Region_EN": "XULAGANI",
+  "Town_GR": "ΞΥΛΑΓΑΝΗ",
+  "Town_EN": "XULAGANI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "40.971827",
+  "Longitude": "25.427669"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8416"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΟΡΓΑΝΗ ΡΟΔΟΠΗΣ -",
+  "Address_EN": "ORGANI RODOPIS -",
+  "ZIPCode": "69500",
+  "District_GR": "ΟΡΓΑΝΗΣ",
+  "District_EN": "ORGANIS",
+  "Region_GR": "ΟΡΓΑΝΗ",
+  "Region_EN": "ORGANI",
+  "Town_GR": "ΟΡΓΑΝΗ",
+  "Town_EN": "ORGANI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.253327",
+  "Longitude": "25.684797"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8417"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΙΑΝΝΗ ΡΙΤΣΟΥ",
+  "Address_EN": "GIANNI RITSOU",
+  "ZIPCode": "69133",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.108846",
+  "Longitude": "25.406614"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8418"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΟΛΥΜΠΟΥ  ΤΕΡΜΑ",
+  "Address_EN": "OLUMPOU  TERMA",
+  "ZIPCode": "69131",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.129533",
+  "Longitude": "25.407332"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8419"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΓΥΜΝΑΣΙΑΡΧΗ Β. ΚΟΥΤΟΥΜΑΝΗ 1",
+  "Address_EN": "GUMNASIARCHI V. KOUTOUMANI 1",
+  "ZIPCode": "69300",
+  "District_GR": "ΣΑΠΩΝ",
+  "District_EN": "SAPON",
+  "Region_GR": "ΣΑΠΕΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "SAPES RODOPIS",
+  "Town_GR": "ΣΑΠΕΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "SAPES RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.022125",
+  "Longitude": "25.702823"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f841a"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 2",
+  "Address_EN": "KONSTANTINOUPOLEOS 2",
+  "ZIPCode": "69200",
+  "District_GR": "ΙΑΣΜΟΥ",
+  "District_EN": "IASMOU",
+  "Region_GR": "ΙΑΣΜΟΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "IASMOS RODOPIS",
+  "Town_GR": "ΙΑΣΜΟΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "IASMOS RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.124953",
+  "Longitude": "25.178018"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f841b"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "1Ο ΧΛΜ. ΕΠ. ΟΔΟΎ Ν. ΚΑΛΛΊΣΤΗΣ - ΠΌΡΠΗΣ",
+  "Address_EN": "1O CHLM. EP. ODOΎ N. KALLΊSTIS - PΌRPIS",
+  "ZIPCode": "69150",
+  "District_GR": "ΑΙΓΕΙΡΟΥ",
+  "District_EN": "AIGEIROU",
+  "Region_GR": "ΝΕΑ ΚΑΛΛΙΣΤΗ ΡΟΔΟΠΗΣ",
+  "Region_EN": "NEA KALLISTI RODOPIS",
+  "Town_GR": "ΝΕΑ ΚΑΛΛΙΣΤΗ ΡΟΔΟΠΗΣ",
+  "Town_EN": "NEA KALLISTI RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Eat",
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 4",
+  "MCCCategory_EN": "Category 4",
+  "Latitude": "41.031879",
+  "Longitude": "25.214695"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f841c"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΦΙΛΙΠΠΟΥ 33",
+  "Address_EN": "FILIPPOU 33",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.122072",
+  "Longitude": "25.397155"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f841d"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "Π. ΕΛΛΗ 6",
+  "Address_EN": "P. ELLI 6",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "KOMOTINIS RODOPIS",
+  "Town_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "KOMOTINIS RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.122688",
+  "Longitude": "25.393116"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f841e"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "14ΗΣ ΜΑΪΟΥ ΤΕΡΜΑ",
+  "Address_EN": "14IS MAΪOU TERMA",
+  "ZIPCode": "69132",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Region_EN": "KOMOTINIS RODOPIS",
+  "Town_GR": "ΚΟΜΟΤΗΝΗΣ ΡΟΔΟΠΗΣ",
+  "Town_EN": "KOMOTINIS RODOPIS",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.120683",
+  "Longitude": "25.394614"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f841f"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΣΩΖΟΥΠΟΛΕΩΣ 35",
+  "Address_EN": "SOZOUPOLEOS 35",
+  "ZIPCode": "69133",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.122713",
+  "Longitude": "25.410542"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8420"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΚΩΝΣΤΑΝΤΙΝΟΥ ΠΑΛΑΙΟΛΟΓΟΥ 8",
+  "Address_EN": "KONSTANTINOU PALAIOLOGOU 8",
+  "ZIPCode": "69132",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.119738",
+  "Longitude": "25.403104"
+},
+{
+  "_id": {
+    "$oid": "66ab44bf0ab8df137d7f8421"
+  },
+  "VATName_GR": "Greek VAT Name",
+  "VATName_EN": "English VAT Name",
+  "BrandName_GR": "Greek Brand Name",
+  "BrandName_EN": "English Brand Name",
+  "Address_GR": "ΤΕΡΜΑ ΣΙΣΜΑΝΟΓΛΟΥ",
+  "Address_EN": "TERMA SISMANOGLOU",
+  "ZIPCode": "69100",
+  "District_GR": "ΚΟΜΟΤΗΝΗΣ",
+  "District_EN": "KOMOTINIS",
+  "Region_GR": "ΚΟΜΟΤΗΝΗ",
+  "Region_EN": "KOMOTINI",
+  "Town_GR": "ΚΟΜΟΤΗΝΗ",
+  "Town_EN": "KOMOTINI",
+  "IsHerocorp": false,
+  "AcceptedProducts": [
+    "UP Gift",
+    "Cheque Dejeuner"
+  ],
+  "MCCCategory_GR": "Κατηγορία 3",
+  "MCCCategory_EN": "Category 3",
+  "Latitude": "41.105691",
+  "Longitude": "25.420549"
+}]
