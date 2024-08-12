@@ -1,3 +1,5 @@
+import { FeatureCollection, Point } from "geojson";
+
 export interface merchantsResponse {
   vat_name_gr: string;
   vat_name_en: string;
@@ -19,3 +21,5 @@ export interface merchantsResponse {
   latitude: string | null;
   longitude: string | null;
 }
+
+export type merchantsGeojson = FeatureCollection<Point, merchantsResponse>;
