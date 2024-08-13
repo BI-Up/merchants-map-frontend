@@ -1,21 +1,33 @@
-import { AdvancedMarker, InfoWindow, useMap } from '@vis.gl/react-google-maps';
-import * as React from 'react';
-import { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
-import { Marker, MarkerClusterer } from '@googlemaps/markerclusterer';
+import { AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
+import * as React from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import { Marker, MarkerClusterer } from "@googlemaps/markerclusterer";
 // @ts-ignore
-import marker from '../../assets/marker.svg';
-import { merchantsResponse } from '../type';
-import { Box } from '@mui/material';
-import { smoothZoom } from '../helper';
+import marker from "../../assets/marker.svg";
+import { merchantsResponse } from "../type";
+import { Box } from "@mui/material";
+import { smoothZoom } from "../helper";
 
 interface MarkersProps {
   data: merchantsResponse[] | [];
   openLocation: Object | number | null;
   setOpenLocation: Dispatch<SetStateAction<Object | number | null>>;
-  language: 'en' | 'gr';
+  language: "en" | "gr";
 }
 
-const Markers = ({ data, openLocation, setOpenLocation, language }: MarkersProps) => {
+const Markers = ({
+  data,
+  openLocation,
+  setOpenLocation,
+  language,
+}: MarkersProps) => {
   const map = useMap();
   const clusterer = useRef<MarkerClusterer | null>(null);
   const markersRef = useRef<{ [key: string]: Marker }>({});
@@ -33,32 +45,31 @@ const Markers = ({ data, openLocation, setOpenLocation, language }: MarkersProps
   );
   useEffect(() => {
     if (!map) return;
-    if (1 == 0) {
-      clusterer.current = new MarkerClusterer({
-        map,
-        renderer: {
-          render: ({ markers, position: position, count }) => {
-            return new google.maps.Marker({
-              position,
-              label: {
-                text: String(count),
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '16px',
-              },
-              icon: '/assets/cluster.svg',
-              opacity: 0.98,
-              zIndex: Number(google.maps.Marker.MAX_ZINDEX) + count,
-            });
-          },
+
+    clusterer.current = new MarkerClusterer({
+      map,
+      renderer: {
+        render: ({ markers, position: position, count }) => {
+          return new google.maps.Marker({
+            position,
+            label: {
+              text: String(count),
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "16px",
+            },
+            icon: "/assets/cluster.svg",
+            opacity: 0.98,
+            zIndex: Number(google.maps.Marker.MAX_ZINDEX) + count,
+          });
         },
-        onClusterClick: (event, cluster) => {
-          map.panTo(event.latLng);
-          if (cluster.markers.length > 2) setOpenLocation(clusterer.current);
-          else setOpenLocation(clusterer.current);
-        },
-      });
-    }
+      },
+      onClusterClick: (event, cluster) => {
+        map.panTo(event.latLng);
+        if (cluster.markers.length > 2) setOpenLocation(clusterer.current);
+        else setOpenLocation(clusterer.current);
+      },
+    });
 
     return () => {
       clusterer.current?.clearMarkers();
@@ -105,9 +116,11 @@ const Markers = ({ data, openLocation, setOpenLocation, language }: MarkersProps
               }}
               ref={(marker) => setMarkerRef(marker, index)}
               clickable={true}
-              onClick={(ev: google.maps.MapMouseEvent) => handleClick(ev, index)}
+              onClick={(ev: google.maps.MapMouseEvent) =>
+                handleClick(ev, index)
+              }
             >
-              <img src={marker} alt={mark?.vat_name_en} width={'30px'} />
+              <img src={marker} alt={mark?.vat_name_en} width={"30px"} />
             </AdvancedMarker>
 
             {openLocation === index && (
@@ -124,21 +137,21 @@ const Markers = ({ data, openLocation, setOpenLocation, language }: MarkersProps
                   <Box
                     sx={{
                       paddingBottom: 1,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'flex-start',
-                      alignItems: 'flex-start',
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                      alignItems: "flex-start",
                     }}
                   >
                     {mark.is_hero_corp && (
                       <Box
                         sx={{
-                          backgroundColor: '#F59100',
+                          backgroundColor: "#F59100",
                           borderRadius: 100,
                           px: 1,
-                          fontSize: '14px',
+                          fontSize: "14px",
                           fontWeight: 600,
-                          color: 'white',
+                          color: "white",
                           width: 130,
                           mb: 0.5,
                         }}
@@ -146,22 +159,27 @@ const Markers = ({ data, openLocation, setOpenLocation, language }: MarkersProps
                         Cashback partner
                       </Box>
                     )}
-                    <Box sx={{ fontSize: '15px', mb: 0.5 }}>{mark[`mcc_category_${language}`]}</Box>
-                    <Box sx={{ fontWeight: 'bold', fontSize: '20px', mb: 0.5 }}>
-                      {mark[`brand_name_${language}`] ?? 'Brand Name'}
+                    <Box sx={{ fontSize: "15px", mb: 0.5 }}>
+                      {mark[`mcc_category_${language}`]}
+                    </Box>
+                    <Box sx={{ fontWeight: "bold", fontSize: "20px", mb: 0.5 }}>
+                      {mark[`brand_name_${language}`] ?? "Brand Name"}
                     </Box>
                     <Box
                       sx={{
-                        fontSize: '14px',
+                        fontSize: "14px",
                         mb: 0.5,
-                        textTransform: 'capitalize',
-                        fontWeight: 'normal',
+                        textTransform: "capitalize",
+                        fontWeight: "normal",
                       }}
                     >
-                      {mark[`address_${language}`]},{mark[`region_${language}`]},{mark.zip_code}
+                      {mark[`address_${language}`]},{mark[`region_${language}`]}
+                      ,{mark.zip_code}
                     </Box>
-                    <Box display={'flex'} sx={{ mb: 0.5 }}>
-                      {mark?.accepted_products.map((product) => <Box mr={0.5}>•{product} </Box>)}
+                    <Box display={"flex"} sx={{ mb: 0.5 }}>
+                      {mark?.accepted_products.map((product) => (
+                        <Box mr={0.5}>•{product} </Box>
+                      ))}
                     </Box>
                   </Box>
                 </InfoWindow>

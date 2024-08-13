@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/layout/Sidebar";
 import {
   InfoWindow,
   Map,
@@ -11,9 +11,8 @@ import Markers from "./components/Markers";
 import { merchantsGeojson, merchantsResponse } from "./type";
 import { getData } from "./api/api";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import Header from "./components/Header";
-import { c } from "vite/dist/node/types.d-aGj9QkWt";
-import { convertToGeoJSON } from "./stores";
+import Header from "./components/layout/Header";
+import { convertToGeoJSON } from "./helper";
 import ClusteredMarkers from "./components/ClusteredMarkers";
 import { Feature, Point } from "geojson";
 import InfoWindowContent from "./components/InfoWindowContent";
@@ -28859,8 +28858,10 @@ const MerchantsMap = () => {
     is_hero_corp: false,
     mcc_category: "",
   });
+
   // const mapRef = useRef(null);
   //
+
   // const handleSelectedTowns = (towns: string[]) => {
   //   const enFormattedTowns = towns.map((town) => {
   //     if (selectedLanguage === "gr") {

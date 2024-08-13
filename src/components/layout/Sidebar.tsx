@@ -13,14 +13,14 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import CustomButton from "./CustomButton";
-import { getFilters } from "../api/api";
+import CustomButton from "../ui/CustomButton";
+import { getFilters } from "../../api/api";
 import FilterListIcon from "@mui/icons-material/FilterList";
-import { merchantsResponse } from "../type";
+import { merchantsResponse } from "../../type";
 import { useMap } from "@vis.gl/react-google-maps";
-import MerchantsList from "./MerchantsList";
-import LeftMenu from "./LeftMenu";
-import { smoothZoom } from "../helper";
+import MerchantsList from "../MerchantsList";
+import LeftMenu from "../LeftMenu";
+import { smoothZoom } from "../../helper";
 interface SidebarProps {
   handleSelectedTowns: (_towns: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;

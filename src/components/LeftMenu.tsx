@@ -1,9 +1,9 @@
 import * as React from "react";
 import { ReactNode } from "react";
 import { Box, Typography } from "@mui/material";
-import InputField from "./InputField";
-import CustomSwitcher from "./CustomSwitcher";
-import CustomButton from "./CustomButton";
+import InputField from "./ui/InputField";
+import CustomSwitcher from "./ui/CustomSwitcher";
+import CustomButton from "./ui/CustomButton";
 
 interface LeftMenuProps {
   isMobile: boolean;

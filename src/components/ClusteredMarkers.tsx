@@ -5,9 +5,9 @@ import Supercluster, { ClusterProperties } from "supercluster";
 import { Feature, FeatureCollection, Point, GeoJsonProperties } from "geojson";
 import { useSupercluster } from "../use-supercluster";
 import { MerchantsClusterMarker } from "./MerchantsCluster";
-import { MerchantsMarker } from "./marker-pin";
+import { MerchantsMarker } from "./svg/marker-pin";
 import { MerchantsMarkerPin } from "./MerchantsMarker";
-import { InfoWindow } from "@vis.gl/react-google-maps";
+import { InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import InfoWindowContent from "./InfoWindowContent";
 
 const superclusterOptions: Supercluster.Options<
@@ -39,6 +39,8 @@ const ClusteredMarkers = ({
 }) => {
   const { clusters, getLeaves } = useSupercluster(geojson, superclusterOptions);
 
+  const map = useMap();
+
   console.log("clusters", clusters);
 
   useEffect(() => {
@@ -59,7 +61,7 @@ const ClusteredMarkers = ({
       const feature = clusters.find(
         (feat) => feat.id === featureId,
       ) as Feature<Point>;
-      console.log(featureId);
+
       setInfoWindowData({ anchor: marker, features: [feature] });
     },
     [clusters, setInfoWindowData],

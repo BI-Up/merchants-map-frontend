@@ -1,8 +1,5 @@
 import { FeatureCollection, Point, GeoJsonProperties } from "geojson";
-import { useSupercluster } from "./use-supercluster";
-
 // Convert the data to GeoJSON
-
 export function convertToGeoJSON(
   data: any[],
 ): FeatureCollection<Point, GeoJsonProperties> {
@@ -37,3 +34,33 @@ export function convertToGeoJSON(
     })),
   };
 }
+
+export const smoothZoom = (map, targetZoom, setOpenLocation, key) => {
+  const currentZoom = map.getZoom();
+
+  const zoomIn = () => {
+    if (map.getZoom() < targetZoom) {
+      map.setZoom(map.getZoom() + 1);
+      setTimeout(zoomIn, 100);
+    } else {
+      setOpenLocation(key);
+    }
+  };
+
+  const zoomOut = () => {
+    if (map.getZoom() > targetZoom) {
+      map.setZoom(map.getZoom() - 1);
+      setTimeout(zoomOut, 100);
+    } else {
+      setOpenLocation(key);
+    }
+  };
+
+  if (currentZoom < targetZoom) {
+    zoomIn();
+  } else if (currentZoom > targetZoom) {
+    zoomOut();
+  } else {
+    setOpenLocation(key);
+  }
+};

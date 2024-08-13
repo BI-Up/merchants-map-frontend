@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 // @ts-ignore
-import logo from "../../assets/logo.svg";
+import logo from "../../../assets/logo.svg";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 interface HeaderProps {

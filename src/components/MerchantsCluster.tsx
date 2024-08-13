@@ -4,7 +4,7 @@ import {
   useAdvancedMarkerRef,
 } from "@vis.gl/react-google-maps";
 import { useCallback } from "react";
-import { ClusterCicle } from "./cluster-cicle";
+import { ClusterCicle } from "./svg/cluster-cicle";
 
 export const MerchantsClusterMarker = ({
   position,
