@@ -1,7 +1,12 @@
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Sidebar from "./components/Sidebar";
-import { Map, MapCameraChangedEvent, useMap } from "@vis.gl/react-google-maps";
+import {
+  InfoWindow,
+  Map,
+  MapCameraChangedEvent,
+  useMap,
+} from "@vis.gl/react-google-maps";
 import Markers from "./components/Markers";
 import { merchantsGeojson, merchantsResponse } from "./type";
 import { getData } from "./api/api";
@@ -10,6 +15,7 @@ import Header from "./components/Header";
 import { c } from "vite/dist/node/types.d-aGj9QkWt";
 import { convertToGeoJSON } from "./stores";
 import ClusteredMarkers from "./components/ClusteredMarkers";
+import { Feature, Point } from "geojson";
 
 const data = [
   {
@@ -28828,7 +28834,10 @@ const MerchantsMap = () => {
 
   const [infoWindowData, setInfoWindowData] = useState<{
     anchor: google.maps.marker.AdvancedMarkerElement;
+    features: Feature<Point>[];
   } | null>(null);
+
+  console.log("infoWindowData", infoWindowData);
 
   // const [merchantsData, setMerchantsData] = useState<any[]>(stores);
 
@@ -28970,8 +28979,8 @@ const MerchantsMap = () => {
   //
   const GREECE_BOUNDS = {
     north: 12,
-    south: 54,
-    west: 9,
+    south: 58,
+    west: 12,
     east: 39,
   };
 
@@ -29006,8 +29015,8 @@ const MerchantsMap = () => {
           disableDefaultUI={true}
           clickableIcons={false}
           // reuseMaps={true}
-          defaultZoom={10}
-          minZoom={6}
+          defaultZoom={7}
+          minZoom={7}
           maxZoom={16}
           defaultCenter={ATHENS}
           restriction={{
@@ -29015,11 +29024,17 @@ const MerchantsMap = () => {
             strictBounds: true,
           }}
         >
-          <ClusteredMarkers
-            geojson={geojson}
-            setNumClusters={setNumClusters}
-            setInfoWindowData={setInfoWindowData}
-          />
+          {geojson && (
+            <ClusteredMarkers
+              geojson={geojson}
+              setNumClusters={setNumClusters}
+              setInfoWindowData={setInfoWindowData}
+              hasInfoWindowData={infoWindowData}
+              closeInfoWindowData={handleInfoWindowClose}
+              anchor={infoWindowData?.anchor}
+            />
+          )}
+
           {/*<Markers*/}
           {/*  data={merchantsData}*/}
           {/*  openLocation={openLocation}*/}

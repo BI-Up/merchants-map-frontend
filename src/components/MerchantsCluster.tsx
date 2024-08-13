@@ -24,12 +24,11 @@ export const MerchantsClusterMarker = ({
       ref={markerRef}
       position={position}
       zIndex={size}
-      onClick={handleClick}
+      // onClick={handleClick}
       className={"marker cluster"}
       style={{ width: markerSize, height: markerSize }}
     >
-      <ClusterCicle />
-      <span>{sizeAsText}</span>
+      <ClusterCicle text={sizeAsText} />
     </AdvancedMarker>
   );
 };

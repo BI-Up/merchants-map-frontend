@@ -1,11 +1,13 @@
 import * as React from "react";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
+// @ts-ignore
 import Supercluster, { ClusterProperties } from "supercluster";
 import { Feature, FeatureCollection, Point, GeoJsonProperties } from "geojson";
 import { useSupercluster } from "../use-supercluster";
 import { MerchantsClusterMarker } from "./MerchantsCluster";
 import { MerchantsMarker } from "./marker-pin";
 import { MerchantsMarkerPin } from "./MerchantsMarker";
+import { InfoWindow } from "@vis.gl/react-google-maps";
 
 const superclusterOptions: Supercluster.Options<
   GeoJsonProperties,
@@ -28,8 +30,19 @@ type ClusteredMarkersProps = {
   ) => void;
 };
 
-const ClusteredMarkers = ({ geojson, setNumClusters, setInfoWindowData }) => {
+const ClusteredMarkers = ({
+  geojson,
+  setNumClusters,
+  setInfoWindowData,
+  closeInfoWindowData,
+  anchor,
+  hasInfoWindowData,
+}) => {
   const { clusters, getLeaves } = useSupercluster(geojson, superclusterOptions);
+
+  useEffect(() => {
+    setNumClusters(clusters.length);
+  }, [setNumClusters, clusters.length]);
 
   const handleClusterClick = useCallback(
     (marker: google.maps.marker.AdvancedMarkerElement, clusterId: number) => {
@@ -59,6 +72,8 @@ const ClusteredMarkers = ({ geojson, setNumClusters, setInfoWindowData }) => {
         const clusterProperties = feature.properties as ClusterProperties;
         const isCluster: boolean = clusterProperties.cluster;
 
+        console.log("clusterProperties", feature);
+
         return isCluster ? (
           <MerchantsClusterMarker
             key={feature.id}
@@ -66,15 +81,23 @@ const ClusteredMarkers = ({ geojson, setNumClusters, setInfoWindowData }) => {
             position={{ lat, lng }}
             size={clusterProperties.point_count}
             sizeAsText={String(clusterProperties.point_count_abbreviated)}
-            onMarkerClick={handleClusterClick}
+            // onMarkerClick={handleClusterClick}
           />
         ) : (
-          <MerchantsMarkerPin
-            key={feature.id}
-            featureId={feature.id as string}
-            position={{ lat, lng }}
-            onMarkerClick={handleMarkerClick}
-          />
+          <>
+            <MerchantsMarkerPin
+              key={feature.id}
+              featureId={feature.id as string}
+              position={{ lat, lng }}
+              onMarkerClick={handleMarkerClick}
+            />
+            {hasInfoWindowData && (
+              <InfoWindow
+                onCloseClick={closeInfoWindowData}
+                anchor={anchor}
+              ></InfoWindow>
+            )}
+          </>
         );
       })}
     </>

@@ -1,4 +1,5 @@
 import { FeatureCollection, GeoJsonProperties, Point } from "geojson";
+// @ts-ignore
 import Supercluster, { ClusterProperties } from "supercluster";
 import { useCallback, useEffect, useMemo, useReducer } from "react";
 import { useMapViewport } from "./use-map-viewport";
