@@ -8,6 +8,7 @@ import { MerchantsClusterMarker } from "./MerchantsCluster";
 import { MerchantsMarker } from "./marker-pin";
 import { MerchantsMarkerPin } from "./MerchantsMarker";
 import { InfoWindow } from "@vis.gl/react-google-maps";
+import InfoWindowContent from "./InfoWindowContent";
 
 const superclusterOptions: Supercluster.Options<
   GeoJsonProperties,
@@ -34,11 +35,11 @@ const ClusteredMarkers = ({
   geojson,
   setNumClusters,
   setInfoWindowData,
-  closeInfoWindowData,
-  anchor,
-  hasInfoWindowData,
+  children,
 }) => {
   const { clusters, getLeaves } = useSupercluster(geojson, superclusterOptions);
+
+  console.log("clusters", clusters);
 
   useEffect(() => {
     setNumClusters(clusters.length);
@@ -58,7 +59,7 @@ const ClusteredMarkers = ({
       const feature = clusters.find(
         (feat) => feat.id === featureId,
       ) as Feature<Point>;
-
+      console.log(featureId);
       setInfoWindowData({ anchor: marker, features: [feature] });
     },
     [clusters, setInfoWindowData],
@@ -71,8 +72,6 @@ const ClusteredMarkers = ({
 
         const clusterProperties = feature.properties as ClusterProperties;
         const isCluster: boolean = clusterProperties.cluster;
-
-        console.log("clusterProperties", feature);
 
         return isCluster ? (
           <MerchantsClusterMarker
@@ -91,12 +90,16 @@ const ClusteredMarkers = ({
               position={{ lat, lng }}
               onMarkerClick={handleMarkerClick}
             />
-            {hasInfoWindowData && (
-              <InfoWindow
-                onCloseClick={closeInfoWindowData}
-                anchor={anchor}
-              ></InfoWindow>
-            )}
+
+            {children ?? <> </>}
+            {/*{hasInfoWindowData && (*/}
+            {/*  <InfoWindow onCloseClick={closeInfoWindowData} anchor={anchor}>*/}
+            {/*    <InfoWindowContent*/}
+            {/*      info={hasInfoWindowData?.features.properties}*/}
+            {/*      language={language}*/}
+            {/*    />*/}
+            {/*  </InfoWindow>*/}
+            {/*)}*/}
           </>
         );
       })}

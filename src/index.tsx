@@ -16,6 +16,7 @@ import { c } from "vite/dist/node/types.d-aGj9QkWt";
 import { convertToGeoJSON } from "./stores";
 import ClusteredMarkers from "./components/ClusteredMarkers";
 import { Feature, Point } from "geojson";
+import InfoWindowContent from "./components/InfoWindowContent";
 
 const data = [
   {
@@ -28827,17 +28828,16 @@ const MerchantsMap = () => {
 
   useEffect(() => {
     const convertedData = convertToGeoJSON(data);
+    // @ts-ignore
     setGeojson(convertedData);
   }, []);
 
-  console.log(geojson);
+  console.log("geo", geojson);
 
   const [infoWindowData, setInfoWindowData] = useState<{
     anchor: google.maps.marker.AdvancedMarkerElement;
     features: Feature<Point>[];
   } | null>(null);
-
-  console.log("infoWindowData", infoWindowData);
 
   // const [merchantsData, setMerchantsData] = useState<any[]>(stores);
 
@@ -28848,8 +28848,9 @@ const MerchantsMap = () => {
 
   const handleInfoWindowClose = useCallback(
     () => setInfoWindowData(null),
-    [setInfoWindowData],
+    [setInfoWindowData, infoWindowData],
   );
+
   const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
   const [queryParams, setQueryParams] = useState({
     town: "",
@@ -28986,6 +28987,8 @@ const MerchantsMap = () => {
 
   const ATHENS = { lat: 37.97991702599259, lng: 23.730877354617046 };
 
+  console.log("infoWindow", infoWindowData?.features[0].properties);
+
   return (
     <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
       <Header
@@ -29010,29 +29013,37 @@ const MerchantsMap = () => {
         {/*/>*/}
 
         <Map
-          // onIdle={handleIdle}
-          mapId="da37f3254c6a6d1c"
+          // mapId="da37f3254c6a6d1c"
+          mapId="116fd91f1d18588b"
           disableDefaultUI={true}
           clickableIcons={false}
-          // reuseMaps={true}
           defaultZoom={7}
           minZoom={7}
-          maxZoom={16}
+          maxZoom={15}
           defaultCenter={ATHENS}
-          restriction={{
-            latLngBounds: GREECE_BOUNDS,
-            strictBounds: true,
-          }}
+          onDrag={handleInfoWindowClose}
+          onZoomChanged={handleInfoWindowClose}
         >
           {geojson && (
             <ClusteredMarkers
               geojson={geojson}
               setNumClusters={setNumClusters}
               setInfoWindowData={setInfoWindowData}
-              hasInfoWindowData={infoWindowData}
-              closeInfoWindowData={handleInfoWindowClose}
-              anchor={infoWindowData?.anchor}
-            />
+            >
+              {infoWindowData && (
+                <InfoWindow
+                  onCloseClick={handleInfoWindowClose}
+                  anchor={infoWindowData?.anchor}
+                  shouldFocus={false}
+                >
+                  <InfoWindowContent
+                    info={infoWindowData?.features[0].properties}
+                    key={infoWindowData?.features[0].properties.id}
+                    language={selectedLanguage}
+                  />
+                </InfoWindow>
+              )}
+            </ClusteredMarkers>
           )}
 
           {/*<Markers*/}
