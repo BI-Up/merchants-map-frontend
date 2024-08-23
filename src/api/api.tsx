@@ -1,23 +1,46 @@
 import axios from "axios";
 
-interface params {
+interface filterParams {
   town: string;
   accepted_products: string;
   region: string;
   is_hero_corp: boolean;
   mcc_category: string;
 }
-export const getData = async (queryParams?: params) => {
+
+interface points {
+  latitude: string;
+  longitude: string;
+}
+
+interface requestPayload {
+  merchant_filter: filterParams | {};
+  northwest_point?: points;
+  southwest_point?: points;
+}
+
+export const postData = async (payload: requestPayload) => {
   try {
-    const response = await axios.get("http://localhost/merchants", {
-      params: queryParams,
-    });
+    const response = await axios.post("http://localhost/merchants", payload);
+    console.log("response: " + response);
     return response.data;
   } catch (error) {
     console.error(error);
     throw error;
   }
 };
+
+// export const getData = async (queryParams?: params) => {
+//   try {
+//     const response = await axios.get("http://localhost/merchants", {
+//       params: queryParams,
+//     });
+//     return response.data;
+//   } catch (error) {
+//     console.error(error);
+//     throw error;
+//   }
+// };
 
 export const getFilters = async (
   filter_value: string,

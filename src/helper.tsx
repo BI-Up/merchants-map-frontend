@@ -12,7 +12,7 @@ export function convertToGeoJSON(
         coordinates: [parseFloat(item.longitude), parseFloat(item.latitude)],
       },
       properties: {
-        id: item._id.$oid,
+        // id: item._id.$oid,
         vat_name_gr: item.vat_name_gr,
         vat_name_en: item.vat_name_en,
         brand_name_gr: item.brand_name_gr,
