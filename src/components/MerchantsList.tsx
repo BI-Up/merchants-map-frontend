@@ -13,6 +13,7 @@ import {
   SxProps,
 } from "@mui/material";
 import { merchantsResponse } from "../type";
+import { AdvancedMarker } from "@vis.gl/react-google-maps";
 
 interface MerchantsListProps {
   data: merchantsResponse[]; // Replace with the actual type of your data
@@ -63,6 +64,12 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
                   transition: "background-color 0.3s",
                 }}
               >
+                <AdvancedMarker
+                  key={index}
+                  onClick={(ev) => {
+                    handleClick(ev, index, paginatedData);
+                  }}
+                />
                 <ListItemText>
                   <Typography variant="body2">
                     {item[`mcc_category_${language}`]}

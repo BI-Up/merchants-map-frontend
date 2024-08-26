@@ -59,7 +59,7 @@ const MerchantsMap = () => {
     const fetchFilteredStores = async () => {
       try {
         const payload = {
-          merchant_filter: { queryParams },
+          merchant_filter: queryParams,
         };
 
         const response = await postData(payload);
@@ -92,6 +92,8 @@ const MerchantsMap = () => {
     anchor: google.maps.marker.AdvancedMarkerElement;
     features: Feature<Point>[];
   } | null>(null);
+
+  console.log("info", infoWindowData);
 
   // const [merchantsData, setMerchantsData] = useState<any[]>(stores);
 
@@ -212,6 +214,8 @@ const MerchantsMap = () => {
     }));
   };
 
+  console.log("queryParams", queryParams);
+
   // const debounceTimeoutRef = useRef(null);
   // const debounce = (func, delay) => {
   //   return function (...args) {
@@ -329,7 +333,7 @@ const MerchantsMap = () => {
           clickableIcons={false}
           defaultZoom={7}
           minZoom={7}
-          maxZoom={15}
+          maxZoom={17}
           defaultCenter={ATHENS}
           onDrag={handleInfoWindowClose}
           onZoomChanged={handleInfoWindowClose}

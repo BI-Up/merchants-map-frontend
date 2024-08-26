@@ -16,7 +16,7 @@ const superclusterOptions: Supercluster.Options<
 > = {
   extent: 256,
   radius: 80,
-  maxZoom: 12,
+  maxZoom: 15,
 };
 
 // Props for ClusteredMarkers
@@ -40,8 +40,6 @@ const ClusteredMarkers = ({
   const { clusters, getLeaves } = useSupercluster(geojson, superclusterOptions);
 
   const map = useMap();
-
-  console.log("clusters", clusters);
 
   useEffect(() => {
     setNumClusters(clusters.length);
@@ -94,14 +92,6 @@ const ClusteredMarkers = ({
             />
 
             {children ?? <> </>}
-            {/*{hasInfoWindowData && (*/}
-            {/*  <InfoWindow onCloseClick={closeInfoWindowData} anchor={anchor}>*/}
-            {/*    <InfoWindowContent*/}
-            {/*      info={hasInfoWindowData?.features.properties}*/}
-            {/*      language={language}*/}
-            {/*    />*/}
-            {/*  </InfoWindow>*/}
-            {/*)}*/}
           </>
         );
       })}

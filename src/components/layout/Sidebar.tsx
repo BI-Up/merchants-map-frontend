@@ -20,7 +20,6 @@ import { merchantsResponse } from "../../type";
 import { useMap } from "@vis.gl/react-google-maps";
 import MerchantsList from "../MerchantsList";
 import LeftMenu from "../LeftMenu";
-import { smoothZoom } from "../../helper";
 interface SidebarProps {
   handleSelectedTowns: (_towns: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
@@ -109,15 +108,18 @@ const Sidebar: React.FC<SidebarProps> = ({
       if (!map) return;
       const merchantData = paginatedData[index];
       if (!merchantData) return;
+
+      console.log("ev", ev);
       const latLng = new google.maps.LatLng(
         Number(merchantData.latitude),
         Number(merchantData.longitude),
       );
       map.panTo(latLng);
+      map.setZoom(17);
 
-      smoothZoom(map, 18, setOpenLocation, index);
+      // smoothZoom(map, 18, setOpenLocation, index);
     },
-    [map, setOpenLocation],
+    [map],
   );
 
   const handleSubmit = () => {
@@ -131,15 +133,17 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   useEffect(() => {
     if (submitted && data.length > 0) {
-      map.panTo({
+      map.setCenter({
         lat: Number(data[0]?.latitude),
         lng: Number(data[0]?.longitude),
       });
 
-      smoothZoom(map, 18, setOpenLocation, {
-        lat: Number(data[0]?.latitude),
-        lng: Number(data[0]?.longitude),
-      });
+      // map.setZoom(9);
+
+      // smoothZoom(map, 18, setOpenLocation, {
+      //   lat: Number(data[0]?.latitude),
+      //   lng: Number(data[0]?.longitude),
+      // });
     }
   }, [submitted, data, setOpenLocation, map]);
 

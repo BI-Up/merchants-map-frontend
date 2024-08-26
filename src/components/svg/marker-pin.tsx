@@ -11,8 +11,8 @@ export const MerchantsMarker = () => (
     <g id="Property 1=Default">
       <path
         id="Subtract"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M43.3874 35.2589C45.6758 31.7102 47 27.5065 47 23C47 10.2975 36.4787 0 23.5 0C10.5213 0 0 10.2975 0 23C0 27.5065 1.32423 31.7103 3.61262 35.2589L3.64085 35.3333L23.5 68L43.3592 35.3333L43.3874 35.2589Z"
         fill="#F59100"
       />
