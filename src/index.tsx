@@ -19,8 +19,9 @@ import InfoWindowContent from "./components/InfoWindowContent";
 
 const MerchantsMap = () => {
   const [loading, setLoading] = useState(true);
+  const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(null);
-  const [data, setData] = useState(null);
+  const [filteredStores, setFilteredStores] = useState(null);
   const [allStores, setAllStores] = useState(null);
   const [geojson, setGeojson] = useState<merchantsGeojson | null>(null);
   const [numClusters, setNumClusters] = useState(0);
@@ -33,60 +34,51 @@ const MerchantsMap = () => {
     is_hero_corp: false,
     mcc_category: "",
   });
+  //
+  // useEffect(() => {
+  //   const fetchAllStores = async () => {
+  //     try {
+  //       const payload = {
+  //         merchant_filter: {},
+  //       };
+  //
+  //       const response = await postData(payload);
+  //       setAllStores(response);
+  //       const convertedData = convertToGeoJSON(response);
+  //       setGeojson(convertedData);
+  //     } catch (err) {
+  //       setError(err);
+  //     } finally {
+  //       setLoading(false);
+  //       setIsFetching(false)
+  //     }
+  //   };
+  //
+  //   fetchAllStores();
+  // }, []);
 
   useEffect(() => {
-    const fetchAllStores = async () => {
-      try {
-        const payload = {
-          merchant_filter: {},
-        };
-
-        const response = await postData(payload);
-        setAllStores(response);
-        const convertedData = convertToGeoJSON(response);
-        setGeojson(convertedData);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchAllStores();
-  }, []);
-
-  useEffect(() => {
-    const fetchFilteredStores = async () => {
+    const fetchStores = async () => {
       try {
         const payload = {
           merchant_filter: queryParams,
         };
 
         const response = await postData(payload);
-        setData(response);
+        if (allStores === null) setAllStores(response);
+        setFilteredStores(response);
         const convertedData = convertToGeoJSON(response);
         setGeojson(convertedData);
       } catch (err) {
         setError(err);
       } finally {
         setLoading(false);
+        setIsFetching(false);
       }
     };
 
-    fetchFilteredStores();
+    fetchStores();
   }, [queryParams]);
-
-  console.log("postData", data);
-
-  // useEffect(() => {
-  //   if (data) {
-  //     const convertedData = convertToGeoJSON(data);
-  //     // @ts-ignore
-  //     setGeojson(convertedData);
-  //   }
-  // }, [data]);
-
-  console.log("geo", geojson);
 
   const [infoWindowData, setInfoWindowData] = useState<{
     anchor: google.maps.marker.AdvancedMarkerElement;
@@ -106,62 +98,6 @@ const MerchantsMap = () => {
     () => setInfoWindowData(null),
     [setInfoWindowData, infoWindowData],
   );
-
-  // const mapRef = useRef(null);
-  //
-
-  // const handleSelectedTowns = (towns: string[]) => {
-  //   const enFormattedTowns = towns.map((town) => {
-  //     if (selectedLanguage === "gr") {
-  //       const merchant = merchantsAllData.find(
-  //         (merchant) => merchant.town_gr === town,
-  //       );
-  //       return merchant ? merchant.town_en : town;
-  //     }
-  //     return town;
-  //   });
-  //   const joinedTowns = enFormattedTowns.join(",");
-  //   setQueryParams((prevState) => ({
-  //     ...prevState,
-  //     town: joinedTowns,
-  //   }));
-  // };
-
-  // const handleSelectedProducts = (products: string[]) => {
-  //   const joinedProducts = products.join(",");
-  //
-  //   setQueryParams((prevState) => ({
-  //     ...prevState,
-  //     accepted_products: joinedProducts,
-  //   }));
-  // };
-  //
-  // const handleIsHerocorp = (is_herocorp: boolean) => {
-  //   setQueryParams((prevState) => ({
-  //     ...prevState,
-  //     is_hero_corp: is_herocorp,
-  //   }));
-  // };
-  //
-  // const handleSelectedCategories = (categories: string[]) => {
-  //   const enFormattedCategories = categories.map((category) => {
-  //     if (selectedLanguage === "gr") {
-  //       const merchant = merchantsAllData.find(
-  //         (merchant) => merchant.mcc_category_gr === category,
-  //       );
-  //       return merchant ? merchant.mcc_category_en : category;
-  //     }
-  //     return category;
-  //   });
-  //
-  //   const joinedCategories = enFormattedCategories.join(",");
-  //
-  //   setQueryParams((prevState) => ({
-  //     ...prevState,
-  //     mcc_category: joinedCategories,
-  //   }));
-  // };
-
   const handleSelectedTowns = (towns: string[]) => {
     const enFormattedTowns = towns.map((town) => {
       if (selectedLanguage === "gr") {
@@ -282,10 +218,10 @@ const MerchantsMap = () => {
   // }, []);
   //
   const GREECE_BOUNDS = {
-    north: 12,
-    south: 58,
-    west: 12,
-    east: 39,
+    north: 41.748, // Northernmost point (near the Greece-Albania border)
+    south: 34.815, // Southernmost point (Gavdos Island)
+    west: 19.374, // Westernmost point (near the Greece-Albania border)
+    east: 28.246, // Easternmost point (near the Greece-Turkey border, on the island of Kastellorizo)
   };
 
   const ATHENS = { lat: 37.97991702599259, lng: 23.730877354617046 };
@@ -320,7 +256,7 @@ const MerchantsMap = () => {
           handleSelectedProducts={handleSelectedProducts}
           handleIsHerocorp={handleIsHerocorp}
           handleSelectedCategories={handleSelectedCategories}
-          data={data}
+          data={filteredStores}
           setInfoWindowData={setInfoWindowData}
           language={selectedLanguage}
           languageHandler={setSelectedLanguage}
@@ -331,18 +267,24 @@ const MerchantsMap = () => {
           mapId="116fd91f1d18588b"
           disableDefaultUI={true}
           clickableIcons={false}
-          defaultZoom={7}
+          defaultZoom={5}
           minZoom={7}
           maxZoom={17}
+          // defaultBounds={GREECE_BOUNDS}
           defaultCenter={ATHENS}
           onDrag={handleInfoWindowClose}
           onZoomChanged={handleInfoWindowClose}
+          restriction={{
+            strictBounds: false,
+            latLngBounds: GREECE_BOUNDS,
+          }}
         >
           {geojson && (
             <ClusteredMarkers
               geojson={geojson}
               setNumClusters={setNumClusters}
               setInfoWindowData={setInfoWindowData}
+              isFetching={isFetching}
             >
               {infoWindowData && (
                 <InfoWindow

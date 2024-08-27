@@ -8,7 +8,6 @@ import { MerchantsClusterMarker } from "./MerchantsCluster";
 import { MerchantsMarker } from "./svg/marker-pin";
 import { MerchantsMarkerPin } from "./MerchantsMarker";
 import { InfoWindow, useMap } from "@vis.gl/react-google-maps";
-import InfoWindowContent from "./InfoWindowContent";
 
 const superclusterOptions: Supercluster.Options<
   GeoJsonProperties,
@@ -36,8 +35,13 @@ const ClusteredMarkers = ({
   setNumClusters,
   setInfoWindowData,
   children,
+  isFetching,
 }) => {
-  const { clusters, getLeaves } = useSupercluster(geojson, superclusterOptions);
+  const { clusters, getLeaves } = useSupercluster(
+    geojson,
+    superclusterOptions,
+    isFetching,
+  );
 
   const map = useMap();
 
