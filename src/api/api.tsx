@@ -22,7 +22,6 @@ interface requestPayload {
 export const postData = async (payload: requestPayload) => {
   try {
     const response = await axios.post("http://localhost/merchants", payload);
-    console.log("response: " + response);
     return response.data;
   } catch (error) {
     console.error(error);

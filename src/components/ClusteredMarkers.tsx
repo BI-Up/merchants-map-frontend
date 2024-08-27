@@ -63,7 +63,6 @@ const ClusteredMarkers = ({
       const feature = clusters.find(
         (feat) => feat.id === featureId,
       ) as Feature<Point>;
-
       setInfoWindowData({ anchor: marker, features: [feature] });
     },
     [clusters, setInfoWindowData],

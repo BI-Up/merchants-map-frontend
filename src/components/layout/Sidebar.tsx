@@ -20,13 +20,14 @@ import { merchantsResponse } from "../../type";
 import { useMap } from "@vis.gl/react-google-maps";
 import MerchantsList from "../MerchantsList";
 import LeftMenu from "../LeftMenu";
+import { checkCoordinates, convertToGeoJSON } from "../../helper";
 interface SidebarProps {
   handleSelectedTowns: (_towns: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
   handleIsHerocorp?: (_is_herocorp: boolean) => void;
   handleSelectedCategories?: (_categories: string[]) => void;
   data: merchantsResponse[] | [];
-  setOpenLocation: Dispatch<SetStateAction<Object | number | null>>;
+  setInfoWindowData: Dispatch<SetStateAction<Object | number | null>>;
   language: "en" | "gr";
   languageHandler: Dispatch<SetStateAction<"en" | "gr">>;
 }
@@ -36,9 +37,10 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedProducts,
   handleIsHerocorp,
   handleSelectedCategories,
-  setOpenLocation,
+  setInfoWindowData,
   language,
   data,
+  geojson,
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
@@ -52,6 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     categories: [] as string[],
     has_cashback: false,
   });
+  const [selectedListItem, setSelectedListItem] = useState(null);
 
   const theme = useTheme();
 
@@ -101,7 +104,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const handleClick = useCallback(
     (
-      ev: React.MouseEvent<HTMLLIElement>,
+      event: React.MouseEvent<HTMLElement>,
       index: number,
       paginatedData: merchantsResponse[],
     ) => {
@@ -109,19 +112,42 @@ const Sidebar: React.FC<SidebarProps> = ({
       const merchantData = paginatedData[index];
       if (!merchantData) return;
 
-      console.log("ev", ev);
-      const latLng = new google.maps.LatLng(
-        Number(merchantData.latitude),
-        Number(merchantData.longitude),
-      );
-      map.panTo(latLng);
-      map.setZoom(17);
+      const merchantLat = Number(merchantData.latitude);
+      const merchantLng = Number(merchantData.longitude);
 
-      // smoothZoom(map, 18, setOpenLocation, index);
+      const latLng = {
+        lat: merchantLat,
+        lng: merchantLng,
+      };
+
+      let matchingGeojson: any = null;
+
+      if (geojson && Array.isArray(geojson.features)) {
+        matchingGeojson = geojson.features.find((geojsonItem) =>
+          checkCoordinates(geojsonItem, merchantLat, merchantLng),
+        );
+      } else if (
+        geojson &&
+        checkCoordinates(geojson, merchantLat, merchantLng)
+      ) {
+        matchingGeojson = geojson;
+      }
+
+      if (matchingGeojson && latLng) {
+        setSelectedListItem({
+          anchor: "",
+          features: [matchingGeojson],
+        });
+        map.setZoom(17);
+        map.setCenter(latLng);
+      }
     },
-    [map],
+    [map, geojson, setSelectedListItem],
   );
 
+  useEffect(() => {
+    setInfoWindowData(selectedListItem);
+  }, [selectedListItem, map]);
   const handleSubmit = () => {
     handleSelectedTowns(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
@@ -137,15 +163,8 @@ const Sidebar: React.FC<SidebarProps> = ({
         lat: Number(data[0]?.latitude),
         lng: Number(data[0]?.longitude),
       });
-
-      // map.setZoom(9);
-
-      // smoothZoom(map, 18, setOpenLocation, {
-      //   lat: Number(data[0]?.latitude),
-      //   lng: Number(data[0]?.longitude),
-      // });
     }
-  }, [submitted, data, setOpenLocation, map]);
+  }, [submitted, data, map]);
 
   if (isMobile) {
     return (

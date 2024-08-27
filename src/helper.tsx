@@ -35,6 +35,32 @@ export function convertToGeoJSON(
   };
 }
 
+// Helper function to check if coordinates match
+export const checkCoordinates = (
+  geojsonItem: any,
+  merchantLat: number,
+  merchantLng: number,
+  tolerance: number = 1e-6,
+): boolean => {
+  // Ensure the feature has geometry and coordinates
+  if (
+    !geojsonItem ||
+    !geojsonItem.geometry ||
+    !geojsonItem.geometry.coordinates
+  ) {
+    return false;
+  }
+
+  const geojsonLat = Number(geojsonItem.geometry.coordinates[1]);
+  const geojsonLng = Number(geojsonItem.geometry.coordinates[0]);
+
+  // Use a tolerance for floating-point comparisons
+  return (
+    Math.abs(geojsonLat - merchantLat) < tolerance &&
+    Math.abs(geojsonLng - merchantLng) < tolerance
+  );
+};
+
 export const smoothZoom = (map, targetZoom, setOpenLocation, key) => {
   const currentZoom = map.getZoom();
 

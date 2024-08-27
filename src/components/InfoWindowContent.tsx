@@ -3,10 +3,9 @@ import { Box } from "@mui/material";
 
 const InfoWindowContent = ({ info, language }) => {
   return (
-    <>
+    <Box key={info.vat_name_gr}>
       {info && (
         <Box
-          key={info.id}
           sx={{
             paddingBottom: 1,
             display: "flex",
@@ -56,7 +55,7 @@ const InfoWindowContent = ({ info, language }) => {
           </Box>
         </Box>
       )}
-    </>
+    </Box>
   );
 };
 

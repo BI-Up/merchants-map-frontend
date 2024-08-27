@@ -53,6 +53,7 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
           {paginatedData.map((item, index) => (
             <React.Fragment key={index}>
               <ListItem
+                key={index}
                 onClick={(ev) => {
                   handleClick(ev, index, paginatedData);
                 }}
@@ -64,12 +65,6 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
                   transition: "background-color 0.3s",
                 }}
               >
-                <AdvancedMarker
-                  key={index}
-                  onClick={(ev) => {
-                    handleClick(ev, index, paginatedData);
-                  }}
-                />
                 <ListItemText>
                   <Typography variant="body2">
                     {item[`mcc_category_${language}`]}

@@ -25,8 +25,14 @@ const MerchantsMap = () => {
   const [allStores, setAllStores] = useState(null);
   const [geojson, setGeojson] = useState<merchantsGeojson | null>(null);
   const [numClusters, setNumClusters] = useState(0);
+  const [selectedListItem, setSelectedListItem] = useState(null);
 
   const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
+
+  const [infoWindowData, setInfoWindowData] = useState<{
+    anchor: google.maps.marker.AdvancedMarkerElement;
+    features: Feature<Point>[];
+  } | null>(null);
   const [queryParams, setQueryParams] = useState({
     town: "",
     accepted_products: "",
@@ -34,28 +40,6 @@ const MerchantsMap = () => {
     is_hero_corp: false,
     mcc_category: "",
   });
-  //
-  // useEffect(() => {
-  //   const fetchAllStores = async () => {
-  //     try {
-  //       const payload = {
-  //         merchant_filter: {},
-  //       };
-  //
-  //       const response = await postData(payload);
-  //       setAllStores(response);
-  //       const convertedData = convertToGeoJSON(response);
-  //       setGeojson(convertedData);
-  //     } catch (err) {
-  //       setError(err);
-  //     } finally {
-  //       setLoading(false);
-  //       setIsFetching(false)
-  //     }
-  //   };
-  //
-  //   fetchAllStores();
-  // }, []);
 
   useEffect(() => {
     const fetchStores = async () => {
@@ -65,6 +49,8 @@ const MerchantsMap = () => {
         };
 
         const response = await postData(payload);
+
+        console.log("response", response);
         if (allStores === null) setAllStores(response);
         setFilteredStores(response);
         const convertedData = convertToGeoJSON(response);
@@ -79,20 +65,6 @@ const MerchantsMap = () => {
 
     fetchStores();
   }, [queryParams]);
-
-  const [infoWindowData, setInfoWindowData] = useState<{
-    anchor: google.maps.marker.AdvancedMarkerElement;
-    features: Feature<Point>[];
-  } | null>(null);
-
-  console.log("info", infoWindowData);
-
-  // const [merchantsData, setMerchantsData] = useState<any[]>(stores);
-
-  // const [merchantsAllData, setMerchantsAllData] = useState<any[]>([]);
-  const [openLocation, setOpenLocation] = useState<Object | number | null>(
-    null,
-  );
 
   const handleInfoWindowClose = useCallback(
     () => setInfoWindowData(null),
@@ -150,73 +122,6 @@ const MerchantsMap = () => {
     }));
   };
 
-  console.log("queryParams", queryParams);
-
-  // const debounceTimeoutRef = useRef(null);
-  // const debounce = (func, delay) => {
-  //   return function (...args) {
-  //     clearTimeout(debounceTimeoutRef.current);
-  //     debounceTimeoutRef.current = setTimeout(() => {
-  //       func(...args);
-  //     }, delay);
-  //   };
-  // };
-  //
-  // const handleCameraChange = useCallback(
-  //   debounce((newCamera) => {
-  //     console.log('Camera or Zoom changed:', newCamera);
-  //     // Your logic here
-  //   }, 1000), // Adjust debounce delay as needed
-  //   [],
-  // );
-  //
-  // const handleIdle = useCallback(
-  //   debounce(() => {
-  //     const map = mapRef.current;
-  //     if (map) {
-  //       const camera = {
-  //         zoom: map.getZoom(),
-  //         center: map.getCenter(),
-  //         heading: map.getHeading(),
-  //         tilt: map.getTilt(),
-  //       };
-  //       console.log('Map interaction completed:', camera);
-  //       // Your logic here
-  //     }
-  //     console.log('Map interaction completed:');
-  //   }, 3000), // Adjust debounce delay as needed
-  //   [],
-  // );
-  //
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //     try {
-  //       //const res = await getData(queryParams);
-  //       setMerchantsData(stores);
-  //       setLoading(false);
-  //     } catch (err) {
-  //       console.error(err);
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-  //
-  //
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //     try {
-  //       // const res = await getData();
-  //       setMerchantsAllData(stores);
-  //       setLoading(false);
-  //     } catch (err) {
-  //       console.error(err);
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-  //
   const GREECE_BOUNDS = {
     north: 41.748, // Northernmost point (near the Greece-Albania border)
     south: 34.815, // Southernmost point (Gavdos Island)
@@ -226,7 +131,7 @@ const MerchantsMap = () => {
 
   const ATHENS = { lat: 37.97991702599259, lng: 23.730877354617046 };
 
-  console.log("infoWindow", infoWindowData?.features[0].properties);
+  console.log("infoWindowData", infoWindowData);
 
   return (
     <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
@@ -240,23 +145,13 @@ const MerchantsMap = () => {
         display={"flex"}
         height={"calc(100vh - 84px)"}
       >
-        {/*<Sidebar*/}
-        {/*  handleSelectedTowns={handleSelectedTowns}*/}
-        {/*  handleSelectedProducts={handleSelectedProducts}*/}
-        {/*  handleIsHerocorp={handleIsHerocorp}*/}
-        {/*  handleSelectedCategories={handleSelectedCategories}*/}
-        {/*  data={merchantsData}*/}
-        {/*  setOpenLocation={setOpenLocation}*/}
-        {/*  language={selectedLanguage}*/}
-        {/*  languageHandler={setSelectedLanguage}*/}
-        {/*/>*/}
-
         <Sidebar
           handleSelectedTowns={handleSelectedTowns}
           handleSelectedProducts={handleSelectedProducts}
           handleIsHerocorp={handleIsHerocorp}
           handleSelectedCategories={handleSelectedCategories}
           data={filteredStores}
+          geojson={geojson}
           setInfoWindowData={setInfoWindowData}
           language={selectedLanguage}
           languageHandler={setSelectedLanguage}
@@ -289,12 +184,20 @@ const MerchantsMap = () => {
               {infoWindowData && (
                 <InfoWindow
                   onCloseClick={handleInfoWindowClose}
-                  anchor={infoWindowData?.anchor}
+                  anchor={infoWindowData?.anchor ?? null}
+                  position={{
+                    lat:
+                      infoWindowData?.features[0].geometry.coordinates[1] ??
+                      null,
+                    lng:
+                      infoWindowData?.features[0].geometry.coordinates[0] ??
+                      null,
+                  }}
                   shouldFocus={false}
                 >
                   <InfoWindowContent
                     info={infoWindowData?.features[0].properties}
-                    key={infoWindowData?.features[0].properties.id}
+                    key={infoWindowData?.features[0].properties.vat_name_gr}
                     language={selectedLanguage}
                   />
                 </InfoWindow>
