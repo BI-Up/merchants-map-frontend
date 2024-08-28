@@ -1,20 +1,13 @@
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Sidebar from "./components/layout/Sidebar";
-import {
-  InfoWindow,
-  Map,
-  MapCameraChangedEvent,
-  useMap,
-} from "@vis.gl/react-google-maps";
-import Markers from "./components/Markers";
-import { merchantsGeojson, merchantsResponse } from "./type";
-import { getData, postData } from "./api/api";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { InfoWindow, Map } from "@vis.gl/react-google-maps";
+import { postData } from "./api/api";
+import { Box, CircularProgress } from "@mui/material";
 import Header from "./components/layout/Header";
 import { convertToGeoJSON } from "./helper";
 import ClusteredMarkers from "./components/ClusteredMarkers";
-import { Feature, Point } from "geojson";
+import { Feature, FeatureCollection, Point } from "geojson";
 import InfoWindowContent from "./components/InfoWindowContent";
 
 const MerchantsMap = () => {
@@ -23,7 +16,7 @@ const MerchantsMap = () => {
   const [error, setError] = useState(null);
   const [filteredStores, setFilteredStores] = useState(null);
   const [allStores, setAllStores] = useState(null);
-  const [geojson, setGeojson] = useState<merchantsGeojson | null>(null);
+  const [geojson, setGeojson] = useState<FeatureCollection<Point> | null>(null);
   const [numClusters, setNumClusters] = useState(0);
   const [selectedListItem, setSelectedListItem] = useState(null);
 
@@ -49,8 +42,6 @@ const MerchantsMap = () => {
         };
 
         const response = await postData(payload);
-
-        console.log("response", response);
         if (allStores === null) setAllStores(response);
         setFilteredStores(response);
         const convertedData = convertToGeoJSON(response);
@@ -174,7 +165,7 @@ const MerchantsMap = () => {
             latLngBounds: GREECE_BOUNDS,
           }}
         >
-          {geojson && (
+          {geojson ? (
             <ClusteredMarkers
               geojson={geojson}
               setNumClusters={setNumClusters}
@@ -203,6 +194,17 @@ const MerchantsMap = () => {
                 </InfoWindow>
               )}
             </ClusteredMarkers>
+          ) : (
+            <Box
+              display={"flex"}
+              width={"100%"}
+              height={"100vh"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexDirection={"column"}
+            >
+              <CircularProgress sx={{ color: "#FF9018" }} size={50} />
+            </Box>
           )}
 
           {/*<Markers*/}

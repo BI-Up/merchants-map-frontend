@@ -43,8 +43,6 @@ const ClusteredMarkers = ({
     isFetching,
   );
 
-  const map = useMap();
-
   useEffect(() => {
     setNumClusters(clusters.length);
   }, [setNumClusters, clusters.length]);

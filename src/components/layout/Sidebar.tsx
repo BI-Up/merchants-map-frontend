@@ -21,6 +21,7 @@ import { useMap } from "@vis.gl/react-google-maps";
 import MerchantsList from "../MerchantsList";
 import LeftMenu from "../LeftMenu";
 import { checkCoordinates, convertToGeoJSON } from "../../helper";
+import { FeatureCollection, Point } from "geojson";
 interface SidebarProps {
   handleSelectedTowns: (_towns: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
@@ -30,6 +31,7 @@ interface SidebarProps {
   setInfoWindowData: Dispatch<SetStateAction<Object | number | null>>;
   language: "en" | "gr";
   languageHandler: Dispatch<SetStateAction<"en" | "gr">>;
+  geojson: FeatureCollection<Point>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
