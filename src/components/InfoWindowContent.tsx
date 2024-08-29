@@ -1,7 +1,26 @@
 import * as React from "react";
 import { Box } from "@mui/material";
 
-const InfoWindowContent = ({ info, language }) => {
+interface Info {
+  vat_name_gr?: string;
+  is_hero_corp?: boolean;
+  mcc_category_en?: string;
+  mcc_category_gr?: string;
+  brand_name_en?: string;
+  brand_name_gr?: string;
+  address_en?: string;
+  address_gr?: string;
+  region_en?: string;
+  region_gr?: string;
+  zip_code?: string;
+  accepted_products?: string[];
+}
+
+interface InfoWindowContentProps {
+  info: Info;
+  language: "en" | "gr";
+}
+const InfoWindowContent = ({ info, language }: InfoWindowContentProps) => {
   return (
     <Box key={info.vat_name_gr}>
       {info && (

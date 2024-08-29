@@ -44,28 +44,30 @@ const MerchantsMap = () => {
     mcc_category: "",
   });
 
-  useEffect(() => {
-    const fetchStores = async () => {
-      try {
-        const payload = {
-          merchant_filter: queryParams,
-        };
+  const fetchStores = useCallback(async () => {
+    try {
+      const payload = {
+        merchant_filter: queryParams,
+      };
 
-        const response = await postData(payload);
-        if (allStores === null)
-          setStores((prevState) => ({ ...prevState, allStores: response }));
-        setStores((prevState) => ({ ...prevState, filteredStores: response }));
-        const convertedData = convertToGeoJSON(response);
-        setGeojson(convertedData);
-      } catch (err) {
-        setState((prevState) => ({ ...prevState, error: err }));
-      } finally {
-        setState((prevState) => ({ ...prevState, loading: false }));
-      }
-    };
-
-    fetchStores();
+      const response = await postData(payload);
+      if (allStores === null)
+        setStores((prevState) => ({ ...prevState, allStores: response }));
+      setStores((prevState) => ({ ...prevState, filteredStores: response }));
+      setGeojson(convertToGeoJSON(response));
+    } catch (err) {
+      setState((prevState) => ({
+        ...prevState,
+        error: err.message || "Unknown error",
+      }));
+    } finally {
+      setState((prevState) => ({ ...prevState, loading: false }));
+    }
   }, [queryParams]);
+
+  useEffect(() => {
+    fetchStores();
+  }, [fetchStores]);
 
   const handleSelectedTowns = (towns: string[]) => {
     const enFormattedTowns = towns.map((town) => {
@@ -120,7 +122,6 @@ const MerchantsMap = () => {
   };
 
   const handleInfoWindowClose = useCallback(() => {
-    console.log("x clicked");
     setInfoWindowData(null);
   }, []);
 

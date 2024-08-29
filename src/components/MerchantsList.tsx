@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import * as React from "react";
 
 import {
@@ -36,11 +36,17 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   ...rest
 }) => {
   const [page, setPage] = useState(1);
-  const itemsPerPage = !isMobile ? 4 : 2; // Number of items per page
-  const pageCount = Math.ceil(data.length / itemsPerPage);
-  const startIndex = (page - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedData = data.slice(startIndex, endIndex);
+  const itemsPerPage = useMemo(() => (isMobile ? 2 : 4), [isMobile]); // Calculate items per page
+  const pageCount = useMemo(
+    () => Math.ceil(data.length / itemsPerPage),
+    [data.length, itemsPerPage],
+  );
+  const paginatedData = useMemo(() => {
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    return data.slice(startIndex, endIndex);
+  }, [data, page, itemsPerPage]);
 
   const handlePageChange = (event, value) => {
     setPage(value);

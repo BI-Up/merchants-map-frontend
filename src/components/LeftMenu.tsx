@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dispatch, ReactNode, SetStateAction, useEffect } from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import InputField from "./ui/InputField";
 import CustomSwitcher from "./ui/CustomSwitcher";
 import CustomButton from "./ui/CustomButton";
@@ -58,33 +58,33 @@ const LeftMenu = ({
     });
   }, [language]);
 
+  const containerStyles: SxProps = {
+    backgroundColor: "white",
+    color: "black",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    overflow: "auto",
+    pt: 4,
+    px: !hasLargeScreen && !isMobile ? 6 : 2,
+    width:
+      hasLargeScreen && !isMobile
+        ? "25%"
+        : !hasLargeScreen && !isMobile
+          ? "35%"
+          : "100%",
+    height: "calc(100vh - 84px)",
+    mt: 1,
+  };
+
   return (
     <>
-      <Box
-        sx={{
-          backgroundColor: "white",
-          width:
-            hasLargeScreen && !isMobile
-              ? "25%"
-              : !hasLargeScreen && !isMobile
-                ? "35%"
-                : "100%",
-
-          color: "black",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          overflow: "auto",
-          pt: 4,
-          px: !hasLargeScreen && !isMobile && 6,
-        }}
-        height={"calc(100vh - 84px)"}
-        mt={1}
-      >
+      <Box sx={containerStyles} height={"calc(100vh - 84px)"} mt={1}>
         <Stack spacing={3} width={300}>
           <LocationAutocomplete
             locationsData={locationsData}
             selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
             language={language}
           />
         </Stack>
