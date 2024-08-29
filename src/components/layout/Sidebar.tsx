@@ -46,9 +46,17 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
-  const [locationsData, setLocationsData] = useState<string[]>([]);
-  const [productsData, setProductsData] = useState<string[]>([]);
-  const [categoriesData, setCategoriesData] = useState<string[]>([]);
+
+  const [filterValues, setFilterValues] = useState({
+    locations: [],
+    products: [],
+    categories: [],
+  });
+  const {
+    locations: locationsData,
+    products: productsData,
+    categories: categoriesData,
+  } = filterValues;
   const map = useMap();
   const [selectedItems, setSelectedItems] = React.useState({
     locations: [] as string[],
@@ -68,33 +76,20 @@ const Sidebar: React.FC<SidebarProps> = ({
     setSubmitted(false);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const loc = await getFilters("town", language);
-        setLocationsData(loc);
-        const prod = await getFilters("accepted_products", language);
-        setProductsData(prod);
-        const cat = await getFilters("mcc_category", language);
-        setCategoriesData(cat);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
+  const fetchFilters = useCallback(async () => {
+    try {
+      const loc = await getFilters("town", language);
+      const prod = await getFilters("accepted_products", language);
+      const cat = await getFilters("mcc_category", language);
+      setFilterValues({ locations: loc, products: prod, categories: cat });
+    } catch (error) {
+      console.error(error);
+    }
   }, [language]);
 
   useEffect(() => {
-    setSelectedItems({
-      locations: [],
-      products: [],
-      categories: [],
-      has_cashback: false,
-    });
-  }, [language]);
-
-  console.log("selected", selectedItems);
+    fetchFilters();
+  }, [fetchFilters]);
 
   const handleSelectChange =
     (type: "locations" | "products" | "categories") =>
@@ -180,6 +175,20 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
   }, [submitted, data, map]);
 
+  const commonProps = {
+    isMobile,
+    hasLargeScreen,
+    locationsData,
+    productsData,
+    categoriesData,
+    selectedItems,
+    setSelectedItems,
+    handleSelectChange,
+    handleSwitchChange,
+    handleSubmit,
+    language,
+  };
+
   if (isMobile) {
     return (
       <Box>
@@ -230,35 +239,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         </Box>
 
         <Drawer anchor={"left"} open={openDrawer} onClose={toggleDrawer}>
-          <LeftMenu
-            isMobile={isMobile}
-            hasLargeScreen={hasLargeScreen}
-            locationsData={locationsData}
-            productsData={productsData}
-            categoriesData={categoriesData}
-            selectedItems={selectedItems}
-            handleSelectChange={handleSelectChange}
-            handleSwitchChange={handleSwitchChange}
-            handleSubmit={handleSubmit}
-            language={language}
-          />
+          <LeftMenu {...commonProps} />
         </Drawer>
       </Box>
     );
   } else {
     return (
-      <LeftMenu
-        isMobile={isMobile}
-        hasLargeScreen={hasLargeScreen}
-        locationsData={locationsData}
-        productsData={productsData}
-        categoriesData={categoriesData}
-        selectedItems={selectedItems}
-        handleSelectChange={handleSelectChange}
-        handleSwitchChange={handleSwitchChange}
-        handleSubmit={handleSubmit}
-        language={language}
-      >
+      <LeftMenu {...commonProps}>
         {submitted && (
           <MerchantsList
             data={data}

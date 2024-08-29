@@ -124,8 +124,6 @@ const MerchantsMap = () => {
     setInfoWindowData(null);
   }, []);
 
-  console.log("infoWindowData", infoWindowData);
-
   return (
     <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
       <Header

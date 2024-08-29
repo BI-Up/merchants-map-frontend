@@ -1,16 +1,10 @@
 import * as React from "react";
-import { ReactNode, useState } from "react";
-import {
-  Autocomplete,
-  Box,
-  Chip,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Dispatch, ReactNode, SetStateAction, useEffect } from "react";
+import { Box, Stack, Typography } from "@mui/material";
 import InputField from "./ui/InputField";
 import CustomSwitcher from "./ui/CustomSwitcher";
 import CustomButton from "./ui/CustomButton";
+import LocationAutocomplete from "./ui/LocationAutocomplete";
 
 interface LeftMenuProps {
   isMobile: boolean;
@@ -24,6 +18,14 @@ interface LeftMenuProps {
     categories: string[];
     has_cashback: boolean;
   };
+  setSelectedItems: Dispatch<
+    SetStateAction<{
+      locations: string[];
+      products: string[];
+      categories: string[];
+      has_cashback: boolean;
+    }>
+  >;
   handleSelectChange: (
     _type: "locations" | "products" | "categories",
   ) => (event: React.ChangeEvent<{ value: unknown }>) => void;
@@ -45,11 +47,16 @@ const LeftMenu = ({
   handleSubmit,
   language,
   children,
+  setSelectedItems,
 }: LeftMenuProps) => {
-  const [inputValue, setInputValue] = useState("");
-  const [open, setOpen] = useState(false);
-
-  console.log(inputValue);
+  useEffect(() => {
+    setSelectedItems({
+      locations: [],
+      products: [],
+      categories: [],
+      has_cashback: false,
+    });
+  }, [language]);
 
   return (
     <>
@@ -75,70 +82,10 @@ const LeftMenu = ({
         mt={1}
       >
         <Stack spacing={3} width={300}>
-          <Autocomplete
-            multiple
-            limitTags={1}
-            options={locationsData}
-            loading={locationsData === null}
-            filterOptions={(options, { inputValue }) =>
-              options.filter((option) =>
-                option.toLowerCase().startsWith(inputValue.toLowerCase()),
-              )
-            }
-            open={open}
-            onOpen={() => {
-              if (inputValue) {
-                setOpen(true);
-              }
-            }}
-            onClose={() => setOpen(false)}
-            inputValue={inputValue}
-            onInputChange={(event, newInputValue) => {
-              setInputValue(newInputValue);
-              setOpen(!!newInputValue); // Open only when there's input
-            }}
-            renderTags={(value, getTagProps) => {
-              // Limit the tags shown even when focused
-              const displayedTags = value.slice(0, 1);
-              const moreCount = value.length - displayedTags.length;
-
-              return (
-                <>
-                  {displayedTags.map((option, index) => (
-                    <Chip
-                      label={option}
-                      {...getTagProps({ index })}
-                      key={index}
-                    />
-                  ))}
-                  {moreCount > 0 && (
-                    <Chip label={`+${moreCount}`} /> // Display remaining count as a disabled chip
-                  )}
-                </>
-              );
-            }}
-            onChange={(event, newValue) => {
-              selectedItems.locations = newValue;
-            }}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label={language === "en" ? "Locations" : "Τοποθεσίες"}
-                variant={"outlined"}
-                sx={{
-                  minWidth: 200, // Ensure minimum width
-                  maxWidth: "100%", // Allow growth within parent
-                  marginBottom: 1,
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: "100px",
-                    overflowX: "auto", // Enable horizontal scrolling
-                    display: "flex",
-                    flexWrap: "nowrap",
-                    flexGrow: 1, // Make the input grow with content
-                  },
-                }}
-              />
-            )}
+          <LocationAutocomplete
+            locationsData={locationsData}
+            selectedItems={selectedItems}
+            language={language}
           />
         </Stack>
 
