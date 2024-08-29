@@ -9,18 +9,28 @@ import { convertToGeoJSON } from "./helper";
 import ClusteredMarkers from "./components/ClusteredMarkers";
 import { Feature, FeatureCollection, Point } from "geojson";
 import InfoWindowContent from "./components/InfoWindowContent";
+import { ATHENS, GREECE_BOUNDS } from "./constants";
 
 const MerchantsMap = () => {
-  const [loading, setLoading] = useState(true);
-  const [isFetching, setIsFetching] = useState(true);
-  const [error, setError] = useState(null);
-  const [filteredStores, setFilteredStores] = useState(null);
-  const [allStores, setAllStores] = useState(null);
   const [geojson, setGeojson] = useState<FeatureCollection<Point> | null>(null);
-  const [numClusters, setNumClusters] = useState(0);
-  const [selectedListItem, setSelectedListItem] = useState(null);
-
   const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
+
+  const [stores, setStores] = useState({
+    allStores: null,
+    filteredStores: null,
+  });
+
+  const { allStores, filteredStores } = stores;
+
+  const [state, setState] = useState<{
+    loading: boolean;
+    error: null | string;
+  }>({
+    loading: true,
+    error: null,
+  });
+
+  const { loading, error } = state;
 
   const [infoWindowData, setInfoWindowData] = useState<{
     anchor: google.maps.marker.AdvancedMarkerElement;
@@ -42,25 +52,21 @@ const MerchantsMap = () => {
         };
 
         const response = await postData(payload);
-        if (allStores === null) setAllStores(response);
-        setFilteredStores(response);
+        if (allStores === null)
+          setStores((prevState) => ({ ...prevState, allStores: response }));
+        setStores((prevState) => ({ ...prevState, filteredStores: response }));
         const convertedData = convertToGeoJSON(response);
         setGeojson(convertedData);
       } catch (err) {
-        setError(err);
+        setState((prevState) => ({ ...prevState, error: err }));
       } finally {
-        setLoading(false);
-        setIsFetching(false);
+        setState((prevState) => ({ ...prevState, loading: false }));
       }
     };
 
     fetchStores();
   }, [queryParams]);
 
-  const handleInfoWindowClose = useCallback(
-    () => setInfoWindowData(null),
-    [setInfoWindowData, infoWindowData],
-  );
   const handleSelectedTowns = (towns: string[]) => {
     const enFormattedTowns = towns.map((town) => {
       if (selectedLanguage === "gr") {
@@ -113,14 +119,10 @@ const MerchantsMap = () => {
     }));
   };
 
-  const GREECE_BOUNDS = {
-    north: 41.748, // Northernmost point (near the Greece-Albania border)
-    south: 34.815, // Southernmost point (Gavdos Island)
-    west: 19.374, // Westernmost point (near the Greece-Albania border)
-    east: 28.246, // Easternmost point (near the Greece-Turkey border, on the island of Kastellorizo)
-  };
-
-  const ATHENS = { lat: 37.97991702599259, lng: 23.730877354617046 };
+  const handleInfoWindowClose = useCallback(() => {
+    console.log("x clicked");
+    setInfoWindowData(null);
+  }, []);
 
   console.log("infoWindowData", infoWindowData);
 
@@ -147,30 +149,39 @@ const MerchantsMap = () => {
           language={selectedLanguage}
           languageHandler={setSelectedLanguage}
         />
-
-        <Map
-          // mapId="da37f3254c6a6d1c"
-          mapId="116fd91f1d18588b"
-          disableDefaultUI={true}
-          clickableIcons={false}
-          defaultZoom={5}
-          minZoom={7}
-          maxZoom={17}
-          // defaultBounds={GREECE_BOUNDS}
-          defaultCenter={ATHENS}
-          onDrag={handleInfoWindowClose}
-          onZoomChanged={handleInfoWindowClose}
-          restriction={{
-            strictBounds: false,
-            latLngBounds: GREECE_BOUNDS,
-          }}
-        >
-          {geojson ? (
+        {loading && !geojson ? (
+          <Box
+            display={"flex"}
+            width={"100%"}
+            height={"100vh"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+          >
+            <CircularProgress sx={{ color: "#FF9018" }} size={50} />
+          </Box>
+        ) : (
+          <Map
+            // mapId="da37f3254c6a6d1c"
+            mapId="116fd91f1d18588b"
+            disableDefaultUI={true}
+            clickableIcons={false}
+            defaultZoom={5}
+            minZoom={7}
+            maxZoom={17}
+            // defaultBounds={GREECE_BOUNDS}
+            defaultCenter={ATHENS}
+            onDrag={handleInfoWindowClose}
+            onZoomChanged={handleInfoWindowClose}
+            restriction={{
+              strictBounds: false,
+              latLngBounds: GREECE_BOUNDS,
+            }}
+          >
             <ClusteredMarkers
               geojson={geojson}
-              setNumClusters={setNumClusters}
               setInfoWindowData={setInfoWindowData}
-              isFetching={isFetching}
+              isLoading={loading}
             >
               {infoWindowData && (
                 <InfoWindow
@@ -194,26 +205,9 @@ const MerchantsMap = () => {
                 </InfoWindow>
               )}
             </ClusteredMarkers>
-          ) : (
-            <Box
-              display={"flex"}
-              width={"100%"}
-              height={"100vh"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              flexDirection={"column"}
-            >
-              <CircularProgress sx={{ color: "#FF9018" }} size={50} />
-            </Box>
-          )}
-
-          {/*<Markers*/}
-          {/*  data={merchantsData}*/}
-          {/*  openLocation={openLocation}*/}
-          {/*  setOpenLocation={setOpenLocation}*/}
-          {/*  language={selectedLanguage}*/}
-          {/*/>*/}
-        </Map>
+            )
+          </Map>
+        )}
       </Box>
     </Box>
   );

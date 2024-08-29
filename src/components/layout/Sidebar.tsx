@@ -20,7 +20,7 @@ import { merchantsResponse } from "../../type";
 import { useMap } from "@vis.gl/react-google-maps";
 import MerchantsList from "../MerchantsList";
 import LeftMenu from "../LeftMenu";
-import { checkCoordinates, convertToGeoJSON } from "../../helper";
+import { checkCoordinates } from "../../helper";
 import { FeatureCollection, Point } from "geojson";
 interface SidebarProps {
   handleSelectedTowns: (_towns: string[]) => void;
@@ -84,6 +84,17 @@ const Sidebar: React.FC<SidebarProps> = ({
 
     fetchData();
   }, [language]);
+
+  useEffect(() => {
+    setSelectedItems({
+      locations: [],
+      products: [],
+      categories: [],
+      has_cashback: false,
+    });
+  }, [language]);
+
+  console.log("selected", selectedItems);
 
   const handleSelectChange =
     (type: "locations" | "products" | "categories") =>
@@ -150,6 +161,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   useEffect(() => {
     setInfoWindowData(selectedListItem);
   }, [selectedListItem, map]);
+
   const handleSubmit = () => {
     handleSelectedTowns(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);

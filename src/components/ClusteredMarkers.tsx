@@ -21,7 +21,6 @@ const superclusterOptions: Supercluster.Options<
 // Props for ClusteredMarkers
 type ClusteredMarkersProps = {
   geojson: FeatureCollection<Point>;
-  setNumClusters: (n: number) => void;
   setInfowindowData: (
     data: {
       anchor: google.maps.marker.AdvancedMarkerElement;
@@ -32,29 +31,24 @@ type ClusteredMarkersProps = {
 
 const ClusteredMarkers = ({
   geojson,
-  setNumClusters,
   setInfoWindowData,
   children,
-  isFetching,
+  isLoading,
 }) => {
   const { clusters, getLeaves } = useSupercluster(
     geojson,
     superclusterOptions,
-    isFetching,
+    isLoading,
   );
 
-  useEffect(() => {
-    setNumClusters(clusters.length);
-  }, [setNumClusters, clusters.length]);
-
-  const handleClusterClick = useCallback(
-    (marker: google.maps.marker.AdvancedMarkerElement, clusterId: number) => {
-      const leaves = getLeaves(clusterId);
-
-      setInfoWindowData({ anchor: marker, features: leaves });
-    },
-    [getLeaves, setInfoWindowData],
-  );
+  // const handleClusterClick = useCallback(
+  //   (marker: google.maps.marker.AdvancedMarkerElement, clusterId: number) => {
+  //     const leaves = getLeaves(clusterId);
+  //
+  //     setInfoWindowData({ anchor: marker, features: leaves });
+  //   },
+  //   [getLeaves, setInfoWindowData],
+  // );
 
   const handleMarkerClick = useCallback(
     (marker: google.maps.marker.AdvancedMarkerElement, featureId: string) => {
