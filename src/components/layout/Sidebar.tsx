@@ -46,6 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [paginatedDataLength, setPaginatedDataLength] = useState(0);
 
   const [filterValues, setFilterValues] = useState({
     locations: [],
@@ -68,8 +69,22 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const theme = useTheme();
 
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const hasLargeScreen = useMediaQuery(theme.breakpoints.up("xl"));
+  const mobileSm = useMediaQuery(theme.breakpoints.up(320));
+  console.log("mobileSm", mobileSm);
+  const mobileMd = useMediaQuery(theme.breakpoints.down(375));
+  console.log("mobileMd", mobileMd);
+  const mobileLg = useMediaQuery(theme.breakpoints.down(425));
+  console.log("mobileLg", mobileLg);
+  const isMobile = useMediaQuery(theme.breakpoints.down("md")); //900px
+  console.log("md - isMobile", isMobile);
+  const lg = useMediaQuery(theme.breakpoints.down("lg")); //1200px
+  console.log("lg", lg);
+  const hasLargeScreen = useMediaQuery(theme.breakpoints.up("xl")); //1525px
+  console.log("up xl - hasLargeScreen", hasLargeScreen);
+
+  const handlePaginatedDataChange = (length) => {
+    setPaginatedDataLength(length);
+  };
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -189,6 +204,13 @@ const Sidebar: React.FC<SidebarProps> = ({
     language,
   };
 
+  const buttonPosition =
+    isMobile && paginatedDataLength === 2
+      ? "38%"
+      : isMobile && paginatedDataLength === 1
+        ? "25%"
+        : "";
+
   if (isMobile) {
     return (
       <Box>
@@ -205,9 +227,10 @@ const Sidebar: React.FC<SidebarProps> = ({
               position: "absolute",
               bottom: !submitted
                 ? "5%"
-                : submitted && data.length < 2
-                  ? "30%"
+                : submitted && mobileSm && mobileMd
+                  ? "45%"
                   : "40%",
+
               left: "50%",
               transform: "translateX(-50%)",
               zIndex: 1000,
@@ -232,7 +255,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 handleClick={handleClick}
                 isMobile={isMobile}
                 language={language}
-                sx={{ py: "0.5rem" }}
+                onPaginatedDataChange={handlePaginatedDataChange}
               />
             </SwipeableDrawer>
           )}
@@ -251,6 +274,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             data={data}
             handleClick={handleClick}
             isMobile={isMobile}
+            onPaginatedDataChange={handlePaginatedDataChange}
             language={language}
             sx={{
               mt: 2,

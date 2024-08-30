@@ -25,6 +25,7 @@ interface MerchantsListProps {
   isMobile: boolean;
   language: "en" | "gr";
   sx?: SxProps;
+  onPaginatedDataChange: (length: number) => void;
 }
 
 const MerchantsList: React.FC<MerchantsListProps> = ({
@@ -33,10 +34,11 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   isMobile,
   language,
   sx,
+  onPaginatedDataChange,
   ...rest
 }) => {
   const [page, setPage] = useState(1);
-  const itemsPerPage = useMemo(() => (isMobile ? 2 : 4), [isMobile]); // Calculate items per page
+  const itemsPerPage = useMemo(() => (isMobile ? 2 : 4), [isMobile]);
   const pageCount = useMemo(
     () => Math.ceil(data.length / itemsPerPage),
     [data.length, itemsPerPage],
@@ -45,8 +47,13 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
-    return data.slice(startIndex, endIndex);
-  }, [data, page, itemsPerPage]);
+    const paginated = data.slice(startIndex, endIndex);
+
+    // Notify parent component about the length of paginatedData
+    onPaginatedDataChange && onPaginatedDataChange(paginated.length);
+
+    return paginated;
+  }, [data, page, itemsPerPage, onPaginatedDataChange]);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -55,7 +62,7 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   return (
     <>
       <Paper elevation={3} sx={{ ...sx }} {...rest}>
-        <List>
+        <List sx={{ py: isMobile && 0 }}>
           {paginatedData.map((item, index) => (
             <React.Fragment key={index}>
               <ListItem

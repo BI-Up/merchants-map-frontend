@@ -79,7 +79,7 @@ const LeftMenu = ({
 
   return (
     <>
-      <Box sx={containerStyles} height={"calc(100vh - 84px)"} mt={1}>
+      <Box sx={containerStyles}>
         <Stack spacing={3} width={300}>
           <LocationAutocomplete
             locationsData={locationsData}
