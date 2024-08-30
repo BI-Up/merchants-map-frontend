@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import {
+  Alert,
   Box,
   Drawer,
   SwipeableDrawer,
@@ -215,28 +216,25 @@ const Sidebar: React.FC<SidebarProps> = ({
     return (
       <Box>
         <Box>
-          <CustomButton
-            label={language === "en" ? "Filters" : "Φιλτρα"}
-            onClick={toggleDrawer}
-            sx={{
-              width: 250,
-              backgroundColor: "#4F5D5B",
-              "&:hover": {
+          {!submitted && (
+            <CustomButton
+              label={language === "en" ? "Filters" : "Φιλτρα"}
+              onClick={toggleDrawer}
+              sx={{
+                width: 250,
                 backgroundColor: "#4F5D5B",
-              },
-              position: "absolute",
-              bottom: !submitted
-                ? "5%"
-                : submitted && mobileSm && mobileMd
-                  ? "45%"
-                  : "40%",
-
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: 1000,
-            }}
-            icon={<FilterListIcon />}
-          />
+                "&:hover": {
+                  backgroundColor: "#4F5D5B",
+                },
+                position: "absolute",
+                bottom: "5%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1000,
+              }}
+              icon={<FilterListIcon />}
+            />
+          )}
 
           {submitted && (
             <SwipeableDrawer
@@ -249,19 +247,69 @@ const Sidebar: React.FC<SidebarProps> = ({
                   invisible: true,
                 },
               }}
+              sx={{
+                position: "relative",
+                display: "flex",
+                flexDirection: "column",
+                "& .MuiPaper-root": {
+                  backgroundColor: "transparent",
+                  boxShadow: "unset",
+                },
+              }}
             >
-              <MerchantsList
-                data={data}
-                handleClick={handleClick}
-                isMobile={isMobile}
-                language={language}
-                onPaginatedDataChange={handlePaginatedDataChange}
-              />
+              <Box
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                py={2}
+              >
+                <CustomButton
+                  label={language === "en" ? "Filters" : "Φιλτρα"}
+                  onClick={toggleDrawer}
+                  sx={{
+                    width: 250,
+                    backgroundColor: "#4F5D5B",
+                    "&:hover": {
+                      backgroundColor: "#4F5D5B",
+                    },
+                    zIndex: 1000,
+                  }}
+                  icon={<FilterListIcon />}
+                />
+              </Box>
+              {data.length > 0 ? (
+                <MerchantsList
+                  data={data}
+                  handleClick={handleClick}
+                  isMobile={isMobile}
+                  language={language}
+                  onPaginatedDataChange={handlePaginatedDataChange}
+                  sx={{ backgroundColor: "white !important" }}
+                />
+              ) : (
+                <Alert
+                  severity={"warning"}
+                  sx={{ backgroundColor: "#white !important" }}
+                >
+                  {language === "en"
+                    ? "No results found."
+                    : "Δεν βρέθηκαν αποτελέσματα."}
+                </Alert>
+              )}
             </SwipeableDrawer>
           )}
         </Box>
 
-        <Drawer anchor={"left"} open={openDrawer} onClose={toggleDrawer}>
+        <Drawer
+          anchor={"left"}
+          open={openDrawer}
+          onClose={toggleDrawer}
+          sx={{
+            "& .MuiPaper-root": {
+              top: 84,
+            },
+          }}
+        >
           <LeftMenu {...commonProps} />
         </Drawer>
       </Box>
@@ -270,18 +318,28 @@ const Sidebar: React.FC<SidebarProps> = ({
     return (
       <LeftMenu {...commonProps}>
         {submitted && (
-          <MerchantsList
-            data={data}
-            handleClick={handleClick}
-            isMobile={isMobile}
-            onPaginatedDataChange={handlePaginatedDataChange}
-            language={language}
-            sx={{
-              mt: 2,
-              mb: 5,
-              p: "1rem",
-            }}
-          />
+          <>
+            {data?.length > 0 ? (
+              <MerchantsList
+                data={data}
+                handleClick={handleClick}
+                isMobile={isMobile}
+                onPaginatedDataChange={handlePaginatedDataChange}
+                language={language}
+                sx={{
+                  mt: 2,
+                  mb: 5,
+                  p: "1rem",
+                }}
+              />
+            ) : (
+              <Alert severity={"warning"} sx={{ mt: 2 }}>
+                {language === "en"
+                  ? "No results found."
+                  : "Δεν βρέθηκαν αποτελέσματα."}
+              </Alert>
+            )}
+          </>
         )}
       </LeftMenu>
     );
