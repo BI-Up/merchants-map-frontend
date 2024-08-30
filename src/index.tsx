@@ -195,13 +195,15 @@ const MerchantsMap = () => {
                       null,
                   }}
                   shouldFocus={false}
-                >
-                  <InfoWindowContent
-                    info={infoWindowData?.features[0].properties}
-                    key={infoWindowData?.features[0].properties.vat_name_gr}
-                    language={selectedLanguage}
-                  />
-                </InfoWindow>
+                  maxWidth={300}
+                  children={
+                    <InfoWindowContent
+                      info={infoWindowData?.features[0].properties}
+                      key={infoWindowData?.features[0].properties.vat_name_gr}
+                      language={selectedLanguage}
+                    />
+                  }
+                />
               )}
             </ClusteredMarkers>
             )

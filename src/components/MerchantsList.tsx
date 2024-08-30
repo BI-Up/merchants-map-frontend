@@ -22,7 +22,7 @@ interface MerchantsListProps {
     index: number,
     paginatedData: merchantsResponse[],
   ) => void;
-  isMobile: boolean;
+  smallScreens: boolean;
   language: "en" | "gr";
   sx?: SxProps;
   onPaginatedDataChange: (length: number) => void;
@@ -31,14 +31,14 @@ interface MerchantsListProps {
 const MerchantsList: React.FC<MerchantsListProps> = ({
   data,
   handleClick,
-  isMobile,
+  smallScreens,
   language,
   sx,
   onPaginatedDataChange,
   ...rest
 }) => {
   const [page, setPage] = useState(1);
-  const itemsPerPage = useMemo(() => (isMobile ? 2 : 4), [isMobile]);
+  const itemsPerPage = useMemo(() => (smallScreens ? 2 : 4), [smallScreens]);
   const pageCount = useMemo(
     () => Math.ceil(data.length / itemsPerPage),
     [data.length, itemsPerPage],
@@ -62,7 +62,7 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
   return (
     <>
       <Paper elevation={3} sx={{ ...sx }} {...rest}>
-        <List sx={{ py: isMobile && 0 }}>
+        <List sx={{ py: smallScreens && 0 }}>
           {paginatedData.map((item, index) => (
             <React.Fragment key={index}>
               <ListItem

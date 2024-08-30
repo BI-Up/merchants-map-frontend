@@ -22,7 +22,7 @@ interface InfoWindowContentProps {
 }
 const InfoWindowContent = ({ info, language }: InfoWindowContentProps) => {
   return (
-    <Box key={info.vat_name_gr}>
+    <Box key={info.vat_name_gr} position={"relative"} zIndex={20000}>
       {info && (
         <Box
           sx={{

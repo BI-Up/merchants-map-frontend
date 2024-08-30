@@ -70,18 +70,11 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const theme = useTheme();
 
-  const mobileSm = useMediaQuery(theme.breakpoints.up(320));
-  console.log("mobileSm", mobileSm);
-  const mobileMd = useMediaQuery(theme.breakpoints.down(375));
-  console.log("mobileMd", mobileMd);
-  const mobileLg = useMediaQuery(theme.breakpoints.down(425));
-  console.log("mobileLg", mobileLg);
-  const isMobile = useMediaQuery(theme.breakpoints.down("md")); //900px
-  console.log("md - isMobile", isMobile);
-  const lg = useMediaQuery(theme.breakpoints.down("lg")); //1200px
-  console.log("lg", lg);
-  const hasLargeScreen = useMediaQuery(theme.breakpoints.up("xl")); //1525px
-  console.log("up xl - hasLargeScreen", hasLargeScreen);
+  const smallScreens = useMediaQuery(theme.breakpoints.down("md")); //900px
+  const mediumScreens = useMediaQuery(theme.breakpoints.down("lg")); //1200px
+  const largeScreens = useMediaQuery(theme.breakpoints.up("xl")); //1525px
+  //1200 ews 1525 => 30%
+  //900 ews 1200 => 45%
 
   const handlePaginatedDataChange = (length) => {
     setPaginatedDataLength(length);
@@ -192,8 +185,9 @@ const Sidebar: React.FC<SidebarProps> = ({
   }, [submitted, data, map]);
 
   const commonProps = {
-    isMobile,
-    hasLargeScreen,
+    smallScreens,
+    mediumScreens,
+    largeScreens,
     locationsData,
     productsData,
     categoriesData,
@@ -205,14 +199,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     language,
   };
 
-  const buttonPosition =
-    isMobile && paginatedDataLength === 2
-      ? "38%"
-      : isMobile && paginatedDataLength === 1
-        ? "25%"
-        : "";
-
-  if (isMobile) {
+  if (smallScreens) {
     return (
       <Box>
         <Box>
@@ -281,7 +268,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <MerchantsList
                   data={data}
                   handleClick={handleClick}
-                  isMobile={isMobile}
+                  smallScreens={smallScreens}
                   language={language}
                   onPaginatedDataChange={handlePaginatedDataChange}
                   sx={{ backgroundColor: "white !important" }}
@@ -323,7 +310,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               <MerchantsList
                 data={data}
                 handleClick={handleClick}
-                isMobile={isMobile}
+                smallScreens={smallScreens}
                 onPaginatedDataChange={handlePaginatedDataChange}
                 language={language}
                 sx={{

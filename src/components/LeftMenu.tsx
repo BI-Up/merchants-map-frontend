@@ -7,8 +7,9 @@ import CustomButton from "./ui/CustomButton";
 import LocationAutocomplete from "./ui/LocationAutocomplete";
 
 interface LeftMenuProps {
-  isMobile: boolean;
-  hasLargeScreen: boolean;
+  smallScreens: boolean;
+  mediumScreens: boolean;
+  largeScreens: boolean;
   locationsData: string[];
   categoriesData: string[];
   productsData: string[];
@@ -36,8 +37,9 @@ interface LeftMenuProps {
 }
 
 const LeftMenu = ({
-  isMobile,
-  hasLargeScreen,
+  smallScreens,
+  mediumScreens,
+  largeScreens,
   locationsData,
   productsData,
   categoriesData,
@@ -66,13 +68,15 @@ const LeftMenu = ({
     alignItems: "center",
     overflow: "auto",
     pt: 4,
-    px: !hasLargeScreen && !isMobile ? 6 : 2,
+    px: largeScreens ? 5 : !largeScreens && !smallScreens ? 4 : 0,
     width:
-      hasLargeScreen && !isMobile
+      largeScreens && !smallScreens
         ? "25%"
-        : !hasLargeScreen && !isMobile
-          ? "35%"
-          : "100%",
+        : !smallScreens && mediumScreens
+          ? "45%"
+          : smallScreens
+            ? "100%"
+            : "30%",
     height: "calc(100vh - 84px)",
     mt: 1,
   };
@@ -126,7 +130,7 @@ const LeftMenu = ({
             sx={{ padding: 1.5 }}
           />
         </Box>
-        {!isMobile && children}
+        {!smallScreens && children}
       </Box>
     </>
   );
