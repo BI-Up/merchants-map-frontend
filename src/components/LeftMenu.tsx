@@ -108,7 +108,7 @@ const LeftMenu = ({
           language={language}
         />
 
-        <Box display={"flex"} alignItems={"center"} gap={2} padding={"1rem"}>
+        <Box display={"flex"} alignItems={"center"} gap={2} py={"1rem"}>
           <Typography>
             {language === "en" ? "Has Cashback officers?" : "Παροχή Cashback;"}
           </Typography>
