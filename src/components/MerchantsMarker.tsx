@@ -5,7 +5,6 @@ import {
   useAdvancedMarkerRef,
 } from "@vis.gl/react-google-maps";
 import { useCallback } from "react";
-import { ClusterCicle } from "./svg/cluster-cicle";
 import { MerchantsMarker } from "./svg/marker-pin";
 
 export const MerchantsMarkerPin = ({

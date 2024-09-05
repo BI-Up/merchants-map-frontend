@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Sidebar from "./components/layout/Sidebar";
 import { InfoWindow, Map } from "@vis.gl/react-google-maps";
 import { postData } from "./api/api";
@@ -44,12 +44,16 @@ const MerchantsMap = () => {
     mcc_category: "",
   });
 
+  const payload = useMemo(
+    () => ({
+      merchant_filter: queryParams,
+    }),
+    [queryParams],
+  );
+
   const fetchStores = useCallback(async () => {
     try {
-      const payload = {
-        merchant_filter: queryParams,
-      };
-
+      setState((prevState) => ({ ...prevState, loading: true }));
       const response = await postData(payload);
       if (allStores === null)
         setStores((prevState) => ({ ...prevState, allStores: response }));
@@ -63,63 +67,65 @@ const MerchantsMap = () => {
     } finally {
       setState((prevState) => ({ ...prevState, loading: false }));
     }
-  }, [queryParams]);
+  }, [payload]);
 
   useEffect(() => {
     fetchStores();
   }, [fetchStores]);
 
-  const handleSelectedTowns = (towns: string[]) => {
-    const enFormattedTowns = towns.map((town) => {
-      if (selectedLanguage === "gr") {
-        const merchant = allStores.find(
-          (merchant) => merchant.town_gr === town,
-        );
-        return merchant ? merchant.town_en : town;
-      }
-      return town;
-    });
-    const joinedTowns = enFormattedTowns.join(",");
+  const handleSelectedTowns = useCallback(
+    (towns: string[]) => {
+      const formattedTowns = towns.map((town) => {
+        if (selectedLanguage === "gr" && allStores) {
+          const merchant = allStores.find(
+            (merchant) => merchant.town_gr === town,
+          );
+          return merchant ? merchant.town_en : town;
+        }
+        return town;
+      });
+
+      setQueryParams((prevState) => ({
+        ...prevState,
+        town: formattedTowns.join(","),
+      }));
+    },
+    [allStores, selectedLanguage],
+  );
+
+  const handleSelectedProducts = useCallback((products: string[]) => {
     setQueryParams((prevState) => ({
       ...prevState,
-      town: joinedTowns,
+      accepted_products: products.join(","),
     }));
-  };
+  }, []);
 
-  const handleSelectedProducts = (products: string[]) => {
-    const joinedProducts = products.join(",");
-
+  const handleIsHerocorp = useCallback((isHerocorp: boolean) => {
     setQueryParams((prevState) => ({
       ...prevState,
-      accepted_products: joinedProducts,
+      is_hero_corp: isHerocorp,
     }));
-  };
+  }, []);
 
-  const handleIsHerocorp = (is_herocorp: boolean) => {
-    setQueryParams((prevState) => ({
-      ...prevState,
-      is_hero_corp: is_herocorp,
-    }));
-  };
+  const handleSelectedCategories = useCallback(
+    (categories: string[]) => {
+      const formattedCategories = categories.map((category) => {
+        if (selectedLanguage === "gr" && allStores) {
+          const merchant = allStores.find(
+            (merchant) => merchant.mcc_category_gr === category,
+          );
+          return merchant ? merchant.mcc_category_en : category;
+        }
+        return category;
+      });
 
-  const handleSelectedCategories = (categories: string[]) => {
-    const enFormattedCategories = categories.map((category) => {
-      if (selectedLanguage === "gr") {
-        const merchant = allStores.find(
-          (merchant) => merchant.mcc_category_gr === category,
-        );
-        return merchant ? merchant.mcc_category_en : category;
-      }
-      return category;
-    });
-
-    const joinedCategories = enFormattedCategories.join(",");
-
-    setQueryParams((prevState) => ({
-      ...prevState,
-      mcc_category: joinedCategories,
-    }));
-  };
+      setQueryParams((prevState) => ({
+        ...prevState,
+        mcc_category: formattedCategories.join(","),
+      }));
+    },
+    [allStores, selectedLanguage],
+  );
 
   const handleInfoWindowClose = useCallback(() => {
     setInfoWindowData(null);

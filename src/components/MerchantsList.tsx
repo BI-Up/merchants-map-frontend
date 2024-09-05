@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import * as React from "react";
 
 import {
@@ -13,7 +13,6 @@ import {
   SxProps,
 } from "@mui/material";
 import { merchantsResponse } from "../type";
-import { AdvancedMarker } from "@vis.gl/react-google-maps";
 
 interface MerchantsListProps {
   data: merchantsResponse[]; // Replace with the actual type of your data
@@ -55,9 +54,9 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
     return paginated;
   }, [data, page, itemsPerPage, onPaginatedDataChange]);
 
-  const handlePageChange = (event, value) => {
+  const handlePageChange = useCallback((event, value) => {
     setPage(value);
-  };
+  }, []);
 
   return (
     <>

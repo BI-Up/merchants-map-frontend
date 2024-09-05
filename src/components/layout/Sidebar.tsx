@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     products: productsData,
     categories: categoriesData,
   } = filterValues;
-  const map = useMap();
+
   const [selectedItems, setSelectedItems] = React.useState({
     locations: [] as string[],
     products: [] as string[],
@@ -74,23 +74,19 @@ const Sidebar: React.FC<SidebarProps> = ({
   const smallScreens = useMediaQuery(theme.breakpoints.down("md")); //900px
   const mediumScreens = useMediaQuery(theme.breakpoints.down("lg")); //1200px
   const largeScreens = useMediaQuery(theme.breakpoints.up("xl")); //1525px
-  //1200 ews 1525 => 30%
-  //900 ews 1200 => 45%
+  const map = useMap();
 
   const handlePaginatedDataChange = (length) => {
     setPaginatedDataLength(length);
   };
 
-  const toggleDrawer = () => {
-    setOpenDrawer(!openDrawer);
-    setSubmitted(false);
-  };
-
   const fetchFilters = useCallback(async () => {
     try {
-      const loc = await getFilters("town", language);
-      const prod = await getFilters("accepted_products", language);
-      const cat = await getFilters("mcc_category", language);
+      const [loc, prod, cat] = await Promise.all([
+        getFilters("town", language),
+        getFilters("accepted_products", language),
+        getFilters("mcc_category", language),
+      ]);
       setFilterValues({ locations: loc, products: prod, categories: cat });
     } catch (error) {
       console.error(error);
@@ -101,24 +97,33 @@ const Sidebar: React.FC<SidebarProps> = ({
     fetchFilters();
   }, [fetchFilters]);
 
-  const handleSelectChange =
+  const toggleDrawer = useCallback(() => {
+    setOpenDrawer((prev) => !prev);
+    setSubmitted(false);
+  }, []);
+
+  const handleSelectChange = useCallback(
     (type: "locations" | "products" | "categories") =>
-    (event: React.ChangeEvent<{ value: string[] }>) => {
-      setSubmitted(false);
-      const { value } = event.target;
+      (event: React.ChangeEvent<{ value: string[] }>) => {
+        setSubmitted(false);
+        const { value } = event.target;
+        setSelectedItems((prevSelectedItems) => ({
+          ...prevSelectedItems,
+          [type]: value as string[],
+        }));
+      },
+    [],
+  );
+
+  const handleSwitchChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
       setSelectedItems((prevSelectedItems) => ({
         ...prevSelectedItems,
-        [type]: value as string[],
+        has_cashback: event.target.checked,
       }));
-    };
-
-  const handleSwitchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { checked } = event.target;
-    setSelectedItems((prevSelectedItems) => ({
-      ...prevSelectedItems,
-      has_cashback: checked,
-    }));
-  };
+    },
+    [],
+  );
 
   const handleClick = useCallback(
     (
@@ -160,21 +165,27 @@ const Sidebar: React.FC<SidebarProps> = ({
         map.setCenter(latLng);
       }
     },
-    [map, geojson, setSelectedListItem],
+    [map, geojson],
   );
 
   useEffect(() => {
     setInfoWindowData(selectedListItem);
-  }, [selectedListItem, map]);
+  }, [selectedListItem, setInfoWindowData]);
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     handleSelectedTowns(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
     handleIsHerocorp(selectedItems.has_cashback);
     handleSelectedCategories(selectedItems.categories);
     setOpenDrawer(false);
     setSubmitted(true);
-  };
+  }, [
+    selectedItems,
+    handleSelectedTowns,
+    handleSelectedProducts,
+    handleIsHerocorp,
+    handleSelectedCategories,
+  ]);
 
   useEffect(() => {
     if (submitted && data.length > 0) {
