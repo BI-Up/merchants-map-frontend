@@ -13,7 +13,6 @@ const AppWrapper = ({ children }) => {
           height: "100vh",
           width: "100vw",
           display: "flex",
-          fontFamily: "Roboto",
         }}
       >
         {children}

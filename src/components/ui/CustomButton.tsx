@@ -1,6 +1,6 @@
 // @ts-ignore
 import React, { ReactNode } from "react";
-import { Button, SxProps } from "@mui/material";
+import { Button, SxProps, Theme } from "@mui/material";
 
 interface CustomButtonProps {
   label: string;
@@ -24,6 +24,7 @@ const CustomButton = ({
         backgroundColor: "#F59100",
         borderRadius: "100px",
         width: "100%",
+        color: (theme: Theme) => theme.palette.common.white,
         "&:hover": { backgroundColor: "#ee8e03" },
         ...sx,
       }}

@@ -3,7 +3,7 @@ import { ReactNode, useCallback, useMemo } from "react";
 // @ts-ignore
 import Supercluster, { ClusterProperties } from "supercluster";
 import { Feature, FeatureCollection, Point, GeoJsonProperties } from "geojson";
-import { useSupercluster } from "../use-supercluster";
+import { useSupercluster } from "../hooks/use-supercluster";
 import { MerchantsClusterMarker } from "./MerchantsCluster";
 import { MerchantsMarkerPin } from "./MerchantsMarker";
 

@@ -6,6 +6,7 @@ import {
   Button,
   Menu,
   MenuItem,
+  Theme,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -39,7 +40,8 @@ const Header = ({ language, languageHandler }: HeaderProps) => {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "#FF9018",
+        // backgroundColor: "#FF9018",
+        backgroundColor: (theme: Theme) => theme.palette.primary.main,
         py: 2,
         height: 84,
         display: "flex",
