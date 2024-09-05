@@ -79,13 +79,13 @@ const MerchantsList: React.FC<MerchantsListProps> = ({
                 }}
               >
                 <ListItemText>
-                  <Typography variant="body2">
+                  <Typography variant="body2" color={"text.primary"}>
                     {item[`mcc_category_${language}`]}
                   </Typography>
-                  <Typography variant="h6">
+                  <Typography variant="h6" color={"text.primary"}>
                     {item[`brand_name_${language}`] ?? "Brand Name"}
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body2" color={"text.primary"}>
                     {item[`address_${language}`]},{item[`region_${language}`]},
                     {item.zip_code}
                   </Typography>

@@ -19,8 +19,6 @@ export const MerchantsMarkerPin = ({
     [onMarkerClick, marker, featureId],
   );
 
-  console.log("fe", featureId);
-
   return (
     <AdvancedMarker
       ref={markerRef}

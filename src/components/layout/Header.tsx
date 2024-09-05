@@ -8,11 +8,11 @@ import {
   MenuItem,
   Theme,
   Toolbar,
-  Typography,
 } from "@mui/material";
 // @ts-ignore
 import logo from "../../../assets/logo.svg";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
+import { colors } from "../../theme/colors";
 
 interface HeaderProps {
   language: "en" | "gr";
@@ -66,12 +66,12 @@ const Header = ({ language, languageHandler }: HeaderProps) => {
           href="https://www.uphellas.gr/contact"
           sx={{
             borderRadius: 100,
-            backgroundColor: "white",
+            backgroundColor: (theme: Theme) => theme.palette.common.white,
             color: "#4F5D5B",
             fontSize: { xs: "14px", sm: "16px" },
             fontWeight: 700,
             "&:hover": {
-              backgroundColor: "white",
+              backgroundColor: (theme: Theme) => theme.palette.common.white,
             },
           }}
         >
@@ -85,13 +85,12 @@ const Header = ({ language, languageHandler }: HeaderProps) => {
             endIcon={open ? <ArrowDropUp /> : <ArrowDropDown />}
             sx={{
               borderRadius: 100,
-              backgroundColor: "white",
-              color: "#4F5D5B",
-
+              backgroundColor: (theme: Theme) => theme.palette.common.white,
+              color: colors.grey4f,
               fontSize: { xs: "14px", sm: "16px" },
               fontWeight: 700,
               "&:hover": {
-                backgroundColor: "white",
+                backgroundColor: (theme: Theme) => theme.palette.common.white,
               },
             }}
           >

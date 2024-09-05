@@ -9,6 +9,7 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
+  Theme,
 } from "@mui/material";
 import CustomButton from "./CustomButton";
 
@@ -58,8 +59,10 @@ const InputField: React.FC<InputFieldProps> = ({
               <Checkbox
                 checked={selectedItems.indexOf(item) > -1}
                 sx={{
-                  color: "#F59100",
-                  "&.Mui-checked": { color: "#F59100" },
+                  color: (theme: Theme) => theme.palette.primary.main,
+                  "&.Mui-checked": {
+                    color: (theme: Theme) => theme.palette.primary.main,
+                  },
                 }}
               />
               <ListItemText primary={item} />

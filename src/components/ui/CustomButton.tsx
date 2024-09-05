@@ -21,11 +21,13 @@ const CustomButton = ({
       variant={variant}
       onClick={onClick}
       sx={{
-        backgroundColor: "#F59100",
+        backgroundColor: (theme: Theme) => theme.palette.primary.main,
         borderRadius: "100px",
         width: "100%",
         color: (theme: Theme) => theme.palette.common.white,
-        "&:hover": { backgroundColor: "#ee8e03" },
+        "&:hover": {
+          backgroundColor: (theme: Theme) => theme.palette.primary.dark,
+        },
         ...sx,
       }}
     >

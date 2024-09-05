@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dispatch, ReactNode, SetStateAction, useEffect } from "react";
-import { Box, Stack, SxProps, Typography } from "@mui/material";
+import { Box, Stack, SxProps, Theme, Typography } from "@mui/material";
 import InputField from "./ui/InputField";
 import CustomSwitcher from "./ui/CustomSwitcher";
 import CustomButton from "./ui/CustomButton";
@@ -61,8 +61,8 @@ const LeftMenu = ({
   }, [language]);
 
   const containerStyles: SxProps = {
-    backgroundColor: "white",
-    color: "black",
+    backgroundColor: (theme: Theme) => theme.palette.common.white,
+    color: (theme: Theme) => theme.palette.common.black,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -109,7 +109,7 @@ const LeftMenu = ({
         />
 
         <Box display={"flex"} alignItems={"center"} gap={2} py={"1rem"}>
-          <Typography>
+          <Typography color={"text.secondary"}>
             {language === "en" ? "Has Cashback officers?" : "Παροχή Cashback;"}
           </Typography>
           <CustomSwitcher

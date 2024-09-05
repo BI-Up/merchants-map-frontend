@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Stack, Switch, Typography } from "@mui/material";
+import { Stack, Switch, Theme, Typography } from "@mui/material";
+import { colors } from "../../theme/colors";
 
 interface CustomSwitcherProps {
   selectedItems: string[] | boolean;
@@ -13,7 +14,9 @@ const CustomSwitcher = ({
 }: CustomSwitcherProps) => {
   return (
     <Stack direction={"row"} spacing={1} alignItems={"center"}>
-      <Typography>{language === "en" ? "Off" : "Όχι"}</Typography>
+      <Typography color={"text.secondary"}>
+        {language === "en" ? "Off" : "Όχι"}
+      </Typography>
       {/*@ts-ignore*/}
       <Switch
         checked={selectedItems as boolean}
@@ -25,7 +28,7 @@ const CustomSwitcher = ({
           border: "2px solid #303644",
           boxShadow: `inset 1px 2px 0 #30364466`,
           backgroundColor: selectedItems
-            ? "white"
+            ? (theme: Theme) => theme.palette.common.white
             : "hsla(0,0%,78.4%,.64)!important",
 
           "& .MuiSwitch-switchBase": {
@@ -33,11 +36,10 @@ const CustomSwitcher = ({
             margin: "2px",
             transitionDuration: "300ms",
             border: "2px solid #303644",
-            // boxShadow: "0 2px 0 #303644",
 
             "&.Mui-checked": {
               transform: "translateX(23px)",
-              color: "#ee8e03",
+              color: (theme: Theme) => theme.palette.primary.main,
             },
           },
           "& .MuiSwitch-thumb": {
@@ -46,7 +48,9 @@ const CustomSwitcher = ({
             height: 15,
             ml: "0.5px",
             my: "1px",
-            backgroundColor: selectedItems ? "#F59100" : "#9747FF",
+            backgroundColor: selectedItems
+              ? (theme: Theme) => theme.palette.primary.main
+              : colors.purple97,
           },
           "& .MuiSwitch-track": {
             borderRadius: 26 / 2,
@@ -54,7 +58,9 @@ const CustomSwitcher = ({
           },
         }}
       />
-      <Typography>{language === "en" ? "On" : "Ναί"}</Typography>
+      <Typography color={"text.secondary"}>
+        {language === "en" ? "On" : "Ναί"}
+      </Typography>
     </Stack>
   );
 };

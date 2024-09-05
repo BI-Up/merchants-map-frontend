@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box } from "@mui/material";
+import { Box, Theme, Typography } from "@mui/material";
 
 interface Info {
   vat_name_gr?: string;
@@ -36,42 +36,57 @@ const InfoWindowContent = ({ info, language }: InfoWindowContentProps) => {
           {info?.is_hero_corp && (
             <Box
               sx={{
-                backgroundColor: "#F59100",
+                backgroundColor: (theme: Theme) => theme.palette.primary.main,
                 borderRadius: 100,
                 px: 1,
                 fontSize: "14px",
                 fontWeight: 600,
-                color: "white",
+                color: (theme: Theme) => theme.palette.common.white,
                 width: 130,
-                mb: 0.5,
+                mb: 0.2,
               }}
             >
               Cashback partner
             </Box>
           )}
 
-          <Box sx={{ fontSize: "15px", mb: 0.5 }}>
+          <Typography
+            variant={"body2"}
+            color={"text.primary"}
+            sx={{ fontSize: "15px", mb: 0.2 }}
+          >
             {info[`mcc_category_${language}`]}
-          </Box>
-          <Box sx={{ fontWeight: "bold", fontSize: "20px", mb: 0.5 }}>
+          </Typography>
+          <Typography
+            variant={"h6"}
+            color={"text.primary"}
+            sx={{ fontSize: "20px", mb: 0.2 }}
+          >
             {info[`brand_name_${language}`] ?? "Brand Name"}
-          </Box>
-          <Box
+          </Typography>
+          <Typography
+            variant={"body2"}
+            color={"text.primary"}
             sx={{
               fontSize: "14px",
-              mb: 0.5,
+              mb: 0.2,
               textTransform: "capitalize",
               fontWeight: "normal",
             }}
           >
             {info[`address_${language}`]},{info[`region_${language}`]},
             {info.zip_code}
-          </Box>
-          <Box display={"flex"} sx={{ mb: 0.5 }}>
+          </Typography>
+          <Typography
+            variant={"body2"}
+            color={"text.secondary"}
+            display={"flex"}
+            sx={{ mt: 0.2 }}
+          >
             {info?.accepted_products.map((product) => (
               <Box mr={0.5}>•{product} </Box>
             ))}
-          </Box>
+          </Typography>
         </Box>
       )}
     </Box>

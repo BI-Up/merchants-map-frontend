@@ -23,6 +23,7 @@ import MerchantsList from "../MerchantsList";
 import LeftMenu from "../LeftMenu";
 import { checkCoordinates } from "../../helper";
 import { FeatureCollection, Point } from "geojson";
+import { colors } from "../../theme/colors";
 interface SidebarProps {
   handleSelectedTowns: (_towns: string[]) => void;
   handleSelectedProducts?: (_products: string[]) => void;
@@ -209,9 +210,9 @@ const Sidebar: React.FC<SidebarProps> = ({
               onClick={toggleDrawer}
               sx={{
                 width: 250,
-                backgroundColor: "#4F5D5B",
+                backgroundColor: colors.grey4f,
                 "&:hover": {
-                  backgroundColor: "#4F5D5B",
+                  backgroundColor: colors.grey4f,
                 },
                 position: "absolute",
                 bottom: "5%",
@@ -255,9 +256,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                   onClick={toggleDrawer}
                   sx={{
                     width: 250,
-                    backgroundColor: "#4F5D5B",
+                    backgroundColor: colors.grey4f,
                     "&:hover": {
-                      backgroundColor: "#4F5D5B",
+                      backgroundColor: colors.grey4f,
                     },
                     zIndex: 1000,
                   }}
@@ -276,7 +277,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               ) : (
                 <Alert
                   severity={"warning"}
-                  sx={{ backgroundColor: "#white !important" }}
+                  sx={{ backgroundColor: "white !important" }}
                 >
                   {language === "en"
                     ? "No results found."
