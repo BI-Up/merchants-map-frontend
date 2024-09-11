@@ -68,7 +68,7 @@ const LeftMenu = ({
     alignItems: "center",
     overflow: "auto",
     pt: 4,
-    px: largeScreens ? 5 : !largeScreens && !smallScreens ? 4 : 0,
+    px: largeScreens ? 5 : !largeScreens && !smallScreens ? 6 : 2,
     width:
       largeScreens && !smallScreens
         ? "25%"
@@ -76,7 +76,7 @@ const LeftMenu = ({
           ? "45%"
           : smallScreens
             ? "100%"
-            : "30%",
+            : "35%",
     height: "calc(100vh - 84px)",
     mt: 1,
   };
