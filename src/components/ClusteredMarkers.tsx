@@ -6,6 +6,8 @@ import { Feature, FeatureCollection, Point, GeoJsonProperties } from "geojson";
 import { useSupercluster } from "../hooks/use-supercluster";
 import { MerchantsClusterMarker } from "./MerchantsCluster";
 import { MerchantsMarkerPin } from "./MerchantsMarker";
+import { convertMarkerToGeoJSON } from "../helper";
+import { merchantsResponse } from "../type";
 
 const superclusterOptions: Supercluster.Options<
   GeoJsonProperties,
@@ -27,6 +29,7 @@ type ClusteredMarkersProps = {
   ) => void;
   children: ReactNode;
   isLoading: boolean;
+  fetchMarkerInfo: ({ id }) => Promise<merchantsResponse>;
 };
 
 const ClusteredMarkers = ({
@@ -34,6 +37,7 @@ const ClusteredMarkers = ({
   setInfoWindowData,
   children,
   isLoading,
+  fetchMarkerInfo,
 }: ClusteredMarkersProps) => {
   const { clusters, getLeaves } = useSupercluster(
     geojson,
@@ -51,11 +55,34 @@ const ClusteredMarkers = ({
   // );
 
   const handleMarkerClick = useCallback(
-    (marker: google.maps.marker.AdvancedMarkerElement, featureId: string) => {
+    async (
+      marker: google.maps.marker.AdvancedMarkerElement,
+      featureId: string,
+    ) => {
       const feature = clusters.find(
-        (feat) => feat.id === featureId,
+        (feat) => feat.properties.id === featureId,
       ) as Feature<Point>;
-      setInfoWindowData({ anchor: marker, features: [feature] });
+
+      console.log("feature on handler", feature.properties.id);
+
+      if (feature) {
+        try {
+          const markerInfo = await fetchMarkerInfo({
+            id: feature.properties.id as number, // You're passing an object instead of a number here
+          });
+
+          const convertedMarkerInfo = convertMarkerToGeoJSON(markerInfo[0]);
+
+          console.log(convertedMarkerInfo);
+
+          setInfoWindowData({
+            anchor: marker,
+            features: [convertedMarkerInfo.features[0]],
+          });
+        } catch (error) {
+          console.error("Error fetching marker info:", error);
+        }
+      }
     },
     [clusters, setInfoWindowData],
   );
@@ -63,8 +90,11 @@ const ClusteredMarkers = ({
   const renderedMarkers = useMemo(
     () =>
       clusters.map((feature) => {
+        console.log("feature on render markers", feature);
         const [lng, lat] = feature.geometry.coordinates;
+        console.log("lng", lng, "lat", lat);
         const clusterProperties = feature.properties as ClusterProperties;
+        console.log("clusterProperties", clusterProperties);
         const isCluster = clusterProperties.cluster;
 
         if (isCluster) {
@@ -81,9 +111,9 @@ const ClusteredMarkers = ({
         }
 
         return (
-          <React.Fragment key={feature.id}>
+          <React.Fragment key={feature.properties.id}>
             <MerchantsMarkerPin
-              featureId={feature.id as string}
+              featureId={feature.properties.id as string}
               position={{ lat, lng }}
               onMarkerClick={handleMarkerClick}
             />
