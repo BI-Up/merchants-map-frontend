@@ -19,9 +19,11 @@ interface requestPayload {
   southwest_point?: points;
 }
 
+const BACKEND_BASE_URL = process.env.BACKEND_BASE_URL;
+
 export const getInitialCoordinates = async () => {
   try {
-    const response = await axios.get("http://localhost:8000/merchants");
+    const response = await axios.get(BACKEND_BASE_URL + "/merchants");
     return response.data;
   } catch (error) {
     console.error(error);
@@ -35,7 +37,7 @@ export const getFilteredCoordinates = async (
 ) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/merchants/search",
+      BACKEND_BASE_URL + "/merchants/search",
 
       { merchant_filter: payload, language },
     );
@@ -48,7 +50,7 @@ export const getFilteredCoordinates = async (
 
 export const getMarkerInfo = async (id: number) => {
   try {
-    const response = await axios.get(`http://localhost:8000/merchants/${id}`);
+    const response = await axios.get(BACKEND_BASE_URL + `/merchants/${id}`);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -61,7 +63,7 @@ export const getFilters = async (
   language?: "en" | "gr",
 ) => {
   try {
-    const response = await axios.get("http://localhost:8000/filters/values", {
+    const response = await axios.get(BACKEND_BASE_URL + "/filters/values", {
       params: {
         filter_label: filter_value,
         language,

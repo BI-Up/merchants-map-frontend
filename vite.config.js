@@ -16,11 +16,16 @@
 import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
-  const { GOOGLE_MAPS_API_KEY = "" } = loadEnv(mode, process.cwd(), "");
+  const { GOOGLE_MAPS_API_KEY = "", BACKEND_BASE_URL = "" } = loadEnv(
+    mode,
+    process.cwd(),
+    "",
+  );
 
   return {
     define: {
       "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(GOOGLE_MAPS_API_KEY),
+      "process.env.BACKEND_BASE_URL": JSON.stringify(BACKEND_BASE_URL),
     },
     resolve: {
       alias: {
