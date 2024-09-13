@@ -19,28 +19,6 @@ interface requestPayload {
   southwest_point?: points;
 }
 
-// export const postData = async (payload: requestPayload) => {
-//   try {
-//     const response = await axios.post("http://localhost/merchants", payload);
-//     return response.data;
-//   } catch (error) {
-//     console.error(error);
-//     throw error;
-//   }
-// };
-
-// export const getData = async (queryParams?: params) => {
-//   try {
-//     const response = await axios.get("http://localhost/merchants", {
-//       params: queryParams,
-//     });
-//     return response.data;
-//   } catch (error) {
-//     console.error(error);
-//     throw error;
-//   }
-// };
-
 export const getInitialCoordinates = async () => {
   try {
     const response = await axios.get("http://localhost:8000/merchants");
@@ -54,7 +32,7 @@ export const getInitialCoordinates = async () => {
 export const getFilteredCoordinates = async (payload: filterParams | {}) => {
   try {
     const response = await axios.post(
-      "http://localhost/merchants/search",
+      "http://localhost:8000/merchants/search",
       payload,
     );
     return response.data;
@@ -62,7 +40,7 @@ export const getFilteredCoordinates = async (payload: filterParams | {}) => {
     console.error(error);
     throw error;
   }
-};
+}; //payload
 
 export const getMarkerInfo = async (id: number) => {
   try {
@@ -79,7 +57,7 @@ export const getFilters = async (
   language?: "en" | "gr",
 ) => {
   try {
-    const response = await axios.get("http://localhost/filters/values", {
+    const response = await axios.get("http://localhost:8000/filters/values", {
       params: {
         filter_label: filter_value,
         language,

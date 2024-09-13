@@ -17,11 +17,8 @@ import {
 import CustomButton from "../ui/CustomButton";
 import { getFilters } from "../../api/api";
 import FilterListIcon from "@mui/icons-material/FilterList";
-import { merchantsResponse } from "../../type";
 import { useMap } from "@vis.gl/react-google-maps";
-import MerchantsList from "../MerchantsList";
 import LeftMenu from "../LeftMenu";
-import { checkCoordinates } from "../../helper";
 import { FeatureCollection, Point } from "geojson";
 import { colors } from "../../theme/colors";
 interface SidebarProps {
@@ -29,8 +26,9 @@ interface SidebarProps {
   handleSelectedProducts?: (_products: string[]) => void;
   handleIsHerocorp?: (_is_herocorp: boolean) => void;
   handleSelectedCategories?: (_categories: string[]) => void;
-  data: merchantsResponse[] | [];
   setInfoWindowData: Dispatch<SetStateAction<Object | number | null>>;
+  submitted: boolean;
+  setSubmitted: Dispatch<SetStateAction<boolean>>;
   language: "en" | "gr";
   languageHandler: Dispatch<SetStateAction<"en" | "gr">>;
   geojson: FeatureCollection<Point>;
@@ -43,12 +41,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedCategories,
   setInfoWindowData,
   language,
-  data,
+  submitted,
+  setSubmitted,
   geojson,
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-  const [submitted, setSubmitted] = useState<boolean>(false);
-  const [paginatedDataLength, setPaginatedDataLength] = useState(0);
 
   const [filterValues, setFilterValues] = useState({
     locations: [],
@@ -75,10 +72,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   const mediumScreens = useMediaQuery(theme.breakpoints.down("lg")); //1200px
   const largeScreens = useMediaQuery(theme.breakpoints.up("xl")); //1525px
   const map = useMap();
-
-  const handlePaginatedDataChange = (length) => {
-    setPaginatedDataLength(length);
-  };
 
   const fetchFilters = useCallback(async () => {
     try {
@@ -125,52 +118,52 @@ const Sidebar: React.FC<SidebarProps> = ({
     [],
   );
 
-  const handleClick = useCallback(
-    (
-      event: React.MouseEvent<HTMLElement>,
-      index: number,
-      paginatedData: merchantsResponse[],
-    ) => {
-      if (!map) return;
-      const merchantData = paginatedData[index];
-      if (!merchantData) return;
+  // const handleClick = useCallback(
+  //   (
+  //     event: React.MouseEvent<HTMLElement>,
+  //     index: number,
+  //     paginatedData: merchantsResponse[],
+  //   ) => {
+  //     if (!map) return;
+  //     const merchantData = paginatedData[index];
+  //     if (!merchantData) return;
+  //
+  //     const merchantLat = Number(merchantData.latitude);
+  //     const merchantLng = Number(merchantData.longitude);
+  //
+  //     const latLng = {
+  //       lat: merchantLat,
+  //       lng: merchantLng,
+  //     };
+  //
+  //     let matchingGeojson: any = null;
+  //
+  //     if (geojson && Array.isArray(geojson.features)) {
+  //       matchingGeojson = geojson.features.find((geojsonItem) =>
+  //         checkCoordinates(geojsonItem, merchantLat, merchantLng),
+  //       );
+  //     } else if (
+  //       geojson &&
+  //       checkCoordinates(geojson, merchantLat, merchantLng)
+  //     ) {
+  //       matchingGeojson = geojson;
+  //     }
+  //
+  //     if (matchingGeojson && latLng) {
+  //       setSelectedListItem({
+  //         anchor: "",
+  //         features: [matchingGeojson],
+  //       });
+  //       map.setZoom(17);
+  //       map.setCenter(latLng);
+  //     }
+  //   },
+  //   [map, geojson],
+  // );
 
-      const merchantLat = Number(merchantData.latitude);
-      const merchantLng = Number(merchantData.longitude);
-
-      const latLng = {
-        lat: merchantLat,
-        lng: merchantLng,
-      };
-
-      let matchingGeojson: any = null;
-
-      if (geojson && Array.isArray(geojson.features)) {
-        matchingGeojson = geojson.features.find((geojsonItem) =>
-          checkCoordinates(geojsonItem, merchantLat, merchantLng),
-        );
-      } else if (
-        geojson &&
-        checkCoordinates(geojson, merchantLat, merchantLng)
-      ) {
-        matchingGeojson = geojson;
-      }
-
-      if (matchingGeojson && latLng) {
-        setSelectedListItem({
-          anchor: "",
-          features: [matchingGeojson],
-        });
-        map.setZoom(17);
-        map.setCenter(latLng);
-      }
-    },
-    [map, geojson],
-  );
-
-  useEffect(() => {
-    setInfoWindowData(selectedListItem);
-  }, [selectedListItem, setInfoWindowData]);
+  // useEffect(() => {
+  //   setInfoWindowData(selectedListItem);
+  // }, [selectedListItem, setInfoWindowData]);
 
   const handleSubmit = useCallback(() => {
     handleSelectedTowns(selectedItems.locations);
@@ -187,14 +180,14 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSelectedCategories,
   ]);
 
-  useEffect(() => {
-    if (submitted && data.length > 0) {
-      map.setCenter({
-        lat: Number(data[0]?.latitude),
-        lng: Number(data[0]?.longitude),
-      });
-    }
-  }, [submitted, data, map]);
+  // useEffect(() => {
+  //   if (submitted && data.length > 0) {
+  //     map.setCenter({
+  //       lat: Number(data[0]?.latitude),
+  //       lng: Number(data[0]?.longitude),
+  //     });
+  //   }
+  // }, [submitted, data, map]);
 
   const commonProps = {
     smallScreens,
@@ -276,25 +269,25 @@ const Sidebar: React.FC<SidebarProps> = ({
                   icon={<FilterListIcon />}
                 />
               </Box>
-              {data.length > 0 ? (
-                <MerchantsList
-                  data={data}
-                  handleClick={handleClick}
-                  smallScreens={smallScreens}
-                  language={language}
-                  onPaginatedDataChange={handlePaginatedDataChange}
-                  sx={{ backgroundColor: "white !important" }}
-                />
-              ) : (
-                <Alert
-                  severity={"warning"}
-                  sx={{ backgroundColor: "white !important" }}
-                >
-                  {language === "en"
-                    ? "No results found."
-                    : "Δεν βρέθηκαν αποτελέσματα."}
-                </Alert>
-              )}
+              {/*{data.length > 0 ? (*/}
+              {/*  <MerchantsList*/}
+              {/*    data={data}*/}
+              {/*    handleClick={handleClick}*/}
+              {/*    smallScreens={smallScreens}*/}
+              {/*    language={language}*/}
+              {/*    onPaginatedDataChange={handlePaginatedDataChange}*/}
+              {/*    sx={{ backgroundColor: "white !important" }}*/}
+              {/*  />*/}
+              {/*) : (*/}
+              {/*  <Alert*/}
+              {/*    severity={"warning"}*/}
+              {/*    sx={{ backgroundColor: "white !important" }}*/}
+              {/*  >*/}
+              {/*    {language === "en"*/}
+              {/*      ? "No results found."*/}
+              {/*      : "Δεν βρέθηκαν αποτελέσματα."}*/}
+              {/*  </Alert>*/}
+              {/*)}*/}
             </SwipeableDrawer>
           )}
         </Box>
@@ -316,30 +309,30 @@ const Sidebar: React.FC<SidebarProps> = ({
   } else {
     return (
       <LeftMenu {...commonProps}>
-        {submitted && (
-          <>
-            {data?.length > 0 ? (
-              <MerchantsList
-                data={data}
-                handleClick={handleClick}
-                smallScreens={smallScreens}
-                onPaginatedDataChange={handlePaginatedDataChange}
-                language={language}
-                sx={{
-                  mt: 2,
-                  mb: 5,
-                  p: "1rem",
-                }}
-              />
-            ) : (
-              <Alert severity={"warning"} sx={{ mt: 2 }}>
-                {language === "en"
-                  ? "No results found."
-                  : "Δεν βρέθηκαν αποτελέσματα."}
-              </Alert>
-            )}
-          </>
-        )}
+        {/*{submitted && (*/}
+        {/*  <>*/}
+        {/*    {data?.length > 0 ? (*/}
+        {/*      <MerchantsList*/}
+        {/*        data={data}*/}
+        {/*        handleClick={handleClick}*/}
+        {/*        smallScreens={smallScreens}*/}
+        {/*        onPaginatedDataChange={handlePaginatedDataChange}*/}
+        {/*        language={language}*/}
+        {/*        sx={{*/}
+        {/*          mt: 2,*/}
+        {/*          mb: 5,*/}
+        {/*          p: "1rem",*/}
+        {/*        }}*/}
+        {/*      />*/}
+        {/*    ) : (*/}
+        {/*      <Alert severity={"warning"} sx={{ mt: 2 }}>*/}
+        {/*        {language === "en"*/}
+        {/*          ? "No results found."*/}
+        {/*          : "Δεν βρέθηκαν αποτελέσματα."}*/}
+        {/*      </Alert>*/}
+        {/*    )}*/}
+        {/*  </>*/}
+        {/*)}*/}
       </LeftMenu>
     );
   }

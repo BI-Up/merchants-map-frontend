@@ -59,6 +59,38 @@ export function convertMarkerToGeoJSON(
   };
 }
 
+export function setDataToLocalStorage(key, value) {
+  const now = new Date();
+
+  const ttl = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+
+  const item = {
+    value: value,
+    expiry: now.getTime() + ttl,
+  };
+
+  localStorage.setItem(key, JSON.stringify(item));
+}
+
+export function getDataFromLocalStorage(key) {
+  const itemStr = localStorage.getItem(key);
+
+  if (!itemStr) {
+    return null;
+  }
+
+  const item = JSON.parse(itemStr);
+  const now = new Date();
+
+  // If the item has expired, remove it from storage and return null
+  if (now.getTime() > item.expiry) {
+    localStorage.removeItem(key);
+    return null;
+  }
+
+  return item.value;
+}
+
 // Helper function to check if coordinates match
 export const checkCoordinates = (
   geojsonItem: any,
