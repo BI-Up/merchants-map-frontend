@@ -25,7 +25,6 @@ export function convertPointsToGeoJSON(
 export function convertMarkerToGeoJSON(
   data: any,
 ): FeatureCollection<Point, GeoJsonProperties> {
-  console.log("data", data);
   return {
     type: "FeatureCollection",
     features: [

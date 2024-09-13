@@ -91,7 +91,10 @@ const MerchantsMap = () => {
     setState((prevState) => ({ ...prevState, loading: true }));
 
     try {
-      const response = await getFilteredCoordinates(memoizedQueryParams);
+      const response = await getFilteredCoordinates(
+        memoizedQueryParams,
+        selectedLanguage,
+      );
       setGeojson(convertPointsToGeoJSON(response));
     } catch (err) {
       setState((prevState) => ({
@@ -118,10 +121,17 @@ const MerchantsMap = () => {
 
   const handleSelectedTowns = useCallback(
     (towns: string[]) => {
-      setQueryParams((prevState) => ({
-        ...prevState,
-        town: towns.join(","),
-      }));
+      if (towns.length > 0)
+        setQueryParams((prevState) => ({
+          ...prevState,
+          town: towns.join(","),
+        }));
+      else {
+        setQueryParams((prevState) => ({
+          ...prevState,
+          town: towns.toString(),
+        }));
+      }
     },
     [selectedLanguage, setQueryParams],
   );

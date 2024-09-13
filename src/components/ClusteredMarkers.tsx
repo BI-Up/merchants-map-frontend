@@ -63,8 +63,6 @@ const ClusteredMarkers = ({
         (feat) => feat.properties.id === featureId,
       ) as Feature<Point>;
 
-      console.log("feature on handler", feature.properties.id);
-
       if (feature) {
         try {
           const markerInfo = await fetchMarkerInfo({
@@ -72,8 +70,6 @@ const ClusteredMarkers = ({
           });
 
           const convertedMarkerInfo = convertMarkerToGeoJSON(markerInfo[0]);
-
-          console.log(convertedMarkerInfo);
 
           setInfoWindowData({
             anchor: marker,
@@ -90,11 +86,8 @@ const ClusteredMarkers = ({
   const renderedMarkers = useMemo(
     () =>
       clusters.map((feature) => {
-        console.log("feature on render markers", feature);
         const [lng, lat] = feature.geometry.coordinates;
-        console.log("lng", lng, "lat", lat);
         const clusterProperties = feature.properties as ClusterProperties;
-        console.log("clusterProperties", clusterProperties);
         const isCluster = clusterProperties.cluster;
 
         if (isCluster) {

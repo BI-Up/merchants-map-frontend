@@ -29,11 +29,15 @@ export const getInitialCoordinates = async () => {
   }
 };
 
-export const getFilteredCoordinates = async (payload: filterParams | {}) => {
+export const getFilteredCoordinates = async (
+  payload: filterParams | {},
+  language: "en" | "gr",
+) => {
   try {
     const response = await axios.post(
       "http://localhost:8000/merchants/search",
-      payload,
+
+      { merchant_filter: payload, language },
     );
     return response.data;
   } catch (error) {

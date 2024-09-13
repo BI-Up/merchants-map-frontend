@@ -7,7 +7,6 @@ import {
   useState,
 } from "react";
 import {
-  Alert,
   Box,
   Drawer,
   SwipeableDrawer,
@@ -26,7 +25,6 @@ interface SidebarProps {
   handleSelectedProducts?: (_products: string[]) => void;
   handleIsHerocorp?: (_is_herocorp: boolean) => void;
   handleSelectedCategories?: (_categories: string[]) => void;
-  setInfoWindowData: Dispatch<SetStateAction<Object | number | null>>;
   submitted: boolean;
   setSubmitted: Dispatch<SetStateAction<boolean>>;
   language: "en" | "gr";
@@ -39,11 +37,9 @@ const Sidebar: React.FC<SidebarProps> = ({
   handleSelectedProducts,
   handleIsHerocorp,
   handleSelectedCategories,
-  setInfoWindowData,
   language,
   submitted,
   setSubmitted,
-  geojson,
 }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
@@ -64,7 +60,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     categories: [] as string[],
     has_cashback: false,
   });
-  const [selectedListItem, setSelectedListItem] = useState(null);
 
   const theme = useTheme();
 
@@ -118,53 +113,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     [],
   );
 
-  // const handleClick = useCallback(
-  //   (
-  //     event: React.MouseEvent<HTMLElement>,
-  //     index: number,
-  //     paginatedData: merchantsResponse[],
-  //   ) => {
-  //     if (!map) return;
-  //     const merchantData = paginatedData[index];
-  //     if (!merchantData) return;
-  //
-  //     const merchantLat = Number(merchantData.latitude);
-  //     const merchantLng = Number(merchantData.longitude);
-  //
-  //     const latLng = {
-  //       lat: merchantLat,
-  //       lng: merchantLng,
-  //     };
-  //
-  //     let matchingGeojson: any = null;
-  //
-  //     if (geojson && Array.isArray(geojson.features)) {
-  //       matchingGeojson = geojson.features.find((geojsonItem) =>
-  //         checkCoordinates(geojsonItem, merchantLat, merchantLng),
-  //       );
-  //     } else if (
-  //       geojson &&
-  //       checkCoordinates(geojson, merchantLat, merchantLng)
-  //     ) {
-  //       matchingGeojson = geojson;
-  //     }
-  //
-  //     if (matchingGeojson && latLng) {
-  //       setSelectedListItem({
-  //         anchor: "",
-  //         features: [matchingGeojson],
-  //       });
-  //       map.setZoom(17);
-  //       map.setCenter(latLng);
-  //     }
-  //   },
-  //   [map, geojson],
-  // );
-
-  // useEffect(() => {
-  //   setInfoWindowData(selectedListItem);
-  // }, [selectedListItem, setInfoWindowData]);
-
   const handleSubmit = useCallback(() => {
     handleSelectedTowns(selectedItems.locations);
     handleSelectedProducts(selectedItems.products);
@@ -179,15 +127,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleIsHerocorp,
     handleSelectedCategories,
   ]);
-
-  // useEffect(() => {
-  //   if (submitted && data.length > 0) {
-  //     map.setCenter({
-  //       lat: Number(data[0]?.latitude),
-  //       lng: Number(data[0]?.longitude),
-  //     });
-  //   }
-  // }, [submitted, data, map]);
 
   const commonProps = {
     smallScreens,
@@ -269,25 +208,6 @@ const Sidebar: React.FC<SidebarProps> = ({
                   icon={<FilterListIcon />}
                 />
               </Box>
-              {/*{data.length > 0 ? (*/}
-              {/*  <MerchantsList*/}
-              {/*    data={data}*/}
-              {/*    handleClick={handleClick}*/}
-              {/*    smallScreens={smallScreens}*/}
-              {/*    language={language}*/}
-              {/*    onPaginatedDataChange={handlePaginatedDataChange}*/}
-              {/*    sx={{ backgroundColor: "white !important" }}*/}
-              {/*  />*/}
-              {/*) : (*/}
-              {/*  <Alert*/}
-              {/*    severity={"warning"}*/}
-              {/*    sx={{ backgroundColor: "white !important" }}*/}
-              {/*  >*/}
-              {/*    {language === "en"*/}
-              {/*      ? "No results found."*/}
-              {/*      : "Δεν βρέθηκαν αποτελέσματα."}*/}
-              {/*  </Alert>*/}
-              {/*)}*/}
             </SwipeableDrawer>
           )}
         </Box>
@@ -307,34 +227,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       </Box>
     );
   } else {
-    return (
-      <LeftMenu {...commonProps}>
-        {/*{submitted && (*/}
-        {/*  <>*/}
-        {/*    {data?.length > 0 ? (*/}
-        {/*      <MerchantsList*/}
-        {/*        data={data}*/}
-        {/*        handleClick={handleClick}*/}
-        {/*        smallScreens={smallScreens}*/}
-        {/*        onPaginatedDataChange={handlePaginatedDataChange}*/}
-        {/*        language={language}*/}
-        {/*        sx={{*/}
-        {/*          mt: 2,*/}
-        {/*          mb: 5,*/}
-        {/*          p: "1rem",*/}
-        {/*        }}*/}
-        {/*      />*/}
-        {/*    ) : (*/}
-        {/*      <Alert severity={"warning"} sx={{ mt: 2 }}>*/}
-        {/*        {language === "en"*/}
-        {/*          ? "No results found."*/}
-        {/*          : "Δεν βρέθηκαν αποτελέσματα."}*/}
-        {/*      </Alert>*/}
-        {/*    )}*/}
-        {/*  </>*/}
-        {/*)}*/}
-      </LeftMenu>
-    );
+    return <LeftMenu {...commonProps}></LeftMenu>;
   }
 };
 
