@@ -621,9 +621,9 @@
     "@types/geojson" "*"
 
 "@vis.gl/react-google-maps@latest":
-  version "0.8.1"
-  resolved "https://registry.npmjs.org/@vis.gl/react-google-maps/-/react-google-maps-0.8.1.tgz"
-  integrity sha512-pjypNwgfsKePo/3zHwwMO4VlywwIeELXRW3PWn8U3OC5cQXmepwHmpLtcAKSwVew3xBb/43p7xjkt7Mdv3hE2Q==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@vis.gl/react-google-maps/-/react-google-maps-1.2.0.tgz#f90bf285259da7d679b0d661ff6392fa7eb799f6"
+  integrity sha512-gKVE1Jb+FT+F8RGzFrsgB4GWbRq/vLJm2U5nMHiLJmRyaO6HcSfZJue8mUEDJCShsXE0ASphcoJxTQNrBhbFJg==
   dependencies:
     "@types/google.maps" "^3.54.10"
     fast-deep-equal "^3.1.3"
