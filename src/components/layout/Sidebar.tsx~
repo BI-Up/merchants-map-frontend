@@ -216,11 +216,11 @@ const Sidebar: React.FC<SidebarProps> = ({
           anchor={"left"}
           open={openDrawer}
           onClose={toggleDrawer}
-          // sx={{
-          //   "& .MuiPaper-root": {
-          //     top: 84,
-          //   },
-          // }}
+          sx={{
+            "& .MuiPaper-root": {
+              top: 84,
+            },
+          }}
         >
           <LeftMenu {...commonProps} />
         </Drawer>
