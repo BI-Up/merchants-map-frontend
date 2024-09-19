@@ -211,11 +211,10 @@ const MerchantsMap = () => {
             mapId="116fd91f1d18588b"
             disableDefaultUI={true}
             clickableIcons={false}
-            defaultZoom={5}
+            defaultZoom={7}
             minZoom={7}
             maxZoom={17}
             zoomControl={true}
-            // defaultBounds={GREECE_BOUNDS}
             defaultCenter={ATHENS}
             onDrag={handleInfoWindowClose}
             onZoomChanged={handleInfoWindowClose}

@@ -39,7 +39,11 @@ const ClusteredMarkers = ({
   isLoading,
   fetchMarkerInfo,
 }: ClusteredMarkersProps) => {
-  const { clusters } = useSupercluster(geojson, superclusterOptions, isLoading);
+  const { clusters } = useSupercluster(
+    geojson,
+    superclusterOptions,
+    isLoading,
+  );
   // const handleClusterClick = useCallback(
   //   (marker: google.maps.marker.AdvancedMarkerElement, clusterId: number) => {
   //     const leaves = getLeaves(clusterId);
