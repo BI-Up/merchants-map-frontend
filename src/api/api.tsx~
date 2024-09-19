@@ -21,7 +21,7 @@ interface requestPayload {
 
 export const getInitialCoordinates = async () => {
   try {
-    const response = await axios.get("http://localhost:7900/merchants");
+    const response = await axios.get("http://localhost:8000/merchants");
     return response.data;
   } catch (error) {
     console.error(error);
@@ -35,7 +35,7 @@ export const getFilteredCoordinates = async (
 ) => {
   try {
     const response = await axios.post(
-      "http://localhost:7900/merchants/search",
+      "http://localhost:8000/merchants/search",
 
       { merchant_filter: payload, language },
     );
@@ -48,7 +48,7 @@ export const getFilteredCoordinates = async (
 
 export const getMarkerInfo = async (id: number) => {
   try {
-    const response = await axios.get(`http://localhost:7900/merchants/${id}`);
+    const response = await axios.get(`http://localhost:8000/merchants/${id}`);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -61,7 +61,7 @@ export const getFilters = async (
   language?: "en" | "gr",
 ) => {
   try {
-    const response = await axios.get("http://localhost:7900/filters/values", {
+    const response = await axios.get("http://localhost:8000/filters/values", {
       params: {
         filter_label: filter_value,
         language,
