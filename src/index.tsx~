@@ -214,7 +214,7 @@ const MerchantsMap = () => {
             minZoom={7}
             maxZoom={17}
             zoomControl={true}
-            // defaultBounds={GREECE_BOUNDS}
+              // defaultBounds={GREECE_BOUNDS}
             defaultCenter={ATHENS}
             onDrag={handleInfoWindowClose}
             onZoomChanged={handleInfoWindowClose}
