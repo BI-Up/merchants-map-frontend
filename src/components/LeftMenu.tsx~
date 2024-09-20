@@ -94,10 +94,12 @@ const LeftMenu = ({
   const handleSubmitClick = () => {
     if (isDefaultSelectedItems(selectedItems)) {
       setShowAlert(true);
-    } else {
-      setShowAlert(false);
+    } else{
+      setShowAlert(false)
       handleSubmit();
     }
+
+
   };
 
   return (

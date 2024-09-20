@@ -90,6 +90,20 @@ export function getDataFromLocalStorage(key) {
   return item.value;
 }
 
+export const isDefaultSelectedItems = (selectedItems: {
+  locations: string[];
+  products: string[];
+  categories: string[];
+  has_cashback: boolean;
+}) => {
+  return (
+    selectedItems.locations.length === 0 &&
+    selectedItems.products.length === 0 &&
+    selectedItems.categories.length === 0 &&
+    !selectedItems.has_cashback
+  );
+};
+
 // Helper function to check if coordinates match
 export const checkCoordinates = (
   geojsonItem: any,
