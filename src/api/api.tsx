@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 interface filterParams {
   town: string;
@@ -19,9 +19,11 @@ interface requestPayload {
   southwest_point?: points;
 }
 
+const BACKEND_BASE_URL = process.env.BACKEND_BASE_URL;
+
 export const getInitialCoordinates = async () => {
   try {
-    const response = await axios.get("http://localhost:7900/merchants");
+    const response = await axios.get(BACKEND_BASE_URL + '/merchants');
     return response.data;
   } catch (error) {
     console.error(error);
@@ -29,13 +31,10 @@ export const getInitialCoordinates = async () => {
   }
 };
 
-export const getFilteredCoordinates = async (
-  payload: filterParams | {},
-  language: "en" | "gr",
-) => {
+export const getFilteredCoordinates = async (payload: filterParams | {}, language: 'en' | 'gr') => {
   try {
     const response = await axios.post(
-      "http://localhost:7900/merchants/search",
+      BACKEND_BASE_URL + '/merchants/search',
 
       { merchant_filter: payload, language },
     );
@@ -48,7 +47,7 @@ export const getFilteredCoordinates = async (
 
 export const getMarkerInfo = async (id: number) => {
   try {
-    const response = await axios.get(`http://localhost:7900/merchants/${id}`);
+    const response = await axios.get(BACKEND_BASE_URL + `/merchants/${id}`);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -56,12 +55,9 @@ export const getMarkerInfo = async (id: number) => {
   }
 };
 
-export const getFilters = async (
-  filter_value: string,
-  language?: "en" | "gr",
-) => {
+export const getFilters = async (filter_value: string, language?: 'en' | 'gr') => {
   try {
-    const response = await axios.get("http://localhost:7900/filters/values", {
+    const response = await axios.get(BACKEND_BASE_URL + '/filters/values', {
       params: {
         filter_label: filter_value,
         language,
