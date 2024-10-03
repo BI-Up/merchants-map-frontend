@@ -1,27 +1,19 @@
-import * as React from "react";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import Sidebar from "./components/layout/Sidebar";
-import { InfoWindow, Map } from "@vis.gl/react-google-maps";
-import {
-  getFilteredCoordinates,
-  getInitialCoordinates,
-  getMarkerInfo,
-} from "./api/api";
-import { Box, CircularProgress } from "@mui/material";
-import Header from "./components/layout/Header";
-import {
-  convertPointsToGeoJSON,
-  getDataFromLocalStorage,
-  setDataToLocalStorage,
-} from "./helper";
-import ClusteredMarkers from "./components/ClusteredMarkers";
-import { Feature, FeatureCollection, Point } from "geojson";
-import InfoWindowContent from "./components/InfoWindowContent";
-import { ATHENS, GREECE_BOUNDS } from "./constants";
+import * as React from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import Sidebar from './components/layout/Sidebar';
+import { InfoWindow, Map } from '@vis.gl/react-google-maps';
+import { getFilteredCoordinates, getInitialCoordinates, getMarkerInfo } from './api/api';
+import { Box, CircularProgress } from '@mui/material';
+import Header from './components/layout/Header';
+import { convertPointsToGeoJSON, getDataFromLocalStorage, setDataToLocalStorage } from './helper';
+import ClusteredMarkers from './components/ClusteredMarkers';
+import { Feature, FeatureCollection, Point } from 'geojson';
+import InfoWindowContent from './components/InfoWindowContent';
+import { ATHENS, GREECE_BOUNDS } from './constants';
 
 const MerchantsMap = () => {
   const [geojson, setGeojson] = useState<FeatureCollection<Point> | null>(null);
-  const [selectedLanguage, setSelectedLanguage] = useState<"en" | "gr">("gr");
+  const [selectedLanguage, setSelectedLanguage] = useState<'en' | 'gr'>('en');
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [state, setState] = useState<{
     loading: boolean;
@@ -39,11 +31,11 @@ const MerchantsMap = () => {
   } | null>(null);
 
   const [queryParams, setQueryParams] = useState({
-    town: "",
-    accepted_products: "",
-    region: "",
+    town: '',
+    accepted_products: '',
+    region: '',
     is_hero_corp: false,
-    mcc_category: "",
+    mcc_category: '',
   });
 
   const memoizedQueryParams = useMemo(() => queryParams, [queryParams]);
@@ -58,7 +50,7 @@ const MerchantsMap = () => {
       }));
       try {
         // Check if stored data exists and is not expired
-        const storedData = getDataFromLocalStorage("initialRequest");
+        const storedData = getDataFromLocalStorage('initialRequest');
         if (storedData) {
           setGeojson(storedData);
         } else {
@@ -67,13 +59,13 @@ const MerchantsMap = () => {
           const geojson = convertPointsToGeoJSON(response);
           setGeojson(geojson);
           // Store in localStorage with a 1-day expiration
-          setDataToLocalStorage("initialRequest", geojson);
+          setDataToLocalStorage('initialRequest', geojson);
         }
       } catch (err) {
         setState((prevState) => ({
           ...prevState,
           loading: false,
-          error: err.message || "Unknown error",
+          error: err.message || 'Unknown error',
         }));
       } finally {
         setState((prevState) => ({
@@ -91,15 +83,12 @@ const MerchantsMap = () => {
     setState((prevState) => ({ ...prevState, loading: true }));
 
     try {
-      const response = await getFilteredCoordinates(
-        memoizedQueryParams,
-        selectedLanguage,
-      );
+      const response = await getFilteredCoordinates(memoizedQueryParams, selectedLanguage);
       setGeojson(convertPointsToGeoJSON(response));
     } catch (err) {
       setState((prevState) => ({
         ...prevState,
-        error: err.message || "Unknown error",
+        error: err.message || 'Unknown error',
       }));
     } finally {
       setState((prevState) => ({ ...prevState, loading: false }));
@@ -115,7 +104,7 @@ const MerchantsMap = () => {
     try {
       return await getMarkerInfo(Number(Number(id as number)));
     } catch (err) {
-      console.error("Error fetching marker info:", err);
+      console.error('Error fetching marker info:', err);
     }
   }, []);
 
@@ -124,7 +113,7 @@ const MerchantsMap = () => {
       if (towns.length > 0)
         setQueryParams((prevState) => ({
           ...prevState,
-          town: towns.join(","),
+          town: towns.join(','),
         }));
       else {
         setQueryParams((prevState) => ({
@@ -140,7 +129,7 @@ const MerchantsMap = () => {
     (products: string[]) => {
       setQueryParams((prevState) => ({
         ...prevState,
-        accepted_products: products.join(","),
+        accepted_products: products.join(','),
       }));
     },
     [selectedLanguage, setQueryParams],
@@ -160,7 +149,7 @@ const MerchantsMap = () => {
     (categories: string[]) => {
       setQueryParams((prevState) => ({
         ...prevState,
-        mcc_category: categories.join(","),
+        mcc_category: categories.join(','),
       }));
     },
     [selectedLanguage, setQueryParams],
@@ -171,17 +160,14 @@ const MerchantsMap = () => {
   }, []);
 
   return (
-    <Box sx={{ width: "100%", height: "100vh", overflow: "hidden" }}>
-      {/*<Header*/}
-      {/*  language={selectedLanguage}*/}
-      {/*  languageHandler={setSelectedLanguage}*/}
-      {/*/>*/}
+    <Box sx={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
+      <Header language={selectedLanguage} languageHandler={setSelectedLanguage} />
       <Box
-        position={"relative"}
-        width={"100%"}
-        display={"flex"}
+        position={'relative'}
+        width={'100%'}
+        display={'flex'}
         // height={"calc(100vh - 84px)"}
-        height={"100vh"}
+        height={'100vh'}
       >
         <Sidebar
           handleSelectedTowns={handleSelectedTowns}
@@ -196,14 +182,14 @@ const MerchantsMap = () => {
         />
         {loading && !geojson ? (
           <Box
-            display={"flex"}
-            width={"100%"}
-            height={"100vh"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            flexDirection={"column"}
+            display={'flex'}
+            width={'100%'}
+            height={'100vh'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            flexDirection={'column'}
           >
-            <CircularProgress sx={{ color: "#FF9018" }} size={50} />
+            <CircularProgress sx={{ color: '#FF9018' }} size={50} />
           </Box>
         ) : (
           <Map
@@ -234,12 +220,8 @@ const MerchantsMap = () => {
                   onCloseClick={handleInfoWindowClose}
                   anchor={infoWindowData?.anchor ?? null}
                   position={{
-                    lat:
-                      infoWindowData?.features[0].geometry.coordinates[1] ??
-                      null,
-                    lng:
-                      infoWindowData?.features[0].geometry.coordinates[0] ??
-                      null,
+                    lat: infoWindowData?.features[0].geometry.coordinates[1] ?? null,
+                    lng: infoWindowData?.features[0].geometry.coordinates[0] ?? null,
                   }}
                   shouldFocus={false}
                   maxWidth={300}
