@@ -162,13 +162,7 @@ const MerchantsMap = () => {
   return (
     <Box sx={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
       <Header language={selectedLanguage} languageHandler={setSelectedLanguage} />
-      <Box
-        position={'relative'}
-        width={'100%'}
-        display={'flex'}
-        // height={"calc(100vh - 84px)"}
-        height={'100vh'}
-      >
+      <Box position={'relative'} width={'100%'} display={'flex'} height={'calc(100vh - 84px)'}>
         <Sidebar
           handleSelectedTowns={handleSelectedTowns}
           handleSelectedProducts={handleSelectedProducts}
